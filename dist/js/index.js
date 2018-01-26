@@ -35,25 +35,44 @@ function init() {
                 rowsEl.insertAdjacentHTML(
                     'beforeEnd',
                     `<div class="b--black-20 bb flex relative">
-                        <div class="absolute bottom-0 b--black-20 left-0 o-30 right-0 top-0" style="background-color: ${
-                            playerStats.Puntos === maxPoints ? '#62A87C' : '#FFE45E'
+                        <div class="absolute bottom-0 b--black-20 left-0 o-20 right-0 top-0" style="background-color: ${
+                            playerStats.Puntos === maxPoints ? '#357EDD' : 'rgba(0, 0, 0, 0.2)'
                         }; width: ${statBarWidth}%; z-index: -1;"></div>
-                        <div class="black-50 cell-1 pa2 tr">${index + 1}</div>
-                        <div class="b cell-2 flex items-center pa2 truncate">
+                        <div class="cell-1 flex items-center justify-end pa1 pa3-ns">
+                            <span>${index + 1}</span>
+                        </div>
+                        <div class="cell-2 flex fw5 items-center pa1 pa3-ns">
                             ${
                                 playerStats.Twitter
                                     ? `<img src="https://avatars.io/twitter/${
                                           playerStats.Twitter
-                                      }" alt="${playerStats['Jugador/a']}" class="h2 mr2 w2" />`
-                                    : '<span class="h2 lh-double mr2 tc w2">😊</span>'
+                                      }" alt="${
+                                          playerStats['Jugador/a']
+                                      }" class="h2 mr1 mr3-ns w2" />`
+                                    : '<span class="h2 lh-double mr1 mr3-ns tc w2">😊</span>'
                             }
-                            ${playerStats['Jugador/a']}${!statBarWidth ? ' 💀' : ''}
+                            <span class="truncate">${playerStats['Jugador/a']}</span>
+                            ${
+                                playerStats.Puntos === maxPoints
+                                    ? '<span class="h2 lh-double ml1 ml3-ns tc w2">🏆</span>'
+                                    : ''
+                            }
                         </div>
-                        <div class="cell-3 pa2">${playerStats.Jugados}</div>
-                        <div class="cell-4 pa2">${playerStats.Ganados}</div>
-                        <div class="cell-5 pa2">${playerStats.Empatados}</div>
-                        <div class="cell-6 pa2">${playerStats.Perdidos}</div>
-                        <div class="b cell-7 pa2">${playerStats.Puntos}</div>
+                        <div class="cell-3 flex items-center pa1 pa3-ns">
+                            <span>${playerStats.Jugados}</span>
+                        </div>
+                        <div class="cell-4 flex items-center pa1 pa3-ns">
+                            <span>${playerStats.Ganados}</span>
+                        </div>
+                        <div class="cell-5 flex items-center pa1 pa3-ns">
+                            <span>${playerStats.Empatados}</span>
+                        </div>
+                        <div class="cell-6 flex items-center pa1 pa3-ns">
+                            <span>${playerStats.Perdidos}</span>
+                        </div>
+                        <div class="cell-7 flex fw5 items-center pa1 pa3-ns">
+                            <span>${playerStats.Puntos}</span>
+                        </div>
                     </div>`
                 );
             });
