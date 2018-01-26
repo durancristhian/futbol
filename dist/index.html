@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <title>️️Fútbol mixto</title>
+    <link rel="stylesheet" href="css/vendor/tachyons.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta property="og:url" content="https://futbolmixto.now.sh/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Fútbol mixto">
+    <meta property="og:description" content="Estadísticas del fútbol mixto.">
+    <meta property="og:image" content="https://futbolmixto.now.sh/images/social.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@durancristhian">
+    <meta name="twitter:title" content="Fútbol mixto">
+    <meta name="twitter:description" content="Estadísticas del fútbol mixto.">
+    <meta name="twitter:image" content="https://futbolmixto.now.sh/images/social.jpg">
+</head>
+
+<body class="f6 f5-ns ma0 sans-serif">
+    <div class="ph3 pv5">
+        <div class="center mw8">
+            <h1 class="mb3 mt0 tc">
+                <span class="animate-ball dib">⚽</span> Fútbol Mixto</h1>
+            <p class="black-50 f7 f6-ns mb5 mt0 tc">By
+                <a href="https://twitter.com/durancristhian" target="_blank" class="b blue no-underline">@durancristhian</a>.
+                <span class="b">v1.2.0</span>
+            </p>
+            <p id="loading" class="black-50 mv0 tc">Cargando...</p>
+            <p id="error" class="black-50 mv0 tc visibility-hidden">Ocurrió un error :(</p>
+            <div id="results" class="visibility-hidden">
+                <div class="b--black-20 bg-black-10 bl br bt flex">
+                    <div class="b--black-20 bb cell-1 fw6 tl pa2">
+                        <span class="visibility-hidden">99</span>
+                    </div>
+                    <div class="b--black-20 bb cell-2 fw6 tl truncate pa2">Nombre</div>
+                    <div class="b--black-20 bb cell-3 fw6 tl truncate pa2">Jugados</div>
+                    <div class="b--black-20 bb cell-4 fw6 tl truncate pa2">Ganados</div>
+                    <div class="b--black-20 bb cell-5 fw6 tl truncate pa2">Empatados</div>
+                    <div class="b--black-20 bb cell-6 fw6 tl truncate pa2">Perdidos</div>
+                    <div class="b--black-20 bb cell-7 fw6 tl truncate pa2">Puntos</div>
+                </div>
+                <div id="rows" class="b--black-20 bl br lh-copy"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/vendor/gsheets.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

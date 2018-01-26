@@ -1,0 +1,24 @@
+{
+    "name": "futbolmixto",
+    "version": "1.2.0",
+    "description": "Estadísticas del fútbol mixto.",
+    "scripts": {
+        "start": "serve dist"
+    },
+    "files": ["dist"],
+    "now": {
+        "alias": "futbolmixto",
+        "env": { "NODE_ENV": "production" },
+        "public": true
+    },
+    "author": "@durancristhian",
+    "license": "ISC",
+    "devDependencies": {
+        "eslint": "^4.16.0",
+        "prettier-eslint": "^8.8.1",
+        "stylelint": "^8.4.0"
+    },
+    "dependencies": {
+        "serve": "^6.4.9"
+    }
+}

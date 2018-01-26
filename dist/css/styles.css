@@ -1,0 +1,59 @@
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+@keyframes rollingBall {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-ball {
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-name: rollingBall;
+    animation-timing-function: linear;
+}
+
+.cell-1 {
+    width: 10%;
+}
+
+.cell-2 {
+    width: 30%;
+}
+
+.cell-3,
+.cell-4,
+.cell-5,
+.cell-6,
+.cell-7 {
+    width: 12%;
+}
+
+.visibility-hidden {
+    visibility: hidden;
+}
+
+@media screen and (min-width: 30em) {
+    .cell-1 {
+        width: 8%;
+    }
+
+    .cell-2 {
+        width: 42%;
+    }
+
+    .cell-3,
+    .cell-4,
+    .cell-5,
+    .cell-6,
+    .cell-7 {
+        width: 10%;
+    }
+}
