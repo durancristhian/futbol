@@ -36,6 +36,10 @@ body {
     width: 12%;
 }
 
+.lh-double {
+    line-height: 2;
+}
+
 .visibility-hidden {
     visibility: hidden;
 }

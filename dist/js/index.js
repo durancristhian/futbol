@@ -39,9 +39,16 @@ function init() {
                             playerStats.Puntos === maxPoints ? '#62A87C' : '#FFE45E'
                         }; width: ${statBarWidth}%; z-index: -1;"></div>
                         <div class="black-50 cell-1 pa2 tr">${index + 1}</div>
-                        <div class="b cell-2 pa2 truncate">${playerStats['Jugador/a']}${
-                        !statBarWidth ? ' 💀' : ''
-                    }</div>
+                        <div class="b cell-2 flex items-center pa2 truncate">
+                            ${
+                                playerStats.Twitter
+                                    ? `<img src="https://twitter.com/${
+                                          playerStats.Twitter
+                                      }/profile_image?size=bigger" class="h2 mr2" />`
+                                    : '<span class="h2 lh-double mr2 tc w2">😊</span>'
+                            }
+                            ${playerStats['Jugador/a']}${!statBarWidth ? ' 💀' : ''}
+                        </div>
                         <div class="cell-3 pa2">${playerStats.Jugados}</div>
                         <div class="cell-4 pa2">${playerStats.Ganados}</div>
                         <div class="cell-5 pa2">${playerStats.Empatados}</div>
