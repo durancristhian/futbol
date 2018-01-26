@@ -42,9 +42,9 @@ function init() {
                         <div class="b cell-2 flex items-center pa2 truncate">
                             ${
                                 playerStats.Twitter
-                                    ? `<img src="https://twitter.com/${
+                                    ? `<img src="https://avatars.io/twitter/${
                                           playerStats.Twitter
-                                      }/profile_image?size=bigger" class="h2 mr2" />`
+                                      }" alt="${playerStats['Jugador/a']}" class="h2 mr2 w2" />`
                                     : '<span class="h2 lh-double mr2 tc w2">😊</span>'
                             }
                             ${playerStats['Jugador/a']}${!statBarWidth ? ' 💀' : ''}

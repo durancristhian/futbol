@@ -1,6 +1,6 @@
 {
     "name": "futbolmixto",
-    "version": "1.3.0",
+    "version": "1.3.1",
     "description": "Estadísticas del fútbol mixto.",
     "scripts": {
         "start": "serve dist"
