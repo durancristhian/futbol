@@ -20,6 +20,14 @@ body {
     animation-timing-function: linear;
 }
 
+.bg-color-blue {
+    background-color: #33485c;
+}
+
+.bg-color-light-blue {
+    background-color: #d3ebf2;
+}
+
 .cell-1 {
     width: 10%;
 }
@@ -34,14 +42,6 @@ body {
 .cell-6,
 .cell-7 {
     width: 12%;
-}
-
-.lh-double {
-    line-height: 2;
-}
-
-.visibility-hidden {
-    visibility: hidden;
 }
 
 @media screen and (min-width: 30em) {
