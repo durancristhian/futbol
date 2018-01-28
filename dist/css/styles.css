@@ -1,16 +1,16 @@
-:root.theme-default {
-    --color-main: #fffceb;
-    --color-secondary: #fbf1a9;
+:root.theme-blue {
+    --color-main: #e0fcff;
+    --color-secondary: #bde4f4;
 }
 
-:root.theme-forest {
+:root.theme-green {
     --color-main: #faffb8;
     --color-secondary: #c5f0a4;
 }
 
-:root.theme-ocean {
-    --color-main: #e0fcff;
-    --color-secondary: #bde4f4;
+:root.theme-yellow {
+    --color-main: #fffceb;
+    --color-secondary: #fbf1a9;
 }
 
 body {
