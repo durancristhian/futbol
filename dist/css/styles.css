@@ -65,26 +65,6 @@ body {
     font-size: 0;
 }
 
-.grayscale {
-    filter: grayscale(1);
-}
-
-.overlay {
-    position: relative;
-}
-
-.overlay::after {
-    background: var(--color-secondary);
-    bottom: 0;
-    content: '';
-    left: 0;
-    opacity: 0.4;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 1;
-}
-
 .ts1 {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
 }

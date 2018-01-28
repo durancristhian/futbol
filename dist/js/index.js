@@ -39,11 +39,11 @@ function init() {
                             <span>${index + 1}</span>
                         </div>
                         <div class="b--black-20 br cell-name flex items-center pa1 pa2-ns">
-                            <div class="h2 mr1 mr3-ns overlay w2">
-                                <div class="bg-center cover grayscale h2 w2" style="background-image: url('${
+                            <div class="h2 mr1 mr3-ns w2">
+                                <div class="bg-center cover h2 w2" style="background-image: url('${
                                     playerStats.Twitter
                                         ? `https://avatars.io/twitter/${playerStats.Twitter}`
-                                        : 'https://placehold.it/32x32/FFFFFF?text=&nbsp;'
+                                        : 'https://placehold.it/32x32/b9d7ea?text=&nbsp;'
                                 }')">
                                 </div>
                             </div>
