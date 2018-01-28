@@ -1,7 +1,9 @@
 const errorEl = document.querySelector('#error');
+const html = document.querySelector('html');
 const loadingEl = document.querySelector('#loading');
 const rowsContainerEl = document.querySelector('#rows-container');
 const rowsEl = document.querySelector('#rows');
+const themeTriggersEl = document.querySelectorAll('[data-theme]');
 
 window.addEventListener('load', init);
 
@@ -14,6 +16,8 @@ function init() {
 
             loadingEl.classList.add('dn');
             rowsContainerEl.classList.remove('dn');
+
+            assignThemeTriggersListeners();
         })
         .catch(error => {
             loadingEl.classList.add('dn');
@@ -72,5 +76,22 @@ function render(playersStats) {
                 </div>
             </div>`
         );
+    });
+}
+
+function assignThemeTriggersListeners() {
+    themeTriggersEl.forEach(themeTriggerEl => {
+        themeTriggerEl.addEventListener('click', event => {
+            event.preventDefault();
+
+            html.className = '';
+            html.classList.add(event.target.dataset.theme);
+
+            themeTriggersEl.forEach(el => {
+                el.classList.add('no-underline');
+            });
+
+            themeTriggerEl.classList.remove('no-underline');
+        });
     });
 }

@@ -1,9 +1,20 @@
-:root {
+:root.theme-default {
     --color-main: #fffceb;
     --color-secondary: #fbf1a9;
 }
 
+:root.theme-forest {
+    --color-main: #faffb8;
+    --color-secondary: #c5f0a4;
+}
+
+:root.theme-ocean {
+    --color-main: #e0fcff;
+    --color-secondary: #bde4f4;
+}
+
 body {
+    transition: all 0.25s linear;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }
