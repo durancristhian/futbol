@@ -1,6 +1,6 @@
 :root {
-    --color-main: #769fcd;
-    --color-secondary: #b9d7ea;
+    --color-main: #fffceb;
+    --color-secondary: #fffdbb;
 }
 
 body {
@@ -10,11 +10,11 @@ body {
 
 @keyframes rollingBall {
     from {
-        transform: rotate(360deg);
+        transform: rotate(0);
     }
 
     to {
-        transform: rotate(0);
+        transform: rotate(360deg);
     }
 }
 
@@ -27,7 +27,7 @@ body {
 
 @keyframes moveBall {
     from {
-        transform: translateX(50vw);
+        transform: translateX(-55vw);
     }
 
     to {
@@ -49,10 +49,6 @@ body {
     background-color: var(--color-secondary);
 }
 
-.bg-tertiary {
-    background-color: #f9f7f7;
-}
-
 .cell-name {
     width: 40%;
 }
@@ -63,10 +59,6 @@ body {
 
 .f0 {
     font-size: 0;
-}
-
-.ts1 {
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
 }
 
 @media screen and (min-width: 30em) {
