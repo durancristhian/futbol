@@ -1,7 +1,3 @@
-<!-- TODO: Default picture for those who doesn't have a Twitter account -->
-<!-- TODO: Replace emojis with icons -->
-<!-- TODO: Add sorting? -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,48 +23,51 @@
 </head>
 
 <body class="black-90 f6 f5-ns ma0 sans-serif">
-    <div class="h1 bg-color-blue"></div>
-    <div class="b--black-20 bg-color-light-blue bb ph3 pv4 pv5-ns">
-        <h1 class="fw5 mv0 tc">
-            <span class="animate-ball dib">⚽</span>
-            <span class="ml1">Fútbol Mixto</span>
-        </h1>
+    <div class="bg-color-blue pa1"></div>
+    <div class="b--black-20 bg-color-light-blue bb color-blue ph3 pv4 pv5-ns">
+        <div class="center mw8">
+            <h1 class="mv0">
+                <span class="dib mr1 v-mid">Fútbol Mixto</span>
+                <span class="animate-ball-path dib v-mid">
+                    <img src="images/ball.png" alt="Pelota de fútbol" class="animate-ball db h2 w2">
+                </span>
+            </h1>
+            <p class="black-50 mb0 mt3">Estadísticas del fútbol mixto.</p>
+        </div>
     </div>
     <div id="loading" class="ph3 pv4 pv5-ns">
         <div class="center mw8">
-            <p class="black-50 f4 fw5 mv0 tc">Cargando...</p>
+            <p class="black-50 f4 mv0 tc">Cargando...</p>
         </div>
     </div>
     <div id="error" class="ph3 pv4 pv5-ns dn">
         <div class="center mw8">
-            <p class="black-50 f4 fw5 mv0 tc">Ocurrió un error</p>
+            <p class="black-50 f4 mv0 tc">Ocurrió un error</p>
         </div>
     </div>
-    <div id="headers" class="bg-color-blue lh-copy ph3 dn">
+    <div id="headers" class="bg-color-blue ph3 dn">
         <div class="center mw8">
-            <div>
-                <div class="b--black-20 bg-color-blue bl bt flex white">
-                    <div class="b--black-20 bb br cell-1 flex justify-end pa1 pa2-ns">
-                        <span>#</span>
-                    </div>
-                    <div class="b--black-20 bb br cell-2 fw5 truncate pa1 pa2-ns">
-                        <span>Nombre</span>
-                    </div>
-                    <div class="b--black-20 bb br cell-3 truncate pa1 pa2-ns">
-                        <span>Jugados</span>
-                    </div>
-                    <div class="b--black-20 bb br cell-4 truncate pa1 pa2-ns">
-                        <span>Ganados</span>
-                    </div>
-                    <div class="b--black-20 bb br cell-5 truncate pa1 pa2-ns">
-                        <span>Empatados</span>
-                    </div>
-                    <div class="b--black-20 bb br cell-6 truncate pa1 pa2-ns">
-                        <span>Perdidos</span>
-                    </div>
-                    <div class="b--black-20 bb br cell-7 fw5 truncate pa1 pa2-ns">
-                        <span>Puntos</span>
-                    </div>
+            <div class="b--black-20 bg-color-blue bl bt f7 flex white">
+                <div class="b--black-20 bb br cell-number flex justify-end pa1 pa2-ns">
+                    <span>#</span>
+                </div>
+                <div class="b--black-20 bb br flex-auto truncate pa1 pa2-ns">
+                    <span>Nombre</span>
+                </div>
+                <div class="b--black-20 bb br cell-number flex justify-end pa1 pa2-ns">
+                    <span class="truncate">Jugados</span>
+                </div>
+                <div class="b--black-20 bb br cell-number flex justify-end pa1 pa2-ns">
+                    <span class="truncate">Ganados</span>
+                </div>
+                <div class="b--black-20 bb br cell-number flex justify-end pa1 pa2-ns">
+                    <span class="truncate">Empatados</span>
+                </div>
+                <div class="b--black-20 bb br cell-number flex justify-end pa1 pa2-ns">
+                    <span class="truncate">Perdidos</span>
+                </div>
+                <div class="b--black-20 bb br cell-number flex justify-end pa1 pa2-ns">
+                    <span class="truncate">Puntos</span>
                 </div>
             </div>
         </div>
