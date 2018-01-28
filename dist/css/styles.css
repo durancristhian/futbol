@@ -1,16 +1,19 @@
+/* https://dribbble.com/shots/4030745-Christmas-Wish-App-and-Illustration */
 :root.theme-blue {
-    --color-main: #e0fcff;
-    --color-secondary: #bde4f4;
+    --color-main: #d7e6fc;
+    --color-secondary: #96ccff;
 }
 
+/* https://dribbble.com/shots/1056443-Greenometry-2x */
 :root.theme-green {
-    --color-main: #faffb8;
-    --color-secondary: #c5f0a4;
+    --color-main: #d5ffad;
+    --color-secondary: #a2deac;
 }
 
+/* https://dribbble.com/shots/2944365-Discover-some-great-icons */
 :root.theme-yellow {
-    --color-main: #fffceb;
-    --color-secondary: #fbf1a9;
+    --color-main: #fff2d1;
+    --color-secondary: #ffe38f;
 }
 
 body {
