@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="theme-ocean">
 
 <head>
     <meta charset="UTF-8">
@@ -22,36 +22,34 @@
     <meta name="twitter:image" content="https://futbolmixto.now.sh/images/social.jpg">
 </head>
 
-<body class="black-90 f6 f5-ns ma0 sans-serif">
-    <div class="bg-color-blue pa1"></div>
-    <div class="b--black-20 bg-color-light-blue bb color-blue ph3 pv4 pv5-ns">
+<body class="bg-tertiary black-90 f6 f5-ns lh-copy ma0 sans-serif">
+    <div class="ph3 pv4 pv5-ns">
         <div class="center mw8">
-            <h1 class="mv0">
-                <span class="dib mr1 v-mid">Fútbol Mixto</span>
+            <h1 class="f0 mv0 tc">
+                <span class="dib f3 f2-ns mr3 v-mid">Fútbol Mixto</span>
                 <span class="animate-ball-path dib v-mid">
                     <img src="images/ball.png" alt="Pelota de fútbol" class="animate-ball db h2 w2">
                 </span>
             </h1>
-            <p class="black-50 mb0 mt3">Estadísticas del fútbol mixto.</p>
         </div>
     </div>
-    <div id="loading" class="ph3 pv4 pv5-ns">
+    <div id="loading" class="ph3">
         <div class="center mw8">
-            <p class="black-50 f4 mv0 tc">Cargando...</p>
+            <p class="black-50 f5 f4-ns mv0 tc">Cargando...</p>
         </div>
     </div>
-    <div id="error" class="ph3 pv4 pv5-ns dn">
+    <div id="error" class="ph3 dn">
         <div class="center mw8">
-            <p class="black-50 f4 mv0 tc">Ocurrió un error</p>
+            <p class="black-50 f5 f4-ns mv0 tc">Ocurrió un error</p>
         </div>
     </div>
-    <div id="headers" class="bg-color-blue ph3 dn">
+    <div id="rows-container" class="ph3 pb4 pb5-ns dn">
         <div class="center mw8">
-            <div class="b--black-20 bg-color-blue bl bt f7 flex white">
+            <div class="b b--black-20 bg-main bl bt flex ts1 white">
                 <div class="b--black-20 bb br cell-number flex justify-end pa1 pa2-ns">
                     <span>#</span>
                 </div>
-                <div class="b--black-20 bb br flex-auto truncate pa1 pa2-ns">
+                <div class="b--black-20 bb br cell-name truncate pa1 pa2-ns">
                     <span>Nombre</span>
                 </div>
                 <div class="b--black-20 bb br cell-number flex justify-end pa1 pa2-ns">
@@ -70,10 +68,6 @@
                     <span class="truncate">Puntos</span>
                 </div>
             </div>
-        </div>
-    </div>
-    <div id="rows-container" class="ph3 pb5 dn">
-        <div class="center mw8">
             <div id="rows" class="b--black-20 bl"></div>
         </div>
     </div>

@@ -1,3 +1,8 @@
+:root {
+    --color-main: #769fcd;
+    --color-secondary: #b9d7ea;
+}
+
 body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -22,7 +27,7 @@ body {
 
 @keyframes moveBall {
     from {
-        transform: translateX(100vw);
+        transform: translateX(50vw);
     }
 
     to {
@@ -36,32 +41,40 @@ body {
     animation-timing-function: linear;
 }
 
-.bg-color-blue {
-    background-color: #33485c;
+.bg-main {
+    background-color: var(--color-main);
 }
 
-.bg-color-light-blue {
-    background-color: #d3ebf2;
+.bg-secondary {
+    background-color: var(--color-secondary);
+}
+
+.bg-tertiary {
+    background-color: #f9f7f7;
+}
+
+.cell-name {
+    width: 40%;
 }
 
 .cell-number {
-    width: 35px;
+    width: 10%;
 }
 
-.color-blue {
-    color: #33485c;
+.f0 {
+    font-size: 0;
 }
 
 .grayscale {
     filter: grayscale(1);
 }
 
-.overlay-blue {
+.overlay {
     position: relative;
 }
 
-.overlay-blue::after {
-    background: #d3ebf2;
+.overlay::after {
+    background: var(--color-secondary);
     bottom: 0;
     content: '';
     left: 0;
@@ -72,8 +85,16 @@ body {
     z-index: 1;
 }
 
+.ts1 {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+}
+
 @media screen and (min-width: 30em) {
+    .cell-name {
+        width: 52%;
+    }
+
     .cell-number {
-        width: 4rem;
+        width: 8%;
     }
 }
