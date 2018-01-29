@@ -46,7 +46,7 @@ function render(playersStats) {
 
         rowsEl.insertAdjacentHTML(
             'beforeEnd',
-            `<div class="b--black-20 bb bg-white-60 flex relative z-0">
+            `<div class="b--black-20 bb br bg-white-60 flex relative z-0">
                 <div class="${scoreBackgroundColor} absolute bottom-0 left-0 right-0 top-0" style="width: ${scoreBackgroundWidth}%; z-index: -1;">
                 </div>
                 <div class="b--black-20 br cell-number flex items-center justify-end pa1 pa2-ns">
@@ -71,7 +71,7 @@ function render(playersStats) {
                 <div class="b--black-20 br cell-number flex items-center justify-end pa1 pa2-ns">
                     <span>${playerStats.Perdidos}</span>
                 </div>
-                <div class="b b--black-20 br cell-number flex items-center justify-end pa1 pa2-ns">
+                <div class="b b--black-20 cell-number flex items-center justify-end pa1 pa2-ns">
                     <span>${playerStats.Puntos}</span>
                 </div>
             </div>`
