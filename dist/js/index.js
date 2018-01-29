@@ -36,8 +36,8 @@ function render(playersStats) {
     playersStats.forEach((playerStats, index) => {
         const isTop = playerStats.Puntos === topScore;
         const playerIndex = index + 1;
-        const playerPicture = playerStats.Twitter
-            ? `https://avatars.io/twitter/${playerStats.Twitter}`
+        const playerPicture = playerStats.Foto
+            ? `https://avatars.io/${playerStats.Foto}`
             : 'https://placehold.it/32x32/bbbbbb?text=&nbsp;';
         const scoreBackgroundColor = isTop ? 'bg-secondary' : 'bg-black-05';
         const scoreBackgroundWidth = Number(
