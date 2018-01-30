@@ -4,9 +4,6 @@ import * as gsheets from 'gsheets';
 import { getSharedDOMElements } from './shared-DOM-elements';
 import { initThemeManager } from './theme-manager';
 
-const SPREADSHEET_ID = '1W5ihCnbzRV3UHa9lMCcJNOtFKWHVUI_0P5SKcdF4wig';
-const WORKSHEET_ID = 'oce51o4';
-
 let themeManager;
 
 // asigna a los elementos que permiten cambiar el tema una función que:
@@ -112,7 +109,7 @@ export function init() {
 
     // obtenemos los datos de la planilla
     gsheets
-        .getWorksheetById(SPREADSHEET_ID, WORKSHEET_ID)
+        .getWorksheetById(process.env.SPREADSHEET_ID, process.env.WORKSHEET_ID)
         .then((worksheet) => worksheet.data)
         .then((playersStats) => {
             // hack para dibujar la grilla en el próximo tick

@@ -79,6 +79,9 @@ module.exports = function webpackConfig() {
             ],
         },
         plugins: removeEmpty([
+            new webpack.DefinePlugin({
+                'process.env': process.env,
+            }),
             new webpack.optimize.ModuleConcatenationPlugin(),
             new CompressionPlugin({
                 algorithm: 'gzip',
