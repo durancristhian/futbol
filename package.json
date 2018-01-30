@@ -5,6 +5,8 @@
     "scripts": {
         "build-dev": "env-cmd ./env/development.env webpack",
         "build-prod": "env-cmd ./env/production.env webpack",
+        "contributors-add": "all-contributors add",
+        "contributors-generate": "all-contributors generate",
         "start": "serve dist",
         "start-dev": "env-cmd ./env/development.env webpack-dev-server --port 2468 --watch",
         "start-prod": "env-cmd ./env/production.env webpack-dev-server --port 2468 --watch"
@@ -20,6 +22,7 @@
     "author": "@durancristhian",
     "license": "MIT",
     "devDependencies": {
+        "all-contributors-cli": "^4.10.1",
         "babel-core": "^6.26.0",
         "babel-loader": "^7.1.2",
         "babel-preset-env": "^1.6.1",
