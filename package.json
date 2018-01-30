@@ -6,7 +6,9 @@
         "dev": "browser-sync start --files dist --no-notify --no-online --no-open --server dist",
         "start": "serve dist"
     },
-    "files": ["dist"],
+    "files": [
+        "dist"
+    ],
     "now": {
         "alias": "futbolmixto",
         "env": {

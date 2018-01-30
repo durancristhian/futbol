@@ -8,6 +8,9 @@ const rowsContainerEl = document.querySelector('#rows-container');
 const rowsEl = document.querySelector('#rows');
 const themeTriggersEl = document.querySelectorAll('[data-theme]');
 
+const theme = localStorage.getItem('theme');
+assignTheme(theme ? theme : 'theme-yellow');
+
 window.addEventListener('load', init);
 
 function init() {
@@ -21,6 +24,7 @@ function init() {
             rowsContainerEl.classList.remove('dn');
 
             assignThemeTriggersListeners();
+
         })
         .catch(error => {
             loadingEl.classList.add('dn');
@@ -89,6 +93,7 @@ function assignThemeTriggersListeners() {
 
             html.className = '';
             html.classList.add(event.target.dataset.theme);
+            localStorage.setItem('theme', event.target.dataset.theme);
 
             themeTriggersEl.forEach(el => {
                 el.classList.add('no-underline');
@@ -96,5 +101,18 @@ function assignThemeTriggersListeners() {
 
             themeTriggerEl.classList.remove('no-underline');
         });
+    });
+}
+
+function assignTheme(theme) {
+    html.className = '';
+    html.classList.add(theme);
+
+    themeTriggersEl.forEach(themeTriggerEl => {
+        if(themeTriggerEl.dataset.theme === theme) {
+            themeTriggerEl.classList.remove('no-underline');
+        } else {
+            themeTriggerEl.classList.add('no-underline');
+        }
     });
 }
