@@ -3,17 +3,21 @@
     "version": "1.7.3",
     "description": "Estadísticas del fútbol mixto.",
     "scripts": {
+        "dev": "browser-sync start --files dist --no-notify --no-online --no-open --server dist",
         "start": "serve dist"
     },
     "files": ["dist"],
     "now": {
         "alias": "futbolmixto",
-        "env": { "NODE_ENV": "production" },
+        "env": {
+            "NODE_ENV": "production"
+        },
         "public": true
     },
     "author": "@durancristhian",
     "license": "ISC",
     "devDependencies": {
+        "browser-sync": "^2.23.6",
         "eslint": "^4.16.0",
         "prettier-eslint": "^8.8.1",
         "stylelint": "^8.4.0"
