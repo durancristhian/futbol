@@ -1,4 +1,4 @@
-# futbol
+# futbolmixto
 
 :trophy: Website that shows data from a Google Spreadsheet
 
