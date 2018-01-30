@@ -1,17 +1,15 @@
 {
     "name": "futbolmixto",
-    "version": "1.8.0",
+    "version": "1.9.0",
     "description": "Estadísticas del fútbol mixto.",
     "scripts": {
         "build-dev": "env-cmd ./env/development.env webpack",
         "build-prod": "env-cmd ./env/production.env webpack",
         "start": "serve dist",
-        "start-dev": "env-cmd ./env/development.env webpack-dev-server --watch",
-        "start-prod": "env-cmd ./env/production.env webpack-dev-server --watch"
+        "start-dev": "env-cmd ./env/development.env webpack-dev-server --port 2468 --watch",
+        "start-prod": "env-cmd ./env/production.env webpack-dev-server --port 2468 --watch"
     },
-    "files": [
-        "dist"
-    ],
+    "files": ["dist"],
     "now": {
         "alias": "futbolmixto",
         "env": {
