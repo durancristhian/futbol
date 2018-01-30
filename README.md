@@ -1,9 +1,6 @@
 # futbolmixto
 
-Website that shows data from a Google Spreadsheet
-
-## Access
-
+:trophy: Website that shows data from a Google Spreadsheet
 [futbolmixto.now.sh](https://futbolmixto.now.sh/)
 
 ## Development
