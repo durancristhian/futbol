@@ -1,4 +1,4 @@
-const gsheets = require('gsheets');
+import * as gsheets from 'gsheets';
 
 const SPREADSHEET_ID = '1W5ihCnbzRV3UHa9lMCcJNOtFKWHVUI_0P5SKcdF4wig';
 const WORKSHEET_ID = 'oce51o4';
