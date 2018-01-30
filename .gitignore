@@ -4,4 +4,5 @@
 
 # folders
 .tmp
+dist
 node_modules
