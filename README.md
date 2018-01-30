@@ -13,10 +13,10 @@ Website that shows data from a Google Spreadsheet
 npm i
 
 # dev mode
-npm run dev
+npm run start-dev
 
 # deploy to now
-now rm -y futbolmixto && now && now alias
+npm run build-prod && now rm -y futbolmixto && now && now alias
 ```
 
 ## "How can I use my own Google Spreadsheet as a database like you did?"

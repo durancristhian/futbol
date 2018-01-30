@@ -1,10 +1,13 @@
 {
     "name": "futbolmixto",
-    "version": "1.7.5",
+    "version": "1.8.0",
     "description": "Estadísticas del fútbol mixto.",
     "scripts": {
-        "dev": "browser-sync start --files dist --no-notify --no-online --no-open --server dist",
-        "start": "serve dist"
+        "build-dev": "env-cmd ./env/development.env webpack",
+        "build-prod": "env-cmd ./env/production.env webpack",
+        "start": "serve dist",
+        "start-dev": "env-cmd ./env/development.env webpack-dev-server --watch",
+        "start-prod": "env-cmd ./env/production.env webpack-dev-server --watch"
     },
     "files": [
         "dist"
@@ -17,12 +20,41 @@
         "public": true
     },
     "author": "@durancristhian",
-    "license": "ISC",
+    "license": "MIT",
     "devDependencies": {
-        "browser-sync": "^2.23.6",
-        "eslint": "^4.16.0",
-        "prettier-eslint": "^8.8.1",
-        "stylelint": "^8.4.0"
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-preset-env": "^1.6.1",
+        "chunk-manifest-webpack-plugin": "^1.1.2",
+        "clean-webpack-plugin": "^0.1.17",
+        "compression-webpack-plugin": "^1.1.3",
+        "copy-webpack-plugin": "^4.3.1",
+        "css-loader": "^0.28.7",
+        "env-cmd": "^7.0.0",
+        "eslint": "^4.14.0",
+        "eslint-formatter-pretty": "^1.3.0",
+        "eslint-loader": "^1.9.0",
+        "eslint-plugin-prettier": "^2.4.0",
+        "extract-text-webpack-plugin": "^3.0.2",
+        "gsheets": "^2.0.0",
+        "html-webpack-plugin": "^2.30.1",
+        "postcss": "^6.0.14",
+        "postcss-import": "^11.0.0",
+        "postcss-loader": "^2.0.9",
+        "postcss-reporter": "^5.0.0",
+        "prettier": "^1.9.2",
+        "simple-progress-webpack-plugin": "^1.0.4",
+        "style-loader": "^0.20.1",
+        "stylelint": "^8.4.0",
+        "stylelint-config-standard": "^18.0.0",
+        "tachyons": "^4.9.0",
+        "uglifyjs-webpack-plugin": "^1.1.5",
+        "webpack": "^3.10.0",
+        "webpack-bundle-analyzer": "^2.9.1",
+        "webpack-chunk-hash": "^0.5.0",
+        "webpack-config-utils": "^2.3.0",
+        "webpack-dev-server": "^2.9.7",
+        "webpack-visualizer-plugin": "^0.1.11"
     },
     "dependencies": {
         "serve": "^6.4.9"
