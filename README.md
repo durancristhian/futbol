@@ -2,7 +2,6 @@
 
 :trophy: Website that shows data from a Google Spreadsheet
 
-[futboljs.now.sh](https://futboljs.now.sh/) <br />
 [futbolmixto.now.sh](https://futbolmixto.now.sh/)
 
 ## Development
@@ -16,6 +15,9 @@
 
     # dev mode
     npm run start-dev
+
+    # prod mode
+    npm run prod-dev
     ```
 
 ## "How can I use my own Google Spreadsheet as a database like you did?"

@@ -2,8 +2,7 @@
 .DS_Store
 *.log
 env/development.env
-env/production.tuesday.env
-env/production.wednesday.env
+env/production.env
 
 # folders
 .tmp
