@@ -1,7 +1,8 @@
 # files
 .DS_Store
 *.log
-env/!development.env
+env/production.thursday.env
+env/production.wednesday.env
 
 # folders
 .tmp
