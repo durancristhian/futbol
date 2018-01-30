@@ -39,12 +39,14 @@ function loadHandler() {
         .getWorksheetById(SPREADSHEET_ID, WORKSHEET_ID)
         .then((worksheet) => worksheet.data)
         .then((playersStats) => {
-            render(playersStats);
+            setTimeout(() => {
+                render(playersStats);
 
-            loadingEl.classList.add('dn');
-            rowsContainerEl.classList.remove('dn');
+                loadingEl.classList.add('dn');
+                rowsContainerEl.classList.remove('dn');
 
-            assignThemeTriggersListeners();
+                assignThemeTriggersListeners();
+            }, 0);
         })
         .catch((error) => {
             loadingEl.classList.add('dn');
