@@ -1,3 +1,6 @@
+const SPREADSHEET_ID = '1W5ihCnbzRV3UHa9lMCcJNOtFKWHVUI_0P5SKcdF4wig';
+const WORKSHEET_ID = 'oce51o4';
+
 const errorEl = document.querySelector('#error');
 const html = document.querySelector('html');
 const loadingEl = document.querySelector('#loading');
@@ -9,7 +12,7 @@ window.addEventListener('load', init);
 
 function init() {
     gsheets
-        .getWorksheetById('1W5ihCnbzRV3UHa9lMCcJNOtFKWHVUI_0P5SKcdF4wig', 'oce51o4')
+        .getWorksheetById(SPREADSHEET_ID, WORKSHEET_ID)
         .then(worksheet => worksheet.data)
         .then(playersStats => {
             render([...playersStats]);
