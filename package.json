@@ -1,6 +1,6 @@
 {
     "name": "futbolmixto",
-    "version": "1.9.0",
+    "version": "1.9.1",
     "description": "Estadísticas del fútbol mixto.",
     "scripts": {
         "build-dev": "env-cmd ./env/development.env webpack",
@@ -39,6 +39,7 @@
         "extract-text-webpack-plugin": "^3.0.2",
         "gsheets": "^2.0.0",
         "html-webpack-plugin": "^2.30.1",
+        "imagemin-webpack-plugin": "^2.0.0",
         "postcss": "^6.0.14",
         "postcss-import": "^11.0.0",
         "postcss-loader": "^2.0.9",

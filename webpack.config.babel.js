@@ -6,6 +6,7 @@ import CopyWebpackPlugin from 'copy-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import { getIfUtils, removeEmpty } from 'webpack-config-utils';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ImageminPlugin from 'imagemin-webpack-plugin';
 import { resolve } from 'path';
 import SimpleProgressWebpackPlugin from 'simple-progress-webpack-plugin';
 import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
@@ -91,6 +92,7 @@ module.exports = function webpackConfig() {
                     to: 'assets',
                 },
             ]),
+            ifProduction(new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i })),
             new SimpleProgressWebpackPlugin(),
             new CleanWebpackPlugin([resolve(distPath, '*'), resolve(__dirname, '.tmp', '*')]),
             new HtmlWebpackPlugin({
@@ -102,11 +104,7 @@ module.exports = function webpackConfig() {
                     removeComments: true,
                 }),
             }),
-            ifProduction(
-                new UglifyJsPlugin({
-                    sourceMap: true,
-                })
-            ),
+            ifProduction(new UglifyJsPlugin({ sourceMap: true })),
             new ExtractTextPlugin({
                 allChunks: true,
                 filename: '[name].[hash].css',
