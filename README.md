@@ -1,20 +1,22 @@
-# futbolmixto
+# futbol
 
 :trophy: Website that shows data from a Google Spreadsheet
+
+[futboljs.now.sh](https://futboljs.now.sh/)
 [futbolmixto.now.sh](https://futbolmixto.now.sh/)
 
 ## Development
 
-```bash
-# install deps
-npm i
+* Duplicate `env/development-template.env` and rename it as `development.env`
+* Run the following commands:
 
-# dev mode
-npm run start-dev
+    ```bash
+    # install deps
+    npm i
 
-# deploy to now
-npm run build-prod && now rm -y futbolmixto && now && now alias
-```
+    # dev mode
+    npm run start-dev
+    ```
 
 ## "How can I use my own Google Spreadsheet as a database like you did?"
 
