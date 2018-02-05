@@ -1,8 +1,7 @@
 {
     "name": "futbol",
-    "version": "1.10.0",
-    "description":
-        "Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.",
+    "version": "1.11.0",
+    "description": "Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.",
     "scripts": {
         "build-dev": "env-cmd ./env/development.env webpack",
         "build-prod": "env-cmd ./env/production.env webpack",
@@ -12,7 +11,9 @@
         "start-dev": "env-cmd ./env/development.env webpack-dev-server --port 2468 --watch",
         "start-prod": "env-cmd ./env/production.env webpack-dev-server --port 2468 --watch"
     },
-    "files": ["dist"],
+    "files": [
+        "dist"
+    ],
     "now": {
         "env": {
             "NODE_ENV": "production"
