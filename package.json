@@ -1,7 +1,8 @@
 {
-    "name": "futbolmixto",
+    "name": "futbol",
     "version": "1.10.0",
-    "description": "Estadísticas del fútbol mixto.",
+    "description":
+        "Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.",
     "scripts": {
         "build-dev": "env-cmd ./env/development.env webpack",
         "build-prod": "env-cmd ./env/production.env webpack",
@@ -13,7 +14,6 @@
     },
     "files": ["dist"],
     "now": {
-        "alias": "futbolmixto",
         "env": {
             "NODE_ENV": "production"
         },

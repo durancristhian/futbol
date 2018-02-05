@@ -1,12 +1,13 @@
-# futbolmixto
+# futbol
 
-:trophy: Website that shows data from a Google Spreadsheet
+:trophy: Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.
 
+[futboljs.now.sh](https://futboljs.now.sh/) <br>
 [futbolmixto.now.sh](https://futbolmixto.now.sh/)
 
 ## Development
 
-* Duplicate `env/development-template.env` and rename it as `development.env`
+* Duplicate `env/development-template.env`, rename it as `development.env` and complete it with the right information
 * Run the following commands:
 
     ```bash
