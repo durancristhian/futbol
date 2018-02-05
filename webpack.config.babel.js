@@ -101,7 +101,7 @@ module.exports = function webpackConfig() {
             new HtmlWebpackPlugin({
                 filename: 'index.html',
                 inlineManifestWebpackName: 'webpackManifest',
-                template: resolve(__dirname, 'src', 'index.html'),
+                template: resolve(__dirname, 'src', process.env.TEMPLATE_NAME),
                 minify: ifProduction({
                     collapseWhitespace: true,
                     removeComments: true,
