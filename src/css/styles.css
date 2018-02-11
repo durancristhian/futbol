@@ -2,12 +2,12 @@
 
 :root.theme-blue {
   --color-main: #d7e6fc;
-  --color-secondary: #96ccff;
+  --color-secondary: #bdf1f6;
 }
 
 :root.theme-green {
   --color-main: #d5ffad;
-  --color-secondary: #a2deac;
+  --color-secondary: #c8f4de;
 }
 
 :root.theme-yellow {
