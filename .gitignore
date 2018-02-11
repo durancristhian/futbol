@@ -1,8 +1,7 @@
 # files
 .DS_Store
 *.log
-env/development.env
-env/production.env
+local.env
 
 # folders
 .tmp

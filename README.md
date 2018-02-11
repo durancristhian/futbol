@@ -7,7 +7,7 @@
 
 ## Development
 
-* Duplicate `env/development-template.env`, rename it as `development.env` and complete it with the right information.
+* Duplicate `template.env`, rename it as `local.env` and complete it with the right information.
 * Run the following commands:
 
     ```bash
