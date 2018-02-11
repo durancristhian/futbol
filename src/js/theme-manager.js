@@ -4,7 +4,8 @@ let isLocalStorageAvailable;
 
 // asigna el tema indica en el DOM
 function assignTheme(themeName) {
-    const { html, themeTriggersEl } = getSharedDOMElements();
+    const html = document.querySelector('html');
+    const { themeTriggersEl } = getSharedDOMElements();
 
     // asigna el tema en el nodo HTML
     html.className = '';
@@ -38,8 +39,7 @@ function saveAndAssignTheme(themeName) {
     assignTheme(themeName);
 }
 
-// inicializa variables necesarias y devuelve un objeto con los métodos necesarios
-// para trabajar con los temas
+// inicializa variables necesarias y devuelve un objeto con métodos para trabajar con los temas
 export function initThemeManager() {
     isLocalStorageAvailable = !!window.localStorage;
 
