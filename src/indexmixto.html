@@ -31,7 +31,7 @@
             </h1>
             <p class="f7 flex items-center justify-center mb0 mt3">
                 <span class="b mr2">Version:</span>
-                <span>1.12.0</span>
+                <span>1.13.0</span>
                 <span class="mh2">|</span>
                 <a href="https://github.com/durancristhian/futbolmixto" target="_blank" class="color-inherit no-underline" rel="noopener">Código fuente</a>
             </p>
@@ -47,7 +47,7 @@
             <p class="black-50 mv0 tc">Ocurrió un error</p>
         </div>
     </div>
-    <div id="rows-container" class="ph3 pb4 pb5-ns dn">
+    <div id="main-container" class="ph3 pb4 pb5-ns dn">
         <div class="center mw8">
             <h2 class="f4 f3-ns mt0 tc">Tabla de posiciones</h2>
             <div class="f7 flex items-center justify-end mb3">
@@ -77,7 +77,7 @@
                     <span>PT</span>
                 </div>
             </div>
-            <div id="rows" class="b--black-20 bl"></div>
+            <div id="positions" class="b--black-20 bl"></div>
             <div class="f7 flex items-center justify-end mt3">
                 <span class="b">Apariencia:</span>
                 <a href="#!" class="color-inherit ml2 pa0" data-theme="theme-yellow">Amarillito</a>
@@ -86,6 +86,22 @@
                 <span class="ml2">|</span>
                 <a href="#!" class="color-inherit ml2 no-underline pa0" data-theme="theme-green">Verdecito</a>
             </div>
+            <div id="covers-container" class="mt4 dn">
+                <h2 class="f4 f3-ns mt0 tc">Tapas de Olé</h2>
+                <div id="covers" class="flex flex-wrap items-center nl3-l nr3-l"></div>
+                <div class="f7 flex items-center justify-end mt3">
+                    <span>Armá tu Tapa de Olé</span>
+                    <a href="https://tapa-ole.now.sh/" target="_blank" class="b color-inherit ml1 pa0">en esta página</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="bg-black-80 bottom-0 dn fixed flex-column left-0 right-0 top-0 z-9999">
+        <div class="tr">
+            <button id="modal-close" class="bg-transparent bn f3 f2-ns lh-solid pa2 pointer white-80">&times;</button>
+        </div>
+        <div class="flex-auto ma3 relative">
+            <div id="modal-content" class="absolute bottom-0 center flex items-center left-0 mw8 right-0 top-0"></div>
         </div>
     </div>
 </body>

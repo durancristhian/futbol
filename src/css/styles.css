@@ -70,8 +70,20 @@ body {
   width: 10%;
 }
 
+.default {
+  cursor: default;
+}
+
 .f0 {
   font-size: 0;
+}
+
+.mh-100 {
+  max-height: 100%;
+}
+
+.zoom-in {
+  cursor: zoom-in;
 }
 
 @media screen and (min-width: 30em) {
