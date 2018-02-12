@@ -1,11 +1,16 @@
 import * as basicLightbox from 'basiclightbox';
 
 function showModal(event) {
+    // creamos una función que recibe un evento keydown y se fija si se presionó
+    // la tecla escape para cerrar el modal
+    const onKeydown = function(modalInstance, event) {
+        if (event.keyCode === 27) modalInstance.close();
+    };
     let onKeydownListener;
 
     const modalInstance = basicLightbox.create(
         // markup del modal
-        `<img src="${event.target.src}"> alt="${event.target.alt}"`,
+        `<img src="${event.target.src}" alt="${event.target.alt}">`,
         {
             // eliminamos el listener de keydown antes de cerrar el modal
             beforeClose: () => {
@@ -13,12 +18,6 @@ function showModal(event) {
             },
             // antes de mostrar el modal
             beforeShow: (instance) => {
-                // creamos una función que recibe un evento keydown y se fija si se presionó
-                // la tecla escape para cerrar el modal
-                const onKeydown = function(event, modalInstance) {
-                    if (event.keyCode === 27) modalInstance.close();
-                };
-
                 // generamos una función que almacenamos en una variable externa
                 // para ser capaces de eliminar el listener luego
                 onKeydownListener = onKeydown.bind(this, instance);
