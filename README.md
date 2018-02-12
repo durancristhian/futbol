@@ -1,6 +1,6 @@
 # futbol
 
-:trophy: Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.
+🏆 Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.
 
 [futboljs.now.sh](https://futboljs.now.sh/) <br>
 [futbolmixto.now.sh](https://futbolmixto.now.sh/)
@@ -15,10 +15,7 @@
     npm i
 
     # dev mode
-    npm run start-dev
-
-    # prod mode
-    npm run prod-dev
+    npm run start-local
     ```
 
 ## "How can I use my own Google Spreadsheet as a database like you did?"
