@@ -1,3 +1,4 @@
+@import 'basiclightbox/dist/basicLightbox.min.css';
 @import 'tachyons';
 
 :root.theme-blue {
@@ -70,10 +71,6 @@ body {
     width: 10%;
 }
 
-.default {
-    cursor: default;
-}
-
 .f0 {
     font-size: 0;
 }
@@ -84,6 +81,10 @@ body {
 
 .zoom-in {
     cursor: zoom-in;
+}
+
+.zoom-out {
+    cursor: zoom-out;
 }
 
 @media screen and (min-width: 30em) {

@@ -1,47 +1,12 @@
+import * as basicLightbox from 'basiclightbox';
+
 function showModal(event) {
-    const bodyEl = document.querySelector('body');
-    const modalEl = document.querySelector('#modal');
-    const modalContentEl = modalEl.querySelector('#modal-content');
+    const modalInstance = basicLightbox.create(
+        `<img src="${event.target.src}"> alt="${event.target.alt}"`,
+        { className: 'zoom-out' }
+    );
 
-    function closeModal() {
-        // cierra el modal
-        bodyEl.classList.remove('overflow-y-hidden');
-        modalEl.classList.add('dn');
-        modalEl.classList.remove('flex');
-
-        // elimina los handlers
-        modalEl.querySelector('#modal-close').removeEventListener('click', closeModal);
-        window.removeEventListener('keydown', closeModalOnEscapeKey);
-    }
-
-    // cierra el modal si se presiona escape
-    function closeModalOnEscapeKey(event) {
-        if (event.keyCode === 27) closeModal();
-    }
-
-    // muestra el modal
-    function showModal() {
-        // clona el target y le modifica algunas clases
-        const clone = event.target.cloneNode(true);
-        clone.classList.add('default');
-        clone.classList.add('shadow-5');
-        clone.classList.remove('zoom-in');
-
-        // limpia el contenido del modal y le asigna el nuevo
-        modalContentEl.innerHTML = '';
-        modalContentEl.appendChild(clone);
-
-        // muestra el modal
-        bodyEl.classList.add('overflow-y-hidden');
-        modalEl.classList.remove('dn');
-        modalEl.classList.add('flex');
-
-        // asigna los handlers
-        modalEl.querySelector('#modal-close').addEventListener('click', closeModal);
-        window.addEventListener('keydown', closeModalOnEscapeKey);
-    }
-
-    showModal();
+    modalInstance.show();
 }
 
 // recibe un array con las portadas provenientes de la spreadsheet y dibuja la lista
