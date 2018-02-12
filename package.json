@@ -1,8 +1,7 @@
 {
     "name": "futbol",
     "version": "1.13.0",
-    "description":
-        "🏆 Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.",
+    "description": "🏆 Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.",
     "scripts": {
         "build-local": "env-cmd ./local.env webpack",
         "build-prod": "env-cmd ./production.env webpack",
@@ -19,7 +18,9 @@
         "env": {
             "NODE_ENV": "production"
         },
-        "files": ["dist"],
+        "files": [
+            "dist"
+        ],
         "public": true,
         "type": "npm"
     },
@@ -31,6 +32,7 @@
         "babel-core": "^6.26.0",
         "babel-loader": "^7.1.2",
         "babel-preset-env": "^1.6.1",
+        "basiclightbox": "^4.0.0",
         "chunk-manifest-webpack-plugin": "^1.1.2",
         "clean-webpack-plugin": "^0.1.17",
         "compression-webpack-plugin": "^1.1.3",
