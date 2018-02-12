@@ -1,16 +1,13 @@
 {
     "name": "futbol",
     "version": "1.13.0",
-    "description": "🏆 Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.",
+    "description":
+        "🏆 Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.",
     "scripts": {
         "build-local": "env-cmd ./local.env webpack",
         "build-prod": "env-cmd ./production.env webpack",
         "contributors-add": "all-contributors add",
         "contributors-generate": "all-contributors generate",
-        "deploy-martes": "now alias $(now --force --name futboljs) futboljs",
-        "deploy-mixto": "now alias $(now --force --name futbolmixto) futbolmixto",
-        "postdeploy-martes": "now rm futboljs --safe --yes",
-        "postdeploy-mixto": "now rm futbolmixto --safe --yes",
         "start": "serve dist",
         "start-local": "env-cmd ./local.env webpack-dev-server --port 2468 --watch"
     },
@@ -18,9 +15,7 @@
         "env": {
             "NODE_ENV": "production"
         },
-        "files": [
-            "dist"
-        ],
+        "files": ["dist"],
         "public": true,
         "type": "npm"
     },
