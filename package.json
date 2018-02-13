@@ -1,13 +1,16 @@
 {
     "name": "futbol",
-    "version": "1.13.0",
+    "version": "1.14.0",
     "description":
         "🏆 Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.",
     "scripts": {
         "build-local": "env-cmd ./local.env webpack",
-        "build-prod": "env-cmd ./production.env webpack",
+        "build-prod": "webpack -p",
         "contributors-add": "all-contributors add",
         "contributors-generate": "all-contributors generate",
+        "deploy":
+            "now alias $(now --name $INSTANCE_NAME --npm --token $NOW_TOKEN) $INSTANCE_NAME --token=$NOW_TOKEN",
+        "postdeploy": "now rm $INSTANCE_NAME --safe --token $NOW_TOKEN --yes",
         "start": "serve dist",
         "start-local": "env-cmd ./local.env webpack-dev-server --port 2468 --watch"
     },

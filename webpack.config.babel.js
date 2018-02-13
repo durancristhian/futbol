@@ -37,12 +37,15 @@ module.exports = function webpackConfig() {
                                 loader: 'css-loader',
                                 options: {
                                     importLoaders: 1,
-                                    minimize: {
-                                        browsers: ['last 2 versions', '> 5%'],
-                                        discardComments: {
-                                            removeAll: ifProduction(true, false),
+                                    minimize: ifProduction(
+                                        {
+                                            browsers: ['last 2 versions', '> 5%'],
+                                            discardComments: {
+                                                removeAll: ifProduction(true, false),
+                                            },
                                         },
-                                    },
+                                        false
+                                    ),
                                 },
                             },
                             {
@@ -80,7 +83,14 @@ module.exports = function webpackConfig() {
         },
         plugins: removeEmpty([
             new webpack.DefinePlugin({
-                'process.env': process.env,
+                'process.env': {
+                    COVERS_WORKSHEET_ID: JSON.stringify(process.env.COVERS_WORKSHEET_ID),
+                    INSTANCE_NAME: process.env.INSTANCE_NAME,
+                    NODE_ENV: process.env.NODE_ENV,
+                    POSITIONS_WORKSHEET_ID: JSON.stringify(process.env.POSITIONS_WORKSHEET_ID),
+                    SPREADSHEET_ID: JSON.stringify(process.env.SPREADSHEET_ID),
+                    TEMPLATE_NAME: process.env.TEMPLATE_NAME,
+                },
             }),
             new webpack.optimize.ModuleConcatenationPlugin(),
             new CompressionPlugin({
@@ -102,10 +112,13 @@ module.exports = function webpackConfig() {
                 filename: 'index.html',
                 inlineManifestWebpackName: 'webpackManifest',
                 template: resolve(__dirname, 'src', process.env.TEMPLATE_NAME),
-                minify: ifProduction({
-                    collapseWhitespace: true,
-                    removeComments: true,
-                }),
+                minify: ifProduction(
+                    {
+                        collapseWhitespace: true,
+                        removeComments: true,
+                    },
+                    {}
+                ),
             }),
             ifProduction(new UglifyJsPlugin({ sourceMap: true })),
             new ExtractTextPlugin({

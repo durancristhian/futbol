@@ -1,0 +1,23 @@
+sudo: false
+language: node_js
+cache:
+  directories:
+    - node_modules
+notifications:
+  email: false
+script:
+  - npm run build-prod
+before_deploy:
+  - npm i now --no-save
+deploy:
+  provider: script
+  script: npm run deploy
+  skip_cleanup: true
+  on:
+    branch: master
+env:
+  global:
+    secure: P7U7K7gQrP9iwhrK5/paF2M0weqeD17Qg80/R9KQdNE8XnbSDutFDf5BiKiKRSu/n11LFxgf9xlJbI6IIc2KllXiCbt+805c1tcLD9zuy+ISYRYmoA7MZeSqXIvyqSfZ3nzoTNzN8IjxluRdxXk63zD0VWXTWZDHodibLP/xtfPxeY+sr5Q1CZ6SxNLb9Bp/rJbcUsZGnn+wUss6pJ8r/Q1b3EkkNi22RIB5EVeePGv8Fq8t/qCqB5nu4AMcEa7uyzmpNcr+59f7079CD/ydxHR9Q9o9ClfWdwkGm2FcLiWUq39NP4vBFWtXA7UroAWDk86n9mdNg1fsUVOlIoNsdiUpSGNVxh76snXUCbEFUm3J/l6rFjr7g+GRrFOje5L77dyJGgqCSaf5xM3ln9w3K2OkX9ejszql/rJNDZj/Xg7Nc8Boom08s5gGvuTqbyJXjYn/lznpbDaJQS7NHU84MfHx5RbXeLgyNL0v091WguPAev7AJICcROAB9iWMNWlQIN6XojxeqizK3/YagQDcdnvX1PfXB9kGbv2+Y0aU6bYiVtGhG+w3xm8m25J7QtWVaVq8uhldu6ASAHMF+E67CNOuo0ky/Nz49D1gLu5AiKVUVNaa2wUj3iGA4Knxj0PSndrGwWjEdt1WSPdBcdraTOI4xF73xWPt5VevYjRy/MU=
+  matrix:
+    - COVERS_WORKSHEET_ID='oxkmli1' INSTANCE_NAME=futboljs NODE_ENV=development POSITIONS_WORKSHEET_ID='oce51o4' SPREADSHEET_ID='10IreaMeMXPPrvx4bFuqU7eOjcAp7VCVP96c4jxs1Hk8' TEMPLATE_NAME=index-martes.html
+    - COVERS_WORKSHEET_ID='obpp9hl' INSTANCE_NAME=futbolmixto NODE_ENV=development POSITIONS_WORKSHEET_ID='oce51o4' SPREADSHEET_ID='1W5ihCnbzRV3UHa9lMCcJNOtFKWHVUI_0P5SKcdF4wig' TEMPLATE_NAME=index-mixto.html

@@ -2,7 +2,6 @@
 .DS_Store
 *.log
 local.env
-production.env
 
 # folders
 .tmp

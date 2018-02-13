@@ -1,5 +1,7 @@
 # futbol
 
+[![Build Status](https://travis-ci.org/durancristhian/futbol.svg?branch=master)](https://travis-ci.org/durancristhian/futbol)
+
 🏆 Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.
 
 [futboljs.now.sh](https://futboljs.now.sh/) <br>
@@ -21,7 +23,7 @@
 ## "How can I use my own Google Spreadsheet as a database like you did?"
 
 * [Check out these easy-to-follow steps](https://support.google.com/docs/answer/37579) to publish a Google Spreadsheet and use it as a database you can get data from.
-* Look into `dist/js/index.js` and change the value of `SPREADSHEET_ID` and `WORKSHEET_ID` with your Google Spreasheet's information.
+* Look into `local.env` and change the corresponding values (`SPREADSHEET_ID`, `WORKSHEET_ID`, etc.) with your Google Spreasheet's information.
 
 ## Contributors
 
