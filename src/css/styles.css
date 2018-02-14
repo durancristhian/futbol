@@ -87,6 +87,10 @@ body {
     cursor: zoom-out;
 }
 
+[data-aload] {
+    background-image: none !important;
+}
+
 @media screen and (min-width: 30em) {
     .cell-name {
         width: 52%;

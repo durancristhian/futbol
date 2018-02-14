@@ -34,7 +34,7 @@ export function renderPositions(positions) {
                 </div>
                 <div class="b--black-20 br cell-name flex items-center pa1 pa2-ns">
                     <div class="h2 mr1 mr3-ns w2">
-                        <div class="bg-center cover h2 w2" style="background-image: url('${playerPicture}')">
+                        <div class="bg-center cover h2 w2" style="background-image: url('${playerPicture}')" data-aload>
                         </div>
                     </div>
                     <span class="${isTop ? 'b' : ''} truncate">${playerStats['Jugador/a']}</span>
