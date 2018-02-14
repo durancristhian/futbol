@@ -14,7 +14,7 @@ export function renderPositions(positions) {
         const playerIndex = index + 1;
         // construimos la URL para mostrar su foto de perfil o ponemos una por defecto
         const playerPicture = playerStats.Foto
-            ? `https://avatars.io/${playerStats.Foto}`
+            ? `https://avatars.io/${playerStats.Foto}/small`
             : 'https://placehold.it/32x32/bbbbbb?text=&nbsp;';
         // usamos un color diferente si la persona está primerx
         const scoreBackgroundColor = isTop ? 'bg-secondary' : 'bg-black-05';
