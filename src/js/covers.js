@@ -46,7 +46,7 @@ export function renderCovers(covers) {
                 'beforeEnd',
                 `<div class="pv3 pa3-l w-100 w-33-l">
                     <p class="mb2 mt0 tc">${cover.Fecha}</p>
-                    <img src="${cover.Portada}"
+                    <img data-aload="${cover.Portada}"
                         alt="Tapa de Olé - ${cover.Fecha}"
                         class="db center mh-100 shadow-5 zoom-in"
                         data-zoom

@@ -1,3 +1,4 @@
+import aload from 'aload';
 // módulo para usar una Google Spreadsheet como base de datos
 import * as gsheets from 'gsheets';
 
@@ -46,7 +47,10 @@ export function init() {
                 mainContainerEl.classList.remove('dn');
 
                 assignThemeTriggersListeners(themeManager);
-            }, 0);
+
+                // lazy-load de imágenes
+                aload();
+            });
         })
         .catch((error) => {
             // ocultamos la grilla
