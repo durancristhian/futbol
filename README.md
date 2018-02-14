@@ -32,7 +32,7 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 
 <!-- prettier-ignore -->
-| [<img src="https://avatars0.githubusercontent.com/u/4248944?v=4" width="100px;"/><br /><sub><b>Cristhian Duran</b></sub>](https://durancristhian.github.io/)<br />[💻](https://github.com/durancristhian/futbolmixto/commits?author=durancristhian "Code") [🎨](#design-durancristhian "Design") [🤔](#ideas-durancristhian "Ideas, Planning, & Feedback") [🚇](#infra-durancristhian "Infrastructure (Hosting, Build-Tools, etc)") | [<img src="https://avatars0.githubusercontent.com/u/25598400?v=4" width="100px;"/><br /><sub><b>Mateo Silguero</b></sub>](https://github.com/mateosilguero)<br />[💻](https://github.com/durancristhian/futbolmixto/commits?author=mateosilguero "Code") |
+| [<img src="https://avatars0.githubusercontent.com/u/4248944?v=4" width="100px;"/><br /><sub><b>Cristhian Duran</b></sub>](https://durancristhian.github.io/)<br />[💻](https://github.com/durancristhian/futbol/commits?author=durancristhian "Code") [🎨](#design-durancristhian "Design") [🤔](#ideas-durancristhian "Ideas, Planning, & Feedback") [🚇](#infra-durancristhian "Infrastructure (Hosting, Build-Tools, etc)") | [<img src="https://avatars0.githubusercontent.com/u/25598400?v=4" width="100px;"/><br /><sub><b>Mateo Silguero</b></sub>](https://github.com/mateosilguero)<br />[💻](https://github.com/durancristhian/futbol/commits?author=mateosilguero "Code") |
 | :---: | :---: |
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
