@@ -6,11 +6,12 @@
     "scripts": {
         "build-local": "env-cmd ./local.env webpack",
         "build-prod": "webpack -p",
+        "clean-deploys": "now rm $INSTANCE_NAME --safe --token $NOW_TOKEN --yes",
         "contributors-add": "all-contributors add",
         "contributors-generate": "all-contributors generate",
         "deploy":
             "now alias $(now --name $INSTANCE_NAME --npm --token $NOW_TOKEN) $INSTANCE_NAME --token=$NOW_TOKEN",
-        "postdeploy": "now rm $INSTANCE_NAME --safe --token $NOW_TOKEN --yes",
+        "scale": "now scale $INSTANCE_NAME + 'now.sh' 1 --token $NOW_TOKEN",
         "start": "serve dist",
         "start-local": "env-cmd ./local.env webpack-dev-server --port 2468 --watch"
     },
