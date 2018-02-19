@@ -6,6 +6,7 @@ import { assignThemeTriggersListeners } from './theme-triggers';
 import { initThemeManager } from './theme-manager';
 import { renderCovers } from './covers';
 import { renderPositions } from './positions';
+import { renderShirts } from './shirts';
 
 export function init() {
     const errorEl = document.querySelector('#error');
@@ -25,7 +26,7 @@ export function init() {
         themeManager.saveAndAssignTheme('theme-yellow');
     }
 
-    Promise.all([
+    const dataPromises = [
         // obtenemos las posiciones
         gsheets
             .getWorksheetById(process.env.SPREADSHEET_ID, process.env.POSITIONS_WORKSHEET_ID)
@@ -34,13 +35,26 @@ export function init() {
         gsheets
             .getWorksheetById(process.env.SPREADSHEET_ID, process.env.COVERS_WORKSHEET_ID)
             .then((worksheet) => worksheet.data),
-    ])
-        .then(([positions, covers]) => {
+    ];
+
+    if (process.env.SHIRTS_WORKSHEET_ID) {
+        dataPromises.push(
+            // obtenemos las camisetas
+            gsheets
+                .getWorksheetById(process.env.SPREADSHEET_ID, process.env.SHIRTS_WORKSHEET_ID)
+                .then((worksheet) => worksheet.data)
+        );
+    }
+
+    Promise.all(dataPromises)
+        .then(([positions, covers, shirts]) => {
             setTimeout(() => {
                 // renderizamos las posiciones
                 renderPositions(positions);
-                // renderizamos las pportadas
+                // renderizamos las portadas
                 renderCovers(covers);
+                // renderizamos las camisetas si existen
+                if (shirts) renderShirts(shirts);
                 // ocultamos el spinner
                 loadingEl.classList.add('dn');
                 // mostramos la interfaz después de haberla generado
