@@ -88,6 +88,7 @@ module.exports = function webpackConfig() {
                     INSTANCE_NAME: process.env.INSTANCE_NAME,
                     NODE_ENV: process.env.NODE_ENV,
                     POSITIONS_WORKSHEET_ID: JSON.stringify(process.env.POSITIONS_WORKSHEET_ID),
+                    SHIRTS_WORKSHEET_ID: JSON.stringify(process.env.SHIRTS_WORKSHEET_ID),
                     SPREADSHEET_ID: JSON.stringify(process.env.SPREADSHEET_ID),
                     TEMPLATE_NAME: process.env.TEMPLATE_NAME,
                 },

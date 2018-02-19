@@ -10,7 +10,7 @@ function showModal(event) {
 
     const modalInstance = basicLightbox.create(
         // markup del modal
-        `<img src="${event.target.src}" alt="${event.target.alt}" class="shadow-5">`,
+        `<img src="${event.target.src}" alt="${event.target.alt}">`,
         {
             // eliminamos el listener de keydown antes de cerrar el modal
             beforeClose: () => {
@@ -48,7 +48,7 @@ export function renderCovers(covers) {
                     <p class="mb2 mt0 tc">${cover.Fecha}</p>
                     <img data-aload="${cover.Portada}"
                         alt="Tapa de Olé - ${cover.Fecha}"
-                        class="db center mh-100 shadow-5 zoom-in"
+                        class="db center mh-100 zoom-in"
                         data-zoom
                     >
                 </div>`
