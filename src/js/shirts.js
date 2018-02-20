@@ -11,9 +11,9 @@ export function renderShirts(shirts) {
 
         shirtsEl.insertAdjacentHTML(
             'beforeEnd',
-            `<div class="b--black-20 ba bg-white-60 ma3 w-100 w-33-l">
+            `<div class="b--black-20 ba ma3 w-100 w-33-l">
                 <h3 class="bg-black-10 mv0 ph3 pv2 tc">${teamName}</h3>
-                <div class="b--black-20 bt pa3">
+                <div class="b--black-20 bg-white-60 bt pa3">
                     <img src="/assets/images/tshirt-${teamName.toLowerCase()}.svg" alt="Camiseta de ${teamName}" class="center db mw5" data-tilt data-tilt-axis="x"
                         data-tilt-reverse="true" data-tilt-scale="1.05">
                     <div class="flex justify-center tc">
