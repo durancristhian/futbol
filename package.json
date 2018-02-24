@@ -66,6 +66,7 @@
         "webpack-visualizer-plugin": "^0.1.11"
     },
     "dependencies": {
+        "isomorphic-fetch": "^2.2.1",
         "serve": "^6.4.9"
     }
 }
