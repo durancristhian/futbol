@@ -1,16 +1,14 @@
 {
     "name": "futbol",
     "version": "1.15.1",
-    "description":
-        "🏆 Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.",
+    "description": "🏆 Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.",
     "scripts": {
         "build-local": "env-cmd ./local.env webpack",
         "build-prod": "webpack -p",
         "clean-deploys": "now rm $INSTANCE_NAME --safe --token $NOW_TOKEN --yes",
         "contributors-add": "all-contributors add",
         "contributors-generate": "all-contributors generate",
-        "deploy":
-            "now alias $(now --name $INSTANCE_NAME --npm --token $NOW_TOKEN) $INSTANCE_NAME --token=$NOW_TOKEN",
+        "deploy": "now alias $(now --name $INSTANCE_NAME --npm --token $NOW_TOKEN) $INSTANCE_NAME --token=$NOW_TOKEN",
         "scale": "now scale $INSTANCE_NAME'.now.sh' 1 --token $NOW_TOKEN",
         "start": "serve dist",
         "start-local": "env-cmd ./local.env webpack-dev-server --port 2468 --watch"
@@ -19,54 +17,56 @@
         "env": {
             "NODE_ENV": "production"
         },
-        "files": ["dist"],
+        "files": [
+            "dist"
+        ],
         "public": true,
         "type": "npm"
     },
     "author": "@durancristhian",
     "license": "MIT",
     "devDependencies": {
-        "all-contributors-cli": "^4.10.1",
+        "all-contributors-cli": "^4.11.0",
         "aload": "^1.2.3",
         "babel-core": "^6.26.0",
-        "babel-loader": "^7.1.2",
+        "babel-loader": "^7.1.3",
         "babel-preset-env": "^1.6.1",
-        "basiclightbox": "^4.0.0",
+        "basiclightbox": "^4.0.1",
         "chunk-manifest-webpack-plugin": "^1.1.2",
-        "clean-webpack-plugin": "^0.1.17",
-        "compression-webpack-plugin": "^1.1.3",
-        "copy-webpack-plugin": "^4.3.1",
-        "css-loader": "^0.28.7",
+        "clean-webpack-plugin": "^0.1.18",
+        "compression-webpack-plugin": "^1.1.9",
+        "copy-webpack-plugin": "^4.4.2",
+        "css-loader": "^0.28.10",
         "env-cmd": "^7.0.0",
-        "eslint": "^4.14.0",
+        "eslint": "^4.18.1",
         "eslint-formatter-pretty": "^1.3.0",
-        "eslint-loader": "^1.9.0",
-        "eslint-plugin-prettier": "^2.4.0",
+        "eslint-loader": "^2.0.0",
+        "eslint-plugin-prettier": "^2.6.0",
         "extract-text-webpack-plugin": "^3.0.2",
         "gsheets": "^2.0.0",
         "html-webpack-plugin": "^2.30.1",
         "imagemin-webpack-plugin": "^2.0.0",
         "isomorphic-fetch": "^2.2.1",
-        "postcss": "^6.0.14",
-        "postcss-import": "^11.0.0",
-        "postcss-loader": "^2.0.9",
+        "postcss": "^6.0.19",
+        "postcss-import": "^11.1.0",
+        "postcss-loader": "^2.1.1",
         "postcss-reporter": "^5.0.0",
-        "prettier": "^1.9.2",
-        "simple-progress-webpack-plugin": "^1.0.4",
-        "style-loader": "^0.20.1",
-        "stylelint": "^8.4.0",
-        "stylelint-config-standard": "^18.0.0",
-        "tachyons": "^4.9.0",
-        "uglifyjs-webpack-plugin": "^1.1.5",
+        "prettier": "^1.11.0",
+        "simple-progress-webpack-plugin": "^1.1.1",
+        "style-loader": "^0.20.2",
+        "stylelint": "^9.1.1",
+        "stylelint-config-standard": "^18.1.0",
+        "tachyons": "^4.9.1",
+        "uglifyjs-webpack-plugin": "^1.2.2",
         "vanilla-tilt": "^1.4.1",
         "webpack": "^3.10.0",
-        "webpack-bundle-analyzer": "^2.9.1",
+        "webpack-bundle-analyzer": "^2.11.0",
         "webpack-chunk-hash": "^0.5.0",
         "webpack-config-utils": "^2.3.0",
         "webpack-dev-server": "^2.9.7",
         "webpack-visualizer-plugin": "^0.1.11"
     },
     "dependencies": {
-        "serve": "^6.4.9"
+        "serve": "^6.5.0"
     }
 }
