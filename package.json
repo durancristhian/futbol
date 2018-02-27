@@ -46,6 +46,7 @@
         "gsheets": "^2.0.0",
         "html-webpack-plugin": "^2.30.1",
         "imagemin-webpack-plugin": "^2.0.0",
+        "isomorphic-fetch": "^2.2.1",
         "postcss": "^6.0.14",
         "postcss-import": "^11.0.0",
         "postcss-loader": "^2.0.9",
@@ -66,7 +67,6 @@
         "webpack-visualizer-plugin": "^0.1.11"
     },
     "dependencies": {
-        "isomorphic-fetch": "^2.2.1",
         "serve": "^6.4.9"
     }
 }
