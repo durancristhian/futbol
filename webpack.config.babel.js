@@ -85,6 +85,7 @@ module.exports = function webpackConfig() {
             new webpack.DefinePlugin({
                 'process.env': {
                     COVERS_WORKSHEET_ID: JSON.stringify(process.env.COVERS_WORKSHEET_ID),
+                    CURIOSITIES_WORKSHEET_ID: JSON.stringify(process.env.CURIOSITIES_WORKSHEET_ID),
                     INSTANCE_NAME: process.env.INSTANCE_NAME,
                     NODE_ENV: process.env.NODE_ENV,
                     POSITIONS_WORKSHEET_ID: JSON.stringify(process.env.POSITIONS_WORKSHEET_ID),

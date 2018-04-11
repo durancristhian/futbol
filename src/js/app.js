@@ -7,6 +7,7 @@ import { initThemeManager } from './theme-manager';
 import { renderCovers } from './covers';
 import { renderPositions } from './positions';
 import { renderShirts } from './shirts';
+import { renderCuriosities } from './curiosities';
 
 export function init() {
     const errorEl = document.querySelector('#error');
@@ -35,6 +36,10 @@ export function init() {
         gsheets
             .getWorksheetById(process.env.SPREADSHEET_ID, process.env.COVERS_WORKSHEET_ID)
             .then((worksheet) => worksheet.data),
+        // obtenemos las curiosidades
+        gsheets
+            .getWorksheetById(process.env.SPREADSHEET_ID, process.env.CURIOSITIES_WORKSHEET_ID)
+            .then((worksheet) => worksheet.data),
     ];
 
     if (process.env.SHIRTS_WORKSHEET_ID) {
@@ -47,7 +52,7 @@ export function init() {
     }
 
     Promise.all(dataPromises)
-        .then(([positions, covers, shirts]) => {
+        .then(([positions, covers, curiosities, shirts]) => {
             setTimeout(() => {
                 // renderizamos las posiciones
                 renderPositions(positions);
@@ -55,6 +60,10 @@ export function init() {
                 renderCovers(covers);
                 // renderizamos las camisetas si existen
                 if (shirts) renderShirts(shirts);
+                // renderizamos las curiosidades si existen
+                if (curiosities && curiosities.length) {
+                    renderCuriosities(curiosities);
+                }
                 // ocultamos el spinner
                 loadingEl.classList.add('dn');
                 // mostramos la interfaz después de haberla generado

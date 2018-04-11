@@ -33,7 +33,7 @@ export function renderPositions(positions) {
                     <span>${playerIndex}</span>
                 </div>
                 <div class="b--black-20 br cell-name flex items-center pa1 pa2-ns">
-                    <div class="h2 mr1 mr3-ns w2">
+                    <div class="mr1 mr3-ns">
                         <div class="bg-center cover h2 w2" style="background-image: url('${playerPicture}')" data-aload>
                         </div>
                     </div>
