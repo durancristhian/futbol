@@ -41,16 +41,17 @@ export function renderCovers(covers) {
     // si hay portadas disponibles
     if (covers.length) {
         // agrego cada cover a la lista
-        covers.forEach((cover) => {
+        covers.forEach((cover, index) => {
             coversEl.insertAdjacentHTML(
                 'beforeEnd',
-                `<div class="pv3 pa3-l w-100 w-33-l">
-                    <p class="mb2 mt0 tc">${cover.Fecha}</p>
-                    <img data-aload="${cover.Portada}"
-                        alt="Tapa de Olé - ${cover.Fecha}"
-                        class="db center mh-100 zoom-in"
-                        data-zoom
-                    >
+                `<div class="pv3 pa3-l w-100 w-50-m w-33-l">
+                    <div class="${index % 2 ? 'ml2-m ml0-l' : 'mr2-m mr0-l'}">
+                        <p class="mb2 mt0 tc">${cover.Fecha}</p>
+                        <img data-aload="${cover.Portada}"
+                            alt="Tapa de Olé - ${cover.Fecha}"
+                            class="db center mh-100 zoom-in"
+                            data-zoom>
+                    </div>
                 </div>`
             );
         });

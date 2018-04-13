@@ -1,6 +1,6 @@
 {
     "name": "futbol",
-    "version": "1.15.1",
+    "version": "1.16.0",
     "description": "🏆 Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.",
     "scripts": {
         "build-local": "env-cmd ./local.env webpack",

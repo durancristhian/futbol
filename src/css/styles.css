@@ -59,10 +59,6 @@ body {
     background-color: var(--color-main);
 }
 
-.bg-secondary {
-    background-color: var(--color-secondary);
-}
-
 .cell-name {
     width: 40%;
 }
