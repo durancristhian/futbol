@@ -32,8 +32,6 @@
   npm run dev
   ```
 
-* Access `http://localhost:2468/`
-
 ## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
