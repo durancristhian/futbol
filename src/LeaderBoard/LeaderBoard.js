@@ -13,7 +13,8 @@ function getStylesFromIndex(index) {
     fontSize: !index ? 'f2 f1-ns' : 'f3 f2-ns',
     order: !index ? 'order-1' : index === 1 ? 'order-0' : 'order-2',
     paddingBottom: !index ? 'pb4 pb5-ns' : index === 1 ? 'pb3 pb4-ns' : 'pb2 pb3-ns',
-    paddingTop: !index ? 'pt4 pt5-ns' : index === 1 ? 'pt3 pt4-ns' : 'pt2 pt3-ns'
+    paddingTop: !index ? 'pt4 pt5-ns' : index === 1 ? 'pt3 pt4-ns' : 'pt2 pt3-ns',
+    width: !index ? 'leader-board-first' : 'leader-board-second'
   };
 }
 
@@ -21,12 +22,14 @@ const LeaderBoard = ({ leaders }) => {
   return (
     <div className="mh3 pv4 pv5-ns">
       <div className="flex items-end justify-center">
-        <ul className="b--black-20 bb flex items-end justify-center list ph4 mv0 pl0">
+        <ul className="b--black-20 bb flex items-end justify-center list ph3 ph4-ns mv0">
           {leaders.map((leader, index) => {
-            const { color, fontSize, order, paddingBottom, paddingTop } = getStylesFromIndex(index);
+            const { color, fontSize, order, paddingBottom, paddingTop, width } = getStylesFromIndex(
+              index
+            );
 
             return (
-              <li key={leader['Jugador/a']} className={`mh2 w3 w4-ns ${order}`}>
+              <li key={leader['Jugador/a']} className={`mh2 ${order} ${width}`}>
                 <div className="tc">
                   <img
                     src={getPlayerImage(leader.Foto, 'large')}
