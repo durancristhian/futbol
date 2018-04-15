@@ -1,0 +1,78 @@
+@import './tachyons.css';
+@import './animations.css';
+@import './themes.css';
+
+body {
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.animate-ball-path {
+  animation-duration: 8s;
+  animation-name: moveBall;
+  animation-timing-function: linear;
+}
+
+.bg-main {
+  background-color: var(--color-main);
+}
+
+.cell-name {
+  width: 40%;
+}
+
+.cell-number {
+  width: 10%;
+}
+
+.f0 {
+  font-size: 0;
+}
+
+.fade-in {
+  animation-duration: 0.75s;
+  animation-name: fadeIn;
+}
+
+.fade-in-up {
+  animation-duration: 1s;
+  animation-name: fadeInUp;
+}
+
+.image-shadow {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+
+.mh-100 {
+  max-height: 100%;
+}
+
+.rolling-ball {
+  animation-duration: 1s;
+  animation-iteration-count: 8;
+  animation-name: rollingBall;
+  animation-timing-function: linear;
+}
+
+.transform-origin-bottom {
+  transform-origin: bottom;
+}
+
+.transition {
+  transition: all 0.25s linear;
+}
+
+.zoom-in {
+  cursor: zoom-in;
+}
+
+@media screen and (min-width: 30em) {
+  .cell-name {
+    width: 52%;
+  }
+
+  .cell-number {
+    width: 8%;
+  }
+}

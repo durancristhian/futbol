@@ -14,23 +14,23 @@
 
 * Install deps
 
-    ```bash
-    npm i
-    ```
+  ```bash
+  npm i
+  ```
 
 * Get the spreadsheet ID from the Sheet URL and execute the following to get the Worksheets ID
 
-    ```bash
-    SPREADSHEET_ID=<your-id> node src/list-worksheets.js
-    ```
+  ```bash
+  SPREADSHEET_ID=<your-id> node scripts/list-worksheets.js
+  ```
 
-* Duplicate `template.env`, rename it as `local.env` and complete it with the right information.
+* Duplicate `template.env`, rename it as `.env` and complete it with the right information.
 * Start the server:
 
-    ```bash
-    # dev mode
-    npm run start-local
-    ```
+  ```bash
+  # dev mode
+  npm run dev
+  ```
 
 * Access `http://localhost:2468/`
 

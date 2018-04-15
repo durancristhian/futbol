@@ -1,14 +1,8 @@
-import { init } from './js/app';
-import { querySharedElements } from './js/shared-DOM-elements';
+import './css/main.css';
+import App from './App';
+import React from 'react';
+import ReactDOM from 'react-dom';
+// import registerServiceWorker from './registerServiceWorker';
 
-// importa los estilos (solo a webpack le interesa esto)
-import './css/styles.css';
-
-// cuando el documento está listo para ser manipulado
-document.addEventListener('DOMContentLoaded', () => {
-    // obtenemos aquellos nodos HTML que son compartidos
-    querySharedElements();
-
-    // inicializa la app
-    init();
-});
+ReactDOM.render(<App />, document.getElementById('root'));
+// registerServiceWorker();
