@@ -52,16 +52,7 @@ const Positions = ({ positions }) => {
 };
 
 Positions.propTypes = {
-  positions: PropTypes.arrayOf(
-    PropTypes.shape({
-      Empatados: PropTypes.number.isRequired,
-      Ganados: PropTypes.number.isRequired,
-      'Jugador/a': PropTypes.string.isRequired,
-      Jugados: PropTypes.number.isRequired,
-      Perdidos: PropTypes.number.isRequired,
-      Puntos: PropTypes.number.isRequired
-    })
-  )
+  positions: PropTypes.arrayOf(Position.propTypes.position)
 };
 
 export default Positions;

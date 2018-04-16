@@ -12,11 +12,7 @@ const Shirts = ({ shirts }) => (
 );
 
 Shirts.propTypes = {
-  shirts: PropTypes.arrayOf(
-    PropTypes.shape({
-      Nombre: PropTypes.string.isRequired
-    })
-  )
+  shirts: PropTypes.arrayOf(Shirt.propTypes.shirt)
 };
 
 export default Shirts;

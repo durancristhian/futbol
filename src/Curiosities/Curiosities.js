@@ -14,11 +14,7 @@ const Curiosities = ({ curiosities }) => (
 );
 
 Curiosities.propTypes = {
-  curiosities: PropTypes.arrayOf(
-    PropTypes.shape({
-      Descripcion: PropTypes.string.isRequired
-    })
-  )
+  curiosities: PropTypes.arrayOf(Curiosity.propTypes.curiosity)
 };
 
 export default Curiosities;

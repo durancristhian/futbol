@@ -104,12 +104,7 @@ class Covers extends Component {
 }
 
 Covers.propTypes = {
-  covers: PropTypes.arrayOf(
-    PropTypes.shape({
-      Fecha: PropTypes.string.isRequired,
-      Portada: PropTypes.string.isRequired
-    })
-  ).isRequired
+  covers: PropTypes.arrayOf(Cover.propTypes.cover).isRequired
 };
 
 export default Covers;
