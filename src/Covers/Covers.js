@@ -30,6 +30,10 @@ class Covers extends Component {
     };
   }
 
+  static propTypes = {
+    covers: PropTypes.arrayOf(Cover.propTypes.cover).isRequired
+  };
+
   closeLightbox() {
     this.setState({
       lightboxIsOpen: false
@@ -102,9 +106,5 @@ class Covers extends Component {
     );
   }
 }
-
-Covers.propTypes = {
-  covers: PropTypes.arrayOf(Cover.propTypes.cover).isRequired
-};
 
 export default Covers;
