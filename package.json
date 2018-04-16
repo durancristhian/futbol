@@ -5,15 +5,15 @@
     "🏆 Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.",
   "scripts": {
     "build-prod": "REACT_APP_VERSION=${npm_package_version} react-scripts build",
-    "clean-deploys": "now rm $REACT_INSTANCE_NAME --safe --token $NOW_TOKEN --yes",
+    "clean-deploys": "now rm $REACT_APP_INSTANCE_NAME --safe --token $NOW_TOKEN --yes",
     "contributors-add": "all-contributors add",
     "contributors-generate": "all-contributors generate",
     "deploy":
-      "now alias $(now --name $REACT_INSTANCE_NAME --npm --token $NOW_TOKEN) $REACT_INSTANCE_NAME --token=$NOW_TOKEN",
+      "now alias $(now --name $REACT_APP_INSTANCE_NAME --npm --token $NOW_TOKEN) $REACT_APP_INSTANCE_NAME --token=$NOW_TOKEN",
     "dev": "REACT_APP_VERSION=${npm_package_version} react-scripts start",
     "eject": "react-scripts eject",
     "precommit": "lint-staged",
-    "scale": "now scale $REACT_INSTANCE_NAME'.now.sh' 1 --token $NOW_TOKEN",
+    "scale": "now scale $REACT_APP_INSTANCE_NAME'.now.sh' 1 --token $NOW_TOKEN",
     "start": "serve build"
   },
   "lint-staged": {

@@ -14,6 +14,12 @@ function getStylesFromIndex(index) {
     order: !index ? 'order-1' : index === 1 ? 'order-0' : 'order-2',
     paddingBottom: !index ? 'pb4 pb5-ns' : index === 1 ? 'pb3 pb4-ns' : 'pb2 pb3-ns',
     paddingTop: !index ? 'pt4 pt5-ns' : index === 1 ? 'pt3 pt4-ns' : 'pt2 pt3-ns',
+    // prettier-ignore
+    shadowClass: !index
+      ? ''
+      : index === 1
+        ? 'leader-board-left-shadow'
+        : 'leader-board-right-shadow',
     width: !index ? 'leader-board-first' : 'leader-board-second'
   };
 }
@@ -24,12 +30,18 @@ const LeaderBoard = ({ leaders }) => {
       <div className="flex items-end justify-center">
         <ul className="b--black-20 bb flex items-end justify-center list ph3 ph4-ns mv0">
           {leaders.map((leader, index) => {
-            const { color, fontSize, order, paddingBottom, paddingTop, width } = getStylesFromIndex(
-              index
-            );
+            const {
+              color,
+              fontSize,
+              order,
+              paddingBottom,
+              paddingTop,
+              shadowClass,
+              width
+            } = getStylesFromIndex(index);
 
             return (
-              <li key={leader['Jugador/a']} className={`mh2 ${order} ${width}`}>
+              <li key={leader['Jugador/a']} className={`${order} ${width}`}>
                 <div className="tc">
                   <img
                     src={getPlayerImage(leader.Foto, 'large')}
@@ -37,11 +49,12 @@ const LeaderBoard = ({ leaders }) => {
                     className={'br-100 center db image-shadow transform-origin-bottom w2 w3-ns'}
                     style={{ transform: `scale(${index ? '1' : '1.4'})` }}
                   />
-                  <h3 className="mb0 mt3 truncate">{leader['Jugador/a']}</h3>
-                  <p className={'black-40 mb3 mt0 f7 f6-ns'}>{leader.Puntos} puntos</p>
+                  <h3 className="mv2 normal truncate">{leader['Jugador/a']}</h3>
                 </div>
                 <div
-                  className={`b--black-20 bl br bt pl2 pr2 tc ${paddingBottom} ${paddingTop} ${fontSize}`}
+                  className={`b--black-20 ${index !== 2 ? 'bl' : ''} ${
+                    index !== 1 ? 'br' : ''
+                  } bt ${fontSize} overflow-hidden ${paddingBottom} pl2 pr2 ${paddingTop} relative ${shadowClass} tc`}
                   style={{ backgroundColor: color }}
                 >
                   <p className={`b black-70 mv0 ${fontSize}`}>{index + 1}</p>

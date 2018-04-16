@@ -45,11 +45,33 @@ body {
 }
 
 .leader-board-first {
-  width: 5rem;
+  width: 7rem;
 }
 
 .leader-board-second {
-  width: 3rem;
+  width: 4rem;
+}
+
+.leader-board-left-shadow::after {
+  background: rgba(0, 0, 0, 0.05);
+  content: '';
+  height: 150px;
+  position: absolute;
+  right: -35px;
+  top: -10px;
+  transform: rotate(8deg);
+  width: 50px;
+}
+
+.leader-board-right-shadow::after {
+  background: rgba(0, 0, 0, 0.05);
+  content: '';
+  height: 150px;
+  left: -35px;
+  position: absolute;
+  top: -10px;
+  transform: rotate(-8deg);
+  width: 50px;
 }
 
 .mh-100 {
@@ -85,10 +107,10 @@ body {
   }
 
   .leader-board-first {
-    width: 8rem;
+    width: 9rem;
   }
 
   .leader-board-second {
-    width: 5rem;
+    width: 6rem;
   }
 }
