@@ -5,9 +5,9 @@ import React from 'react';
 const Curiosity = ({ curiosity, index }) => {
   return (
     <div className="pv3 pa3-l w-100 w-50-m w-33-l">
-      <div className={index % 2 ? 'ml2-m ml0-l' : 'mr2-m mr0-l'}>
-        <p className="mb3 mt0">"{curiosity.Descripcion}"</p>
-        <div className="flex items-center">
+      <div className={index % 2 ? 'ml2-m ma0-l' : 'mr2-m ma0-l'}>
+        <p className="b--black-20 bl br bt bg-white-60 mv0 pa3">"{curiosity.Descripcion}"</p>
+        <div className="b--black-20 ba bg-black-10 flex items-center ph3 pv2">
           <div className="mr3">
             <div
               className="bg-center cover h2 w2"
