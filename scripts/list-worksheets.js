@@ -1,8 +1,8 @@
-import 'isomorphic-fetch';
-import gsheets, { getSpreadsheet as _getSpreadsheet } from 'gsheets';
+require('isomorphic-fetch');
+const gsheets = require('gsheets');
 
 const sheetID = process.env.SPREADSHEET_ID;
-const getSpreadsheet = _getSpreadsheet.bind(gsheets);
+const getSpreadsheet = gsheets.getSpreadsheet.bind(gsheets);
 
 Promise.resolve(sheetID)
   .then(
