@@ -46,7 +46,8 @@
     "react-tilt": "^0.1.4",
     "stylelint": "^9.2.0",
     "stylelint-config-css-modules": "^1.2.0",
-    "stylelint-config-standard": "^18.2.0"
+    "stylelint-config-standard": "^18.2.0",
+    "tachyons": "^4.9.1"
   },
   "dependencies": {
     "serve": "^6.5.0"
