@@ -55,7 +55,9 @@ const LeaderBoard = ({ leaders }) => {
                     <img
                       src={getPlayerImage(leader.Foto, 'large')}
                       alt={`${leader['Jugador/a']}`}
-                      className={'br-100 center db image-shadow transform-origin-bottom w2 w3-ns'}
+                      className={`br-100 center db ${styles['image-shadow']} ${
+                        styles['transform-origin-bottom']
+                      } w2 w3-ns`}
                       style={{ transform: `scale(${index ? '1' : '1.4'})` }}
                     />
                   </Tilt>

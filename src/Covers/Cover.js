@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import * as styles from './Covers.module.css';
 
 const Cover = ({ cover, index, onClick }) => (
   <div className="pv3 pa3-l w-100 w-50-m w-33-l">
@@ -8,7 +9,7 @@ const Cover = ({ cover, index, onClick }) => (
       <img
         src={cover.Portada}
         alt={`Tapa de Olé - ${cover.Fecha}`}
-        className="db center mh-100 zoom-in"
+        className={`db center ${styles['mh-100']} ${styles['zoom-in']}`}
         onClick={(event) => onClick(event, index)}
       />
     </div>

@@ -5,6 +5,7 @@ import Header from './Header/Header';
 import Main from './Main/Main';
 import React, { Component } from 'react';
 import Spinner from './Spinner/Spinner';
+import * as styles from './App.module.css';
 import themeManager from './utils/themeManager';
 
 class App extends Component {
@@ -84,7 +85,9 @@ class App extends Component {
 
     return (
       <div
-        className={`bg-main mid-gray fade-in f6 f5-ns flex flex-column lh-copy min-vh-100 sans-serif transition ${theme}`}
+        className={`${styles['bg-main']} mid-gray ${
+          styles['fade-in']
+        } f6 f5-ns flex flex-column lh-copy min-vh-100 sans-serif ${theme} ${styles['transition']}`}
       >
         <div>
           <Header />

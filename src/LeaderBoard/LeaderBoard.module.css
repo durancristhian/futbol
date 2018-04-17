@@ -1,9 +1,17 @@
+:local(.image-shadow) {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+
 :local(.leader-board-first) {
   width: 7rem;
 }
 
 :local(.leader-board-second) {
   width: 4rem;
+}
+
+:local(.transform-origin-bottom) {
+  transform-origin: bottom;
 }
 
 :local(.leader-board-left-shadow::after) {

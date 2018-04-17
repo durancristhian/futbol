@@ -3,10 +3,11 @@ import Curiosities from '../Curiosities/Curiosities';
 import Positions from '../Positions/Positions';
 import React from 'react';
 import Shirts from '../Shirts/Shirts';
+import * as styles from './Main.module.css';
 
 const Main = ({ positions, covers, curiosities, shirts }) => (
   <div className="ph3">
-    <div className="center fade-in-up mw8">
+    <div className={`center ${styles['fade-in-up']} mw8`}>
       <Positions positions={positions} />
       <Covers covers={covers} />
       {shirts && shirts.length && <Shirts shirts={shirts} />}
