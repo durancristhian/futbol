@@ -1,0 +1,39 @@
+:local(.leader-board-first) {
+  width: 7rem;
+}
+
+:local(.leader-board-second) {
+  width: 4rem;
+}
+
+:local(.leader-board-left-shadow::after) {
+  background: rgba(0, 0, 0, 0.05);
+  content: '';
+  height: 150px;
+  position: absolute;
+  right: -35px;
+  top: -10px;
+  transform: rotate(8deg);
+  width: 50px;
+}
+
+:local(.leader-board-right-shadow::after) {
+  background: rgba(0, 0, 0, 0.05);
+  content: '';
+  height: 150px;
+  left: -35px;
+  position: absolute;
+  top: -10px;
+  transform: rotate(-8deg);
+  width: 50px;
+}
+
+@media screen and (min-width: 30em) {
+  :local(.leader-board-first) {
+    width: 9rem;
+  }
+
+  :local(.leader-board-second) {
+    width: 6rem;
+  }
+}

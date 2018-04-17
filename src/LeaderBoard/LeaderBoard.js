@@ -1,6 +1,7 @@
 import { getPlayerImage } from '../utils/getPlayerImage';
 import PropTypes from 'prop-types';
 import React from 'react';
+import * as styles from './LeaderBoard.module.css';
 
 function getStylesFromIndex(index) {
   return {
@@ -18,9 +19,9 @@ function getStylesFromIndex(index) {
     shadowClass: !index
       ? ''
       : index === 1
-        ? 'leader-board-left-shadow'
-        : 'leader-board-right-shadow',
-    width: !index ? 'leader-board-first' : 'leader-board-second'
+        ? styles['leader-board-left-shadow']
+        : styles['leader-board-right-shadow'],
+    width: !index ? styles['leader-board-first'] : styles['leader-board-second']
   };
 }
 
