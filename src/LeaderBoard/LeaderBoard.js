@@ -2,7 +2,6 @@ import { getPlayerImage } from '../utils/getPlayerImage';
 import PropTypes from 'prop-types';
 import React from 'react';
 import * as styles from './LeaderBoard.module.css';
-import Tilt from 'react-tilt';
 
 function getStylesFromIndex(index) {
   return {
@@ -45,22 +44,14 @@ const LeaderBoard = ({ leaders }) => {
             return (
               <li key={leader['Jugador/a']} className={`${order} ${width}`}>
                 <div className="tc">
-                  <Tilt
-                    options={{
-                      axis: 'x',
-                      reverse: true,
-                      scale: '1.05'
-                    }}
-                  >
-                    <img
-                      src={getPlayerImage(leader.Foto, 'large')}
-                      alt={`${leader['Jugador/a']}`}
-                      className={`br-100 center db ${styles['image-shadow']} ${
-                        styles['transform-origin-bottom']
-                      } w2 w3-ns`}
-                      style={{ transform: `scale(${index ? '1' : '1.4'})` }}
-                    />
-                  </Tilt>
+                  <img
+                    src={getPlayerImage(leader.Foto, 'large')}
+                    alt={`${leader['Jugador/a']}`}
+                    className={`br-100 center db ${styles['image-shadow']} ${
+                      styles['transform-origin-bottom']
+                    } w2 w3-ns`}
+                    style={{ transform: `scale(${index ? '1' : '1.4'})` }}
+                  />
                   <h3 className="mv2 normal truncate">{leader['Jugador/a']}</h3>
                 </div>
                 <div
