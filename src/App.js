@@ -1,3 +1,4 @@
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Error from './Error/Error';
 import Footer from './Footer/Footer';
 import * as gsheets from 'gsheets';
@@ -7,6 +8,8 @@ import React, { Component } from 'react';
 import Spinner from './Spinner/Spinner';
 import * as styles from './App.module.css';
 import themeManager from './utils/themeManager';
+
+const notFound = () => <h1>404 - Not Found</h1>;
 
 class App extends Component {
   constructor(props) {
@@ -84,31 +87,40 @@ class App extends Component {
     const { dataset, error, loading, theme } = this.state;
 
     return (
-      <div
-        className={`${styles['bg-main']} mid-gray ${
-          styles['fade-in']
-        } f6 f5-ns flex flex-column lh-copy min-vh-100 sans-serif ${theme} ${styles['transition']}`}
-      >
-        <div>
-          <Header />
-        </div>
-        <div className="flex-auto">
-          {loading && <Spinner />}
-          {error && <Error />}
-          {!error &&
-            !loading && (
-              <Main
-                positions={dataset.positions}
-                covers={dataset.covers}
-                curiosities={dataset.curiosities}
-                shirts={dataset.shirts}
-              />
-            )}
-        </div>
-        <div>
-          <Footer currentTheme={theme} changeTheme={this.changeTheme} />
-        </div>
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/">
+            <div
+              className={`${styles['bg-main']} mid-gray ${
+                styles['fade-in']
+              } f6 f5-ns flex flex-column lh-copy min-vh-100 sans-serif ${theme} ${
+                styles['transition']
+              }`}
+            >
+              <div>
+                <Header />
+              </div>
+              <div className="flex-auto">
+                {loading && <Spinner />}
+                {error && <Error />}
+                {!error &&
+                  !loading && (
+                    <Main
+                      positions={dataset.positions}
+                      covers={dataset.covers}
+                      curiosities={dataset.curiosities}
+                      shirts={dataset.shirts}
+                    />
+                  )}>
+              </div>
+              <div>
+                <Footer currentTheme={theme} changeTheme={this.changeTheme} />
+              </div>
+            </div>
+          </Route>
+          <Route component={notFound} />
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
