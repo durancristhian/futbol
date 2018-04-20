@@ -12,7 +12,7 @@
     "eject": "react-scripts eject",
     "precommit": "lint-staged",
     "scale": "now scale $REACT_APP_INSTANCE_NAME'.now.sh' 1 --token $NOW_TOKEN",
-    "start": "serve build"
+    "start": "serve build --single"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
