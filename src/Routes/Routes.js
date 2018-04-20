@@ -1,11 +1,18 @@
-import App from '../App/App';
+import AsyncComponent from '../Async/Async';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
-import NotFound from '../404/404';
 import React, { Component } from 'react';
 import * as styles from './Routes.module.css';
 import themeManager from '../utils/themeManager';
+
+const AsyncApp = AsyncComponent({
+  loader: () => import('../App/App')
+});
+
+const AsyncNotFound = AsyncComponent({
+  loader: () => import('../404/404')
+});
 
 export default class Routes extends Component {
   constructor(props) {
@@ -41,8 +48,8 @@ export default class Routes extends Component {
         </div>
         <BrowserRouter>
           <Switch>
-            <Route exact path="/" component={App} />
-            <Route component={NotFound} />
+            <Route exact path="/" component={AsyncApp} />
+            <Route component={AsyncNotFound} />
           </Switch>
         </BrowserRouter>
         <div>
