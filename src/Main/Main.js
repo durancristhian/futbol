@@ -1,5 +1,6 @@
 import Covers from '../Covers/Covers';
 import Curiosities from '../Curiosities/Curiosities';
+import LeaderBoard from '../LeaderBoard/LeaderBoard';
 import Positions from '../Positions/Positions';
 import React from 'react';
 import Shirts from '../Shirts/Shirts';
@@ -8,6 +9,7 @@ import * as styles from './Main.module.css';
 const Main = ({ positions, covers, curiosities, shirts }) => (
   <div className="ph3">
     <div className={`center ${styles.fadeInUp} mw8`}>
+      <LeaderBoard leaders={positions.slice(0, 3)} />
       <Positions positions={positions} />
       <Covers covers={covers} />
       {shirts && shirts.length && <Shirts shirts={shirts} />}

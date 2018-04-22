@@ -10,10 +10,6 @@
   width: 4rem;
 }
 
-:local(.transformOriginBottom) {
-  transform-origin: bottom;
-}
-
 :local(.leaderBoardLeftShadow::after) {
   background: rgba(0, 0, 0, 0.05);
   content: '';

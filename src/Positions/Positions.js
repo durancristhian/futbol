@@ -1,4 +1,3 @@
-import LeaderBoard from '../LeaderBoard/LeaderBoard';
 import Position from './Position';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -10,8 +9,7 @@ const Positions = ({ positions }) => {
   return (
     <div className="mv4 mv5-ns">
       <h2 className="f4 f3-ns mb4 mb5-ns mt0 normal tc">Tabla de posiciones</h2>
-      <LeaderBoard leaders={positions.slice(0, 3)} />
-      <div className="f7 flex items-center justify-end mb3 pt3">
+      <div className="f7 flex items-center justify-end mb3 mt0">
         <span className="b">Ordenado por:</span>
         <span className="ml2">PT, PG, PJ y Nombre</span>
       </div>

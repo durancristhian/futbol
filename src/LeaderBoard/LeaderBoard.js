@@ -27,7 +27,8 @@ function getStylesFromIndex(index) {
 
 const LeaderBoard = ({ leaders }) => {
   return (
-    <div className="mh3 pb4 pb5-ns">
+    <div className="mv4 mv5-ns">
+      <h2 className="f4 f3-ns mb4 mb5-ns mt0 normal tc">Los mejores</h2>
       <div className="flex items-end justify-center">
         <ul className="b--black-20 bb flex items-end justify-center list ph3 ph4-ns mv0">
           {leaders.map((leader, index) => {
@@ -42,15 +43,14 @@ const LeaderBoard = ({ leaders }) => {
             } = getStylesFromIndex(index);
 
             return (
-              <li key={leader['Jugador/a']} className={`${order} ${!index ? 'pt4' : ''} ${width}`}>
+              <li key={leader['Jugador/a']} className={`${order} ${width}`}>
                 <div className="tc">
                   <img
                     src={getPlayerImage(leader.Foto, 'large')}
                     alt={`${leader['Jugador/a']}`}
                     className={`br-100 center db ${styles.imageShadow} ${
-                      styles.transformOriginBottom
-                    } w2 w3-ns`}
-                    style={{ transform: `scale(${index ? '1' : '1.4'})` }}
+                      !index ? 'w3 w4-ns' : 'w2 w3-ns'
+                    }`}
                   />
                   <h3 className="mv2 normal truncate">{leader['Jugador/a']}</h3>
                 </div>

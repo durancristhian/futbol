@@ -3,7 +3,7 @@ import React from 'react';
 import Tilt from 'react-tilt';
 
 const Shirt = ({ shirt }) => (
-  <div className="b--black-20 ba mv3 ma3-l w-100 w-33-l">
+  <div className="b--black-20 ba mv3 mh3-l mv0-l w-100 w-33-l">
     <h3 className="bg-black-10 mv0 ph3 pv2 tc">{shirt.Nombre}</h3>
     <div className="b--black-20 bg-white-60 bt pa3">
       <Tilt

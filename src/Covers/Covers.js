@@ -91,7 +91,7 @@ class Covers extends Component {
           rightArrowTitle="Siguiente"
           theme={LightboxTheme}
         />
-        <p className="f7 mt3 tr">
+        <p className="f7 mb0 mt3 tr">
           Armá tu Tapa de Olé
           <a
             href="https://tapa-ole.now.sh/"
