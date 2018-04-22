@@ -1,20 +1,13 @@
-import AsyncComponent from '../Async/Async';
+import AsyncComponent from '../HOC/AsyncComponent';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
+import NotFound from '../404/404';
 import React, { Component } from 'react';
-import * as styles from './Routes.module.css';
+import * as styles from './Layout.module.css';
 import themeManager from '../utils/themeManager';
 
-const AsyncApp = AsyncComponent({
-  loader: () => import('../App/App')
-});
-
-const AsyncNotFound = AsyncComponent({
-  loader: () => import('../404/404')
-});
-
-export default class Routes extends Component {
+class Layout extends Component {
   constructor(props) {
     super(props);
 
@@ -37,21 +30,30 @@ export default class Routes extends Component {
 
   render() {
     const { theme } = this.state;
+
     return (
       <div
-        className={`${styles['bg-main']} mid-gray ${
-          styles['fade-in']
-        } f6 f5-ns flex flex-column lh-copy min-vh-100 sans-serif ${theme} ${styles['transition']}`}
+        className={`${styles.bgMain} ${
+          styles.fadeIn
+        } f6 f5-ns flex flex-column lh-copy mid-gray min-vh-100 sans-serif ${theme} ${
+          styles.transition
+        }`}
       >
         <div>
           <Header />
         </div>
-        <BrowserRouter>
-          <Switch>
-            <Route exact path="/" component={AsyncApp} />
-            <Route component={AsyncNotFound} />
-          </Switch>
-        </BrowserRouter>
+        <div className="flex-auto">
+          <BrowserRouter>
+            <Switch>
+              <Route
+                exact
+                path="/"
+                component={AsyncComponent({ loader: () => import('../App/App') })}
+              />
+              <Route component={NotFound} />
+            </Switch>
+          </BrowserRouter>
+        </div>
         <div>
           <Footer currentTheme={theme} changeTheme={this.changeTheme} />
         </div>
@@ -59,3 +61,5 @@ export default class Routes extends Component {
     );
   }
 }
+
+export default Layout;

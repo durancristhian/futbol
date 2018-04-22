@@ -1,12 +1,9 @@
-import './css/main.css';
-import AsyncComponent from './Async/Async';
+import Layout from './Layout/Layout';
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import registerServiceWorker from './registerServiceWorker';
 
-const AsyncRoutes = AsyncComponent({
-  loader: () => import('./Routes/Routes')
-});
+import './index.css';
 
-ReactDOM.render(<AsyncRoutes />, document.getElementById('root'));
+ReactDOM.render(<Layout />, document.getElementById('root'));
 // registerServiceWorker();

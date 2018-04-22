@@ -1,20 +1,20 @@
-:local(.image-shadow) {
+:local(.imageShadow) {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
 }
 
-:local(.leader-board-first) {
+:local(.leaderBoardFirst) {
   width: 7rem;
 }
 
-:local(.leader-board-second) {
+:local(.leaderBoardSecond) {
   width: 4rem;
 }
 
-:local(.transform-origin-bottom) {
+:local(.transformOriginBottom) {
   transform-origin: bottom;
 }
 
-:local(.leader-board-left-shadow::after) {
+:local(.leaderBoardLeftShadow::after) {
   background: rgba(0, 0, 0, 0.05);
   content: '';
   height: 150px;
@@ -25,7 +25,7 @@
   width: 50px;
 }
 
-:local(.leader-board-right-shadow::after) {
+:local(.leaderBoardRightShadow::after) {
   background: rgba(0, 0, 0, 0.05);
   content: '';
   height: 150px;
@@ -37,11 +37,11 @@
 }
 
 @media screen and (min-width: 30em) {
-  :local(.leader-board-first) {
+  :local(.leaderBoardFirst) {
     width: 9rem;
   }
 
-  :local(.leader-board-second) {
+  :local(.leaderBoardSecond) {
     width: 6rem;
   }
 }

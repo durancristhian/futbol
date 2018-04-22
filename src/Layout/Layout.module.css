@@ -1,4 +1,4 @@
-:local(.bg-main) {
+:local(.bgMain) {
   background-color: var(--color-main);
 }
 
@@ -12,7 +12,7 @@
   }
 }
 
-:local(.fade-in) {
+:local(.fadeIn) {
   animation-duration: 0.75s;
   animation-name: fadeIn;
 }

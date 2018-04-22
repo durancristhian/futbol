@@ -19,9 +19,9 @@ function getStylesFromIndex(index) {
     shadowClass: !index
       ? ''
       : index === 1
-        ? styles['leader-board-left-shadow']
-        : styles['leader-board-right-shadow'],
-    width: !index ? styles['leader-board-first'] : styles['leader-board-second']
+        ? styles.leaderBoardLeftShadow
+        : styles.leaderBoardRightShadow,
+    width: !index ? styles.leaderBoardFirst : styles.leaderBoardSecond
   };
 }
 
@@ -47,8 +47,8 @@ const LeaderBoard = ({ leaders }) => {
                   <img
                     src={getPlayerImage(leader.Foto, 'large')}
                     alt={`${leader['Jugador/a']}`}
-                    className={`br-100 center db ${styles['image-shadow']} ${
-                      styles['transform-origin-bottom']
+                    className={`br-100 center db ${styles.imageShadow} ${
+                      styles.transformOriginBottom
                     } w2 w3-ns`}
                     style={{ transform: `scale(${index ? '1' : '1.4'})` }}
                   />

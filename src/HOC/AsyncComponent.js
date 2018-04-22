@@ -1,10 +1,10 @@
 import Loadable from 'react-loadable';
 import Spinner from '../Spinner/Spinner';
 
-const AsyncComponent = (opts) =>
+const AsyncComponent = (props) =>
   Loadable({
     loading: Spinner,
-    ...opts
+    ...props
   });
 
 export default AsyncComponent;

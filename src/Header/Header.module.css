@@ -8,7 +8,7 @@
   }
 }
 
-:local(.animate-ball-path) {
+:local(.animateBallPath) {
   animation-duration: 8s;
   animation-name: moveBall;
   animation-timing-function: linear;
@@ -28,7 +28,7 @@
   }
 }
 
-:local(.rolling-ball) {
+:local(.rollingBall) {
   animation-duration: 1s;
   animation-iteration-count: 8;
   animation-name: rollingBall;

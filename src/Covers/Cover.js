@@ -9,7 +9,7 @@ const Cover = ({ cover, index, onClick }) => (
       <img
         src={cover.Portada}
         alt={`Tapa de Olé - ${cover.Fecha}`}
-        className={`db center ${styles['mh-100']} ${styles['zoom-in']}`}
+        className={`db center ${styles.mh100} ${styles.zoomIn}`}
         onClick={(event) => onClick(event, index)}
       />
     </div>

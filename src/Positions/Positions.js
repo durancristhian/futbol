@@ -16,25 +16,25 @@ const Positions = ({ positions }) => {
         <span className="ml2">PT, PG, PJ y Nombre</span>
       </div>
       <div className="b b--black-20 bg-black-10 bl br bt flex">
-        <div className={`b--black-20 bb br ${styles['cell-number']} flex justify-end pa1 pa2-ns`}>
+        <div className={`b--black-20 bb br ${styles.cellNumber} flex justify-end pa1 pa2-ns`}>
           <span>#</span>
         </div>
-        <div className={`b--black-20 bb br ${styles['cell-name']} pa1 pa2-ns`}>
+        <div className={`b--black-20 bb br ${styles.cellName} pa1 pa2-ns`}>
           <span>Nombre</span>
         </div>
-        <div className={`b--black-20 bb br ${styles['cell-number']} flex justify-end pa1 pa2-ns`}>
+        <div className={`b--black-20 bb br ${styles.cellNumber} flex justify-end pa1 pa2-ns`}>
           <span>PJ</span>
         </div>
-        <div className={`b--black-20 bb br ${styles['cell-number']} flex justify-end pa1 pa2-ns`}>
+        <div className={`b--black-20 bb br ${styles.cellNumber} flex justify-end pa1 pa2-ns`}>
           <span>PG</span>
         </div>
-        <div className={`b--black-20 bb br ${styles['cell-number']} flex justify-end pa1 pa2-ns`}>
+        <div className={`b--black-20 bb br ${styles.cellNumber} flex justify-end pa1 pa2-ns`}>
           <span>PE</span>
         </div>
-        <div className={`b--black-20 bb br ${styles['cell-number']} flex justify-end pa1 pa2-ns`}>
+        <div className={`b--black-20 bb br ${styles.cellNumber} flex justify-end pa1 pa2-ns`}>
           <span>PP</span>
         </div>
-        <div className={`b--black-20 bb ${styles['cell-number']} flex justify-end pa1 pa2-ns`}>
+        <div className={`b--black-20 bb ${styles.cellNumber} flex justify-end pa1 pa2-ns`}>
           <span>PT</span>
         </div>
       </div>

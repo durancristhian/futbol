@@ -10,7 +10,7 @@
   }
 }
 
-:local(.fade-in-up) {
+:local(.fadeInUp) {
   animation-duration: 1s;
   animation-name: fadeInUp;
 }

@@ -1,17 +1,17 @@
-:local(.cell-name) {
+:local(.cellName) {
   width: 40%;
 }
 
-:local(.cell-number) {
+:local(.cellNumber) {
   width: 10%;
 }
 
 @media screen and (min-width: 30em) {
-  :local(.cell-name) {
+  :local(.cellName) {
     width: 52%;
   }
 
-  :local(.cell-number) {
+  :local(.cellNumber) {
     width: 8%;
   }
 }
