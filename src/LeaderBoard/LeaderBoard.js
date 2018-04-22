@@ -27,7 +27,7 @@ function getStylesFromIndex(index) {
 
 const LeaderBoard = ({ leaders }) => {
   return (
-    <div className="mh3 pv4 pv5-ns">
+    <div className="mh3 pb4 pb5-ns">
       <div className="flex items-end justify-center">
         <ul className="b--black-20 bb flex items-end justify-center list ph3 ph4-ns mv0">
           {leaders.map((leader, index) => {
@@ -42,7 +42,7 @@ const LeaderBoard = ({ leaders }) => {
             } = getStylesFromIndex(index);
 
             return (
-              <li key={leader['Jugador/a']} className={`${order} ${width}`}>
+              <li key={leader['Jugador/a']} className={`${order} ${!index ? 'pt4' : ''} ${width}`}>
                 <div className="tc">
                   <img
                     src={getPlayerImage(leader.Foto, 'large')}

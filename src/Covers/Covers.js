@@ -66,8 +66,8 @@ class Covers extends Component {
     const { currentImage, lightboxIsOpen } = this.state;
 
     return (
-      <div className="mt4 mt5-ns">
-        <h2 className="f4 f3-ns mt0 tc">Tapas de Olé</h2>
+      <div className="mv4 mv5-ns">
+        <h2 className="f4 f3-ns mb4 mb5-ns mt0 normal tc">Tapas de Olé</h2>
         <div className="flex flex-wrap justify-between nl3-l nr3-l">
           {covers.map((cover, index) => (
             <Cover key={cover.Fecha} cover={cover} index={index} onClick={this.showLightbox} />

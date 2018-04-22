@@ -8,8 +8,8 @@ const Positions = ({ positions }) => {
   const topScore = Math.max(...positions.map((position) => position.Puntos));
 
   return (
-    <div className="mt4 mt5-ns">
-      <h2 className="f4 f3-ns tc">Tabla de posiciones</h2>
+    <div className="mv4 mv5-ns">
+      <h2 className="f4 f3-ns mb4 mb5-ns mt0 normal tc">Tabla de posiciones</h2>
       <LeaderBoard leaders={positions.slice(0, 3)} />
       <div className="f7 flex items-center justify-end mb3 pt3">
         <span className="b">Ordenado por:</span>

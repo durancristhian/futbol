@@ -2,21 +2,6 @@
   background-color: var(--color-main);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-:local(.fadeIn) {
-  animation-duration: 0.75s;
-  animation-name: fadeIn;
-}
-
 :local(.transition) {
   transition: all 0.25s linear;
 }

@@ -33,8 +33,8 @@ class Layout extends Component {
 
     return (
       <div
-        className={`${styles.bgMain} ${
-          styles.fadeIn
+        className={`${
+          styles.bgMain
         } f6 f5-ns flex flex-column lh-copy mid-gray min-vh-100 sans-serif ${theme} ${
           styles.transition
         }`}
