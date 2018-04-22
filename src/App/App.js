@@ -67,7 +67,7 @@ class App extends Component {
     const { dataset, error, loading } = this.state;
 
     return (
-      <div>
+      <div className="flex-auto">
         {loading && <Spinner />}
         {error && <Error />}
         {!error &&
