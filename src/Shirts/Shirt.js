@@ -22,15 +22,15 @@ const Shirt = ({ shirt }) => (
       <div className="flex justify-center tc">
         <div className="mh3">
           <p className="b f2 mv0">{shirt.Victorias}</p>
-          <p className="black-50 mv0">Victoria{shirt.Victorias === 1 ? '' : 's'}</p>
+          <p className="black-50 mv0">Victoria{shirt.Victorias !== 1 && 's'}</p>
         </div>
         <div className="mh3">
           <p className="b f2 mv0">{shirt.Empates}</p>
-          <p className="black-50 mv0">Empate{shirt.Empates === 1 ? '' : 's'}</p>
+          <p className="black-50 mv0">Empate{shirt.Empates !== 1 && 's'}</p>
         </div>
         <div className="mh3">
           <p className="b f2 mv0">{shirt.Derrotas}</p>
-          <p className="black-50 mv0">Derrota{shirt.Derrotas === 1 ? '' : 's'}</p>
+          <p className="black-50 mv0">Derrota{shirt.Derrotas !== 1 && 's'}</p>
         </div>
       </div>
     </div>

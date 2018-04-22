@@ -28,7 +28,7 @@ const Position = ({ position, index, topScore, totalPlayers }) => {
               style={{ backgroundImage: `url(${getPlayerImage(position.Foto)})` }}
             />
           </div>
-          <span className={'truncate ' + (isTop ? 'b' : '')}>{position['Jugador/a']}</span>
+          <span className={'truncate ' + (isTop && 'b')}>{position['Jugador/a']}</span>
         </div>
         <div
           className={`b--black-20 br ${styles.cellNumber} flex items-center justify-end pa1 pa2-ns`}

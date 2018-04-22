@@ -9,9 +9,7 @@ const Footer = ({ currentTheme, changeTheme }) => (
           <span className="b">Apariencia:</span>
           <a
             href="#!"
-            className={`color-inherit ml2 pa0 ${
-              currentTheme === 'theme-yellow' ? '' : 'no-underline'
-            }`}
+            className={`color-inherit ml2 pa0 ${currentTheme !== 'theme-yellow' && 'no-underline'}`}
             onClick={(event) => changeTheme(event, 'theme-yellow')}
           >
             Amarillito
@@ -19,9 +17,7 @@ const Footer = ({ currentTheme, changeTheme }) => (
           <span className="ml2">|</span>
           <a
             href="#!"
-            className={`color-inherit ml2 pa0 ${
-              currentTheme === 'theme-blue' ? '' : 'no-underline'
-            }`}
+            className={`color-inherit ml2 pa0 ${currentTheme !== 'theme-blue' && 'no-underline'}`}
             onClick={(event) => changeTheme(event, 'theme-blue')}
           >
             Azulcito
@@ -29,9 +25,7 @@ const Footer = ({ currentTheme, changeTheme }) => (
           <span className="ml2">|</span>
           <a
             href="#!"
-            className={`color-inherit ml2 pa0 ${
-              currentTheme === 'theme-green' ? '' : 'no-underline'
-            }`}
+            className={`color-inherit ml2 pa0 ${currentTheme !== 'theme-green' && 'no-underline'}`}
             onClick={(event) => changeTheme(event, 'theme-green')}
           >
             Verdecito
