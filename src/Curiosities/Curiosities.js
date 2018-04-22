@@ -1,17 +1,23 @@
 import Curiosity from './Curiosity';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { PureComponent } from 'react';
 
-const Curiosities = ({ curiosities }) => (
-  <div className="mv4 mv5-ns">
-    <h2 className="f4 f3-ns mb4 mb5-ns mt0 normal tc">Curiosidades</h2>
-    <div className="flex flex-wrap justify-between nl3-l nr3-l">
-      {curiosities.map((curiosity, index) => (
-        <Curiosity key={curiosity.Descripcion} curiosity={curiosity} index={index} />
-      ))}
-    </div>
-  </div>
-);
+class Curiosities extends PureComponent {
+  render() {
+    const { curiosities } = this.props;
+
+    return (
+      <div className="mv4 mv5-ns">
+        <h2 className="f4 f3-ns mb4 mb5-ns mt0 normal tc">Curiosidades</h2>
+        <div className="flex flex-wrap justify-between nl3-l nr3-l">
+          {curiosities.map((curiosity, index) => (
+            <Curiosity key={curiosity.Descripcion} curiosity={curiosity} index={index} />
+          ))}
+        </div>
+      </div>
+    );
+  }
+}
 
 Curiosities.propTypes = {
   curiosities: PropTypes.arrayOf(Curiosity.propTypes.curiosity)

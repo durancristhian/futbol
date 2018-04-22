@@ -1,6 +1,6 @@
 import { getPlayerImage } from '../utils/getPlayerImage';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { PureComponent } from 'react';
 import * as styles from './LeaderBoard.module.css';
 
 function getStylesFromIndex(index) {
@@ -25,51 +25,55 @@ function getStylesFromIndex(index) {
   };
 }
 
-const LeaderBoard = ({ leaders }) => {
-  return (
-    <div className="mv4 mv5-ns">
-      <h2 className="f4 f3-ns mb4 mb5-ns mt0 normal tc">Los mejores</h2>
-      <div className="flex items-end justify-center">
-        <ul className="b--black-20 bb flex items-end justify-center list ph3 ph4-ns mv0">
-          {leaders.map((leader, index) => {
-            const {
-              color,
-              fontSize,
-              order,
-              paddingBottom,
-              paddingTop,
-              shadowClass,
-              width
-            } = getStylesFromIndex(index);
+class LeaderBoard extends PureComponent {
+  render() {
+    const { leaders } = this.props;
 
-            return (
-              <li key={leader['Jugador/a']} className={`${order} ${width}`}>
-                <div className="tc">
-                  <img
-                    src={getPlayerImage(leader.Foto)}
-                    alt={`${leader['Jugador/a']}`}
-                    className={`br-100 center db ${styles.imageShadow} ${
-                      !index ? 'w3 w4-ns' : 'w2 w3-ns'
-                    }`}
-                  />
-                  <h3 className="mv2 normal truncate">{leader['Jugador/a']}</h3>
-                </div>
-                <div
-                  className={`b--black-20 ${index !== 2 ? 'bl' : ''} ${
-                    index !== 1 ? 'br' : ''
-                  } bt ${fontSize} overflow-hidden ${paddingBottom} pl2 pr2 ${paddingTop} relative ${shadowClass} tc`}
-                  style={{ backgroundColor: color }}
-                >
-                  <p className={`b black-70 mv0 ${fontSize}`}>{index + 1}</p>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
+    return (
+      <div className="mv4 mv5-ns">
+        <h2 className="f4 f3-ns mb4 mb5-ns mt0 normal tc">Los mejores</h2>
+        <div className="flex items-end justify-center">
+          <ul className="b--black-20 bb flex items-end justify-center list ph3 ph4-ns mv0">
+            {leaders.map((leader, index) => {
+              const {
+                color,
+                fontSize,
+                order,
+                paddingBottom,
+                paddingTop,
+                shadowClass,
+                width
+              } = getStylesFromIndex(index);
+
+              return (
+                <li key={leader['Jugador/a']} className={`${order} ${width}`}>
+                  <div className="tc">
+                    <img
+                      src={getPlayerImage(leader.Foto)}
+                      alt={`${leader['Jugador/a']}`}
+                      className={`br-100 center db ${styles.imageShadow} ${
+                        !index ? 'w3 w4-ns' : 'w2 w3-ns'
+                      }`}
+                    />
+                    <h3 className="mv2 normal truncate">{leader['Jugador/a']}</h3>
+                  </div>
+                  <div
+                    className={`b--black-20 ${index !== 2 ? 'bl' : ''} ${
+                      index !== 1 ? 'br' : ''
+                    } bt ${fontSize} overflow-hidden ${paddingBottom} pl2 pr2 ${paddingTop} relative ${shadowClass} tc`}
+                    style={{ backgroundColor: color }}
+                  >
+                    <p className={`b black-70 mv0 ${fontSize}`}>{index + 1}</p>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 LeaderBoard.propTypes = {
   leaders: PropTypes.arrayOf(
