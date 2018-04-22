@@ -42,6 +42,7 @@ const Positions = ({ positions }) => {
             key={position['Jugador/a']}
             position={position}
             index={index}
+            totalPlayers={positions.length}
             topScore={topScore}
           />
         ))}

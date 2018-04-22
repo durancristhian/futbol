@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import * as styles from './Positions.module.css';
 
-const Position = ({ position, index, topScore }) => {
+const Position = ({ position, index, topScore, totalPlayers }) => {
   const isTop = position.Puntos === topScore;
 
   return (
     <Link
       to={{
         pathname: `/ficha/${position['Jugador/a'].toLowerCase()}`,
-        state: { position: { ...position }, index: index + 1 }
+        state: { position: { ...position }, index: index + 1, totalPlayers }
       }}
       className="color-inherit link"
     >
@@ -70,7 +70,8 @@ Position.propTypes = {
     Perdidos: PropTypes.number.isRequired,
     Puntos: PropTypes.number.isRequired
   }),
-  topScore: PropTypes.number.isRequired
+  topScore: PropTypes.number.isRequired,
+  totalPlayers: PropTypes.number.isRequired
 };
 
 export default Position;
