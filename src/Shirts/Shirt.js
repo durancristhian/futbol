@@ -14,7 +14,7 @@ const Shirt = ({ shirt }) => (
         }}
       >
         <img
-          src={require(`../assets/images/tshirt-${shirt.Nombre.toLowerCase()}.svg`)}
+          src={require(`./${shirt.Nombre.toLowerCase()}.svg`)}
           alt={`Camiseta de ${shirt.Nombre}`}
           className="center db mw5"
         />

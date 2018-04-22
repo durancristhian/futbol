@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import * as styles from './Footer.module.css';
 
 const Footer = ({ currentTheme, changeTheme }) => (
-  <div className={`b--black-20 bt bg-white-80 pa3 ${styles.shadowTop}`}>
+  <div className="b--black-20 bt bg-white-80 pa3">
     <div className="center mw8">
       <div className="flex flex-column flex-row-m flex-row-l justify-between-m justify-between-l">
         <div className="f7 flex items-center justify-center">

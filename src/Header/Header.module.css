@@ -2,7 +2,3 @@
   height: 1.5rem;
   width: 1.5rem;
 }
-
-:local(.shadowBottom) {
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
-}
