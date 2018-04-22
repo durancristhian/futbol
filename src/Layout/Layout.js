@@ -7,10 +7,6 @@ import React, { Component } from 'react';
 import * as styles from './Layout.module.css';
 import themeManager from '../utils/themeManager';
 
-const AsyncApp = AsyncComponent({
-  loader: () => import('../App/App')
-});
-
 class Layout extends Component {
   constructor(props) {
     super(props);
@@ -41,10 +37,23 @@ class Layout extends Component {
         className={`${bgMain} f6 f5-ns flex flex-column lh-copy mid-gray min-vh-100 sans-serif ${theme} ${transition}`}
       >
         <Header />
-        <div className="flex-auto relative">
+        <div className="flex-auto">
           <BrowserRouter>
             <Switch>
-              <Route exact path="/" component={() => <AsyncApp />} />
+              <Route
+                exact
+                path="/"
+                component={AsyncComponent({
+                  loader: () => import('../App/App')
+                })}
+              />
+              <Route
+                exact
+                path="/ficha/:name"
+                component={AsyncComponent({
+                  loader: () => import('../Card/Card')
+                })}
+              />
               <Route component={NotFound} />
             </Switch>
           </BrowserRouter>

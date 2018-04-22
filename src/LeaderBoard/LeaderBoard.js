@@ -46,7 +46,7 @@ const LeaderBoard = ({ leaders }) => {
               <li key={leader['Jugador/a']} className={`${order} ${width}`}>
                 <div className="tc">
                   <img
-                    src={getPlayerImage(leader.Foto, 'large')}
+                    src={getPlayerImage(leader.Foto)}
                     alt={`${leader['Jugador/a']}`}
                     className={`br-100 center db ${styles.imageShadow} ${
                       !index ? 'w3 w4-ns' : 'w2 w3-ns'
