@@ -4,15 +4,14 @@ import LeaderBoard from '../LeaderBoard/LeaderBoard';
 import Positions from '../Positions/Positions';
 import React, { PureComponent } from 'react';
 import Shirts from '../Shirts/Shirts';
-import * as styles from './Main.module.css';
 
 class Main extends PureComponent {
   render() {
     const { positions, covers, curiosities, shirts } = this.props;
 
     return (
-      <div className="ph3">
-        <div className={`center ${styles.fadeInUp} mw8`}>
+      <div className="fadeInUp ph3">
+        <div className="center mw8">
           <LeaderBoard leaders={positions.slice(0, 3)} />
           <Positions positions={positions} />
           <Covers covers={covers} />

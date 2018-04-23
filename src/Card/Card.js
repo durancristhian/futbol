@@ -16,7 +16,7 @@ class Card extends PureComponent {
         {error && <Error />}
         {!error &&
           !loading && (
-            <div className="ph3">
+            <div className="fadeInUp ph3">
               <div className="center mw8">
                 <div className="flex flex-column items-center justify-center pv4 pv5-ns">
                   <div className="w-100 w-40-l">
