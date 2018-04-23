@@ -24,19 +24,15 @@ class Card extends PureComponent {
                 />
               </div>
               <div className="b--black-20 ba bg-white-60 pa3">
-                <p className="mv0">
-                  Posición: <span className="b">{index}</span>
+                <p className="mb1 mt0">Posición:</p>
+                <p className="b f4 mv0">
+                  <span className="b">{index}</span>
                   <span className="black-30"> de {totalPlayers}</span>
                 </p>
-                <p className="mv3">
-                  Récord: <span className="b">{position.Puntos} puntos</span>
+                <p className="mb1 mt4">Puntos obtenidos:</p>
+                <p className="b f4 mb4 mt0">
+                  <span className="b">{position.Puntos}</span>
                   <span className="black-30"> en {position.Jugados} partidos</span>
-                </p>
-                <p className="mv3">
-                  Efectividad:{' '}
-                  <span className="b">
-                    {Number(position.Puntos * 100 / (position.Jugados * 3)).toFixed(2)} %
-                  </span>
                 </p>
                 <Pie
                   data={{
@@ -71,6 +67,10 @@ class Card extends PureComponent {
                     }
                   }}
                 />
+                <p className="mb1 mt4">Efectividad:</p>
+                <p className="b f4 mv0">
+                  {Number(position.Puntos * 100 / (position.Jugados * 3)).toFixed(2)} %
+                </p>
               </div>
             </div>
             <a href="/" className="color-inherit f7 f6-ns mt3" rel="noopener noreferrer">
