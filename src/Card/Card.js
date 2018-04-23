@@ -97,10 +97,10 @@ class Card extends PureComponent {
 
 Card.propTypes = {
   error: PropTypes.bool.isRequired,
-  index: PropTypes.number,
+  index: PropTypes.number.isRequired,
   loading: PropTypes.bool.isRequired,
-  position: Position.propTypes.position,
-  totalPlayers: PropTypes.number
+  position: Position.propTypes.position.isRequired,
+  totalPlayers: PropTypes.number.isRequired
 };
 
 export default Card;
