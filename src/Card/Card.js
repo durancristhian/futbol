@@ -32,6 +32,12 @@ class Card extends PureComponent {
                   Récord: <span className="b">{position.Puntos} puntos</span>
                   <span className="black-30"> en {position.Jugados} partidos</span>
                 </p>
+                <p className="mv3">
+                  Efectividad:{' '}
+                  <span className="b">
+                    {Number(position.Puntos * 100 / (position.Jugados * 3)).toFixed(2)} %
+                  </span>
+                </p>
                 <Pie
                   data={{
                     labels: [
