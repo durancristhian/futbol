@@ -32,7 +32,10 @@ class Card extends PureComponent {
                 <p className="mb1 mt4">Puntos obtenidos:</p>
                 <p className="b f4 mb4 mt0">
                   <span className="b">{position.Puntos}</span>
-                  <span className="black-30"> en {position.Jugados} partidos</span>
+                  <span className="black-30">
+                    {' '}
+                    en {position.Jugados} partido{position.Jugados !== 1 && 's'}
+                  </span>
                 </p>
                 <Pie
                   data={{
