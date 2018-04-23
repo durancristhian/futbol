@@ -1,6 +1,6 @@
 import AsyncComponent from '../HOC/AsyncComponent';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import DataProvider from '../HOC/DataProvider';
+import DataProvider from '../DataProvider/DataProvider';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import NotFound from '../404/404';
