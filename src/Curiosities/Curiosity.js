@@ -2,14 +2,14 @@ import { getPlayerImage } from '../utils/getPlayerImage';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 
-class Curiosity extends PureComponent() {
+class Curiosity extends PureComponent {
   static propTypes = {
     curiosity: PropTypes.shape({
       Descripcion: PropTypes.string.isRequired,
       Estadista: PropTypes.string.isRequired,
       Fecha: PropTypes.number.isRequired,
       Foto: PropTypes.string.isRequired
-    }),
+    }).isRequired,
     index: PropTypes.number.isRequired
   };
 
