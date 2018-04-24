@@ -72,7 +72,7 @@ class DataProvider extends Component {
   }
 
   getPositionFromName(dataset, name) {
-    return dataset.positions.find((position) => position['Jugador/a'].toLowerCase() === name) + 1;
+    return dataset.positions.find((position) => position['Jugador/a'].toLowerCase() === name);
   }
 
   render() {
