@@ -3,6 +3,14 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 
 class Error extends PureComponent {
+  static propTypes = {
+    message: PropTypes.string
+  };
+
+  static defaultProps = {
+    message: 'Ocurrió un error.'
+  };
+
   render() {
     const { message } = this.props;
 
@@ -17,13 +25,5 @@ class Error extends PureComponent {
     );
   }
 }
-
-Error.defaultProps = {
-  message: 'Ocurrió un error.'
-};
-
-Error.propTypes = {
-  message: PropTypes.string
-};
 
 export default Error;

@@ -3,6 +3,14 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 
 class Spinner extends PureComponent {
+  static propTypes = {
+    message: PropTypes.string
+  };
+
+  static defaultProps = {
+    message: 'Cargando...'
+  };
+
   render() {
     const { message } = this.props;
 
@@ -14,13 +22,5 @@ class Spinner extends PureComponent {
     );
   }
 }
-
-Spinner.defaultProps = {
-  message: 'Cargando...'
-};
-
-Spinner.propTypes = {
-  message: PropTypes.string
-};
 
 export default Spinner;

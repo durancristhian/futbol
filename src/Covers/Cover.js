@@ -3,6 +3,15 @@ import React, { PureComponent } from 'react';
 import * as styles from './Covers.module.css';
 
 class Cover extends PureComponent {
+  static propTypes = {
+    cover: PropTypes.shape({
+      Fecha: PropTypes.string.isRequired,
+      Portada: PropTypes.string.isRequired
+    }).isRequired,
+    index: PropTypes.number.isRequired,
+    onClick: PropTypes.func.isRequired
+  };
+
   render() {
     const { cover, index, onClick } = this.props;
 
@@ -21,14 +30,5 @@ class Cover extends PureComponent {
     );
   }
 }
-
-Cover.propTypes = {
-  cover: PropTypes.shape({
-    Fecha: PropTypes.string.isRequired,
-    Portada: PropTypes.string.isRequired
-  }),
-  index: PropTypes.number.isRequired,
-  onClick: PropTypes.func.isRequired
-};
 
 export default Cover;

@@ -1,12 +1,12 @@
 import Cover from './Cover';
+import { FONT_FAMILY } from '../utils/constants';
 import Lightbox from 'react-images';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
 const styles = {
   color: 'white',
-  fontFamily:
-    '-apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif',
+  fontFamily: FONT_FAMILY,
   fontSize: '1rem'
 };
 
@@ -16,50 +16,41 @@ const LightboxTheme = {
 };
 
 class Covers extends Component {
-  constructor(props) {
-    super(props);
-
-    this.closeLightbox = this.closeLightbox.bind(this);
-    this.gotoNext = this.gotoNext.bind(this);
-    this.gotoPrevious = this.gotoPrevious.bind(this);
-    this.showLightbox = this.showLightbox.bind(this);
-
-    this.state = {
-      currentImage: 0,
-      lightboxIsOpen: false
-    };
-  }
-
   static propTypes = {
     covers: PropTypes.arrayOf(Cover.propTypes.cover).isRequired
   };
 
-  closeLightbox() {
+  state = {
+    currentImage: 0,
+    lightboxIsOpen: false
+  };
+
+  closeLightbox = () => {
     this.setState({
       lightboxIsOpen: false
     });
-  }
+  };
 
-  gotoNext() {
+  gotoNext = () => {
     this.setState({
       currentImage: this.state.currentImage + 1
     });
-  }
+  };
 
-  gotoPrevious() {
+  gotoPrevious = () => {
     this.setState({
       currentImage: this.state.currentImage - 1
     });
-  }
+  };
 
-  showLightbox(event, currentIndex) {
+  showLightbox = (event, currentIndex) => {
     event.preventDefault();
 
     this.setState({
       currentImage: currentIndex,
       lightboxIsOpen: true
     });
-  }
+  };
 
   render() {
     const { covers } = this.props;

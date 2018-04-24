@@ -6,11 +6,18 @@ import React, { PureComponent } from 'react';
 import Shirts from '../Shirts/Shirts';
 
 class Main extends PureComponent {
+  static propTypes = {
+    covers: Covers.propTypes.covers,
+    curiosities: Curiosities.propTypes.curiosities,
+    positions: Positions.propTypes.positions,
+    shirts: Shirts.propTypes.shirts
+  };
+
   render() {
     const { positions, covers, curiosities, shirts } = this.props;
 
     return (
-      <div className="fadeInUp ph3">
+      <div className="fadeIn ph3">
         <div className="center mw8">
           <LeaderBoard leaders={positions.slice(0, 3)} />
           <Positions positions={positions} />
@@ -22,12 +29,5 @@ class Main extends PureComponent {
     );
   }
 }
-
-Main.propTypes = {
-  covers: Covers.propTypes.covers,
-  curiosities: Curiosities.propTypes.curiosities,
-  positions: Positions.propTypes.positions,
-  shirts: Shirts.propTypes.shirts
-};
 
 export default Main;

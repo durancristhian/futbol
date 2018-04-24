@@ -26,6 +26,16 @@ function getStylesFromIndex(index) {
 }
 
 class LeaderBoard extends PureComponent {
+  static propTypes = {
+    leaders: PropTypes.arrayOf(
+      PropTypes.shape({
+        Foto: PropTypes.string.isRequired,
+        'Jugador/a': PropTypes.string.isRequired,
+        Puntos: PropTypes.number.isRequired
+      })
+    ).isRequired
+  };
+
   render() {
     const { leaders } = this.props;
 
@@ -74,15 +84,5 @@ class LeaderBoard extends PureComponent {
     );
   }
 }
-
-LeaderBoard.propTypes = {
-  leaders: PropTypes.arrayOf(
-    PropTypes.shape({
-      Foto: PropTypes.string.isRequired,
-      'Jugador/a': PropTypes.string.isRequired,
-      Puntos: PropTypes.number.isRequired
-    })
-  )
-};
 
 export default LeaderBoard;

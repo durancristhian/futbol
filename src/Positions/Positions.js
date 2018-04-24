@@ -4,6 +4,10 @@ import React, { PureComponent } from 'react';
 import * as styles from './Positions.module.css';
 
 class Positions extends PureComponent {
+  static propTypes = {
+    positions: PropTypes.arrayOf(Position.propTypes.position)
+  };
+
   render() {
     const { positions } = this.props;
     const topScore = Math.max(...positions.map((position) => position.Puntos));
@@ -44,7 +48,6 @@ class Positions extends PureComponent {
               key={position['Jugador/a']}
               position={position}
               index={index}
-              totalPlayers={positions.length}
               topScore={topScore}
             />
           ))}
@@ -53,9 +56,5 @@ class Positions extends PureComponent {
     );
   }
 }
-
-Positions.propTypes = {
-  positions: PropTypes.arrayOf(Position.propTypes.position)
-};
 
 export default Positions;

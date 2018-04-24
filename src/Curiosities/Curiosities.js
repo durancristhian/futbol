@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 
 class Curiosities extends PureComponent {
+  static propTypes = {
+    curiosities: PropTypes.arrayOf(Curiosity.propTypes.curiosity).isRequired
+  };
+
   render() {
     const { curiosities } = this.props;
 
@@ -18,9 +22,5 @@ class Curiosities extends PureComponent {
     );
   }
 }
-
-Curiosities.propTypes = {
-  curiosities: PropTypes.arrayOf(Curiosity.propTypes.curiosity)
-};
 
 export default Curiosities;

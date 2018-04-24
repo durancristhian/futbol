@@ -2,6 +2,11 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 
 class Footer extends PureComponent {
+  static propTypes = {
+    currentTheme: PropTypes.string.isRequired,
+    changeTheme: PropTypes.func.isRequired
+  };
+
   render() {
     const { currentTheme, changeTheme } = this.props;
 
@@ -57,10 +62,5 @@ class Footer extends PureComponent {
     );
   }
 }
-
-Footer.propTypes = {
-  currentTheme: PropTypes.string.isRequired,
-  changeTheme: PropTypes.func.isRequired
-};
 
 export default Footer;

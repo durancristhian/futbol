@@ -5,15 +5,17 @@ import React, { Component } from 'react';
 import Spinner from '../Spinner/Spinner';
 
 class DataProvider extends Component {
-  constructor(props) {
-    super(props);
+  static propTypes = {
+    Component: PropTypes.func.isRequired,
+    mode: PropTypes.oneOf(['home', 'card']).isRequired,
+    name: PropTypes.string
+  };
 
-    this.state = {
-      dataset: {},
-      error: false,
-      loading: true
-    };
-  }
+  state = {
+    dataset: {},
+    error: false,
+    loading: true
+  };
 
   componentDidMount() {
     const dataPromises = [
@@ -63,37 +65,34 @@ class DataProvider extends Component {
       });
   }
 
+  getIndexFromName(dataset, name) {
+    return (
+      dataset.positions.findIndex((position) => position['Jugador/a'].toLowerCase() === name) + 1
+    );
+  }
+
+  getPositionFromName(dataset, name) {
+    return dataset.positions.find((position) => position['Jugador/a'].toLowerCase() === name) + 1;
+  }
+
   render() {
     const { Component, mode, name } = this.props;
     const { dataset, error, loading } = this.state;
 
     if (loading) return <Spinner />;
     if (error) return <Error />;
-
     if (mode === 'home') return <Component dataset={dataset} />;
-    else
+    if (mode === 'card')
       return (
         <Component
-          index={
-            dataset.positions.findIndex(
-              (position) => position['Jugador/a'].toLowerCase() === name
-            ) + 1
-          }
-          position={dataset.positions.find(
-            (position) => position['Jugador/a'].toLowerCase() === name
-          )}
+          index={this.getIndexFromName(dataset, name)}
+          position={this.getPositionFromName(dataset, name)}
           totalPlayers={dataset.positions.length}
         />
       );
+
+    return null;
   }
 }
-
-DataProvider.propTypes = {
-  Component: PropTypes.func.isRequired,
-  mode: PropTypes.oneOf(['home', 'card']).isRequired,
-  name: PropTypes.string
-};
-
-// TODO: Define DataProvider.defaultProps
 
 export default DataProvider;

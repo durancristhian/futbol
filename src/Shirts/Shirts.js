@@ -3,6 +3,10 @@ import React, { PureComponent } from 'react';
 import Shirt from './Shirt';
 
 class Shirts extends PureComponent {
+  static propTypes = {
+    shirts: PropTypes.arrayOf(Shirt.propTypes.shirt)
+  };
+
   render() {
     const { shirts } = this.props;
 
@@ -16,9 +20,5 @@ class Shirts extends PureComponent {
     );
   }
 }
-
-Shirts.propTypes = {
-  shirts: PropTypes.arrayOf(Shirt.propTypes.shirt)
-};
 
 export default Shirts;

@@ -17,17 +17,11 @@ const AsyncCard = AsyncComponent({
 });
 
 class Layout extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    theme: themeManager.get()
+  };
 
-    this.state = {
-      theme: themeManager.get()
-    };
-
-    this.changeTheme = this.changeTheme.bind(this);
-  }
-
-  changeTheme(event, newTheme) {
+  changeTheme = (event, newTheme) => {
     event.preventDefault();
 
     themeManager.save(newTheme);
@@ -35,7 +29,7 @@ class Layout extends Component {
     this.setState({
       theme: newTheme
     });
-  }
+  };
 
   render() {
     const { bgMain, transition } = styles;

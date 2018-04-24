@@ -5,15 +5,27 @@ import React, { PureComponent } from 'react';
 import * as styles from './Positions.module.css';
 
 class Position extends PureComponent {
+  static propTypes = {
+    index: PropTypes.number.isRequired,
+    position: PropTypes.shape({
+      Empatados: PropTypes.number.isRequired,
+      Ganados: PropTypes.number.isRequired,
+      'Jugador/a': PropTypes.string.isRequired,
+      Jugados: PropTypes.number.isRequired,
+      Perdidos: PropTypes.number.isRequired,
+      Puntos: PropTypes.number.isRequired
+    }),
+    topScore: PropTypes.number.isRequired
+  };
+
   render() {
-    const { position, index, topScore, totalPlayers } = this.props;
+    const { position, index, topScore } = this.props;
     const isTop = this.props.position.Puntos === topScore;
 
     return (
       <Link
         to={{
-          pathname: `/ficha/${position['Jugador/a'].toLowerCase()}`,
-          state: { position: { ...position }, index: index + 1, totalPlayers }
+          pathname: `/ficha/${position['Jugador/a'].toLowerCase()}`
         }}
         className="color-inherit link"
       >
@@ -74,19 +86,5 @@ class Position extends PureComponent {
     );
   }
 }
-
-Position.propTypes = {
-  index: PropTypes.number.isRequired,
-  position: PropTypes.shape({
-    Empatados: PropTypes.number.isRequired,
-    Ganados: PropTypes.number.isRequired,
-    'Jugador/a': PropTypes.string.isRequired,
-    Jugados: PropTypes.number.isRequired,
-    Perdidos: PropTypes.number.isRequired,
-    Puntos: PropTypes.number.isRequired
-  }),
-  topScore: PropTypes.number.isRequired,
-  totalPlayers: PropTypes.number.isRequired
-};
 
 export default Position;

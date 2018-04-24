@@ -3,6 +3,15 @@ import React, { PureComponent } from 'react';
 import Tilt from 'react-tilt';
 
 class Shirt extends PureComponent {
+  static propTypes = {
+    shirt: PropTypes.shape({
+      Derrotas: PropTypes.number.isRequired,
+      Empates: PropTypes.number.isRequired,
+      Nombre: PropTypes.string.isRequired,
+      Victorias: PropTypes.number.isRequired
+    })
+  };
+
   render() {
     const { shirt } = this.props;
 
@@ -42,14 +51,5 @@ class Shirt extends PureComponent {
     );
   }
 }
-
-Shirt.propTypes = {
-  shirt: PropTypes.shape({
-    Derrotas: PropTypes.number.isRequired,
-    Empates: PropTypes.number.isRequired,
-    Nombre: PropTypes.string.isRequired,
-    Victorias: PropTypes.number.isRequired
-  })
-};
 
 export default Shirt;
