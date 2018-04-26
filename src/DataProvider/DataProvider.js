@@ -1,4 +1,5 @@
 import Error from '../Error/Error';
+import { getPositionNumberFromName } from '../utils/getPositionNumberFromName';
 import * as gsheets from 'gsheets';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
@@ -16,6 +17,14 @@ class DataProvider extends Component {
     error: false,
     loading: true
   };
+
+  addIndexToPositions(positions) {
+    return positions.map((position) =>
+      Object.assign(position, {
+        Posicion: getPositionNumberFromName(positions, position['Jugador/a'])
+      })
+    );
+  }
 
   componentDidMount() {
     const dataPromises = [
@@ -53,7 +62,7 @@ class DataProvider extends Component {
     Promise.all(dataPromises)
       .then(([positions, covers, curiosities, shirts]) => {
         this.setState({
-          dataset: { positions, covers, curiosities, shirts },
+          dataset: { positions: this.addIndexToPositions(positions), covers, curiosities, shirts },
           loading: false
         });
       })
@@ -63,12 +72,6 @@ class DataProvider extends Component {
           loading: false
         });
       });
-  }
-
-  getIndexFromName(dataset, name) {
-    return (
-      dataset.positions.findIndex((position) => position['Jugador/a'].toLowerCase() === name) + 1
-    );
   }
 
   getPositionFromName(dataset, name) {
@@ -82,14 +85,7 @@ class DataProvider extends Component {
     if (loading) return <Spinner />;
     if (error) return <Error />;
     if (mode === 'home') return <Component dataset={dataset} />;
-    if (mode === 'card')
-      return (
-        <Component
-          index={this.getIndexFromName(dataset, name)}
-          position={this.getPositionFromName(dataset, name)}
-          totalPlayers={dataset.positions.length}
-        />
-      );
+    if (mode === 'card') return <Component position={this.getPositionFromName(dataset, name)} />;
 
     return null;
   }

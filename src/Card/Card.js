@@ -2,7 +2,6 @@ import { FONT_FAMILY } from '../utils/constants';
 import { getPlayerImage } from '../utils/getPlayerImage';
 import { Pie } from 'react-chartjs-2';
 import Position from '../Positions/Position';
-import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 
 const pieDatasetOptions = {
@@ -28,13 +27,11 @@ const pieOptions = {
 
 class Card extends PureComponent {
   static propTypes = {
-    index: PropTypes.number.isRequired,
-    position: Position.propTypes.position.isRequired,
-    totalPlayers: PropTypes.number.isRequired
+    position: Position.propTypes.position.isRequired
   };
 
   render() {
-    const { index, position, totalPlayers } = this.props;
+    const { position } = this.props;
 
     return (
       <div className="fadeIn ph3">
@@ -54,8 +51,7 @@ class Card extends PureComponent {
               <div className="b--black-20 ba bg-white-60 pa3">
                 <p className="mb1 mt0">Posición:</p>
                 <p className="b f4 mv0">
-                  <span className="b">{index}</span>
-                  <span className="black-30"> de {totalPlayers}</span>
+                  <span className="b">{position.Posicion}</span>
                 </p>
                 <p className="mb1 mt4">Puntos obtenidos:</p>
                 <p className="b f4 mb4 mt0">
