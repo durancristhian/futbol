@@ -36,12 +36,12 @@ class Layout extends Component {
     const { theme } = this.state;
 
     return (
-      <div
-        className={`${bgMain} f6 f5-ns flex flex-column lh-copy mid-gray min-vh-100 sans-serif ${theme} ${transition}`}
-      >
-        <Header />
-        <div className="flex-auto">
-          <BrowserRouter>
+      <BrowserRouter>
+        <div
+          className={`${bgMain} f6 f5-ns flex flex-column lh-copy mid-gray min-vh-100 sans-serif ${theme} ${transition}`}
+        >
+          <Header />
+          <div className="flex-auto">
             <Switch>
               <Route
                 exact
@@ -57,10 +57,10 @@ class Layout extends Component {
               />
               <Route component={NotFound} />
             </Switch>
-          </BrowserRouter>
+          </div>
+          <Footer currentTheme={theme} changeTheme={this.changeTheme} />
         </div>
-        <Footer currentTheme={theme} changeTheme={this.changeTheme} />
-      </div>
+      </BrowserRouter>
     );
   }
 }

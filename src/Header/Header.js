@@ -1,4 +1,5 @@
 import ball from './ball.svg';
+import { Link } from 'react-router-dom';
 import React, { PureComponent } from 'react';
 import * as styles from './Header.module.css';
 
@@ -7,9 +8,11 @@ class Header extends PureComponent {
     return (
       <div className="b--black-20 bb bg-white-80 pa3">
         <div className="center mw8">
-          <h1 className="flex items-center mv0 normal">
-            <img src={ball} alt="Pelota de fútbol" className={`${styles.ball}`} />
-            <span className="f5 f4-ns ml3">{process.env.REACT_APP_TITLE}</span>
+          <h1 className="dib mv0 normal v-btm">
+            <Link to="/" className="color-inherit flex items-center link">
+              <img src={ball} alt="Pelota de fútbol" className={`${styles.ball} dib v-mid`} />
+              <span className="dib f5 f4-ns ml3 v-mid">{process.env.REACT_APP_TITLE}</span>
+            </Link>
           </h1>
         </div>
       </div>
