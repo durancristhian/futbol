@@ -1,4 +1,3 @@
-import { getPlayerImage } from '../utils/getPlayerImage';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import * as styles from './LeaderBoard.module.css';
@@ -59,7 +58,7 @@ class LeaderBoard extends PureComponent {
                 <li key={leader['Jugador/a']} className={`${order} ${width}`}>
                   <div className="tc">
                     <img
-                      src={getPlayerImage(leader.Foto)}
+                      src={leader.Foto}
                       alt={`${leader['Jugador/a']}`}
                       className={`br-100 center db ${styles.imageShadow} ${
                         !index ? 'w3 w4-ns' : 'w2 w3-ns'

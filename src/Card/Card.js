@@ -1,8 +1,7 @@
-import { FONT_FAMILY } from '../utils/constants';
-import { getPlayerImage } from '../utils/getPlayerImage';
+import React, { PureComponent } from 'react';
 import { Pie } from 'react-chartjs-2';
 import Position from '../Positions/Position';
-import React, { PureComponent } from 'react';
+import { FONT_FAMILY } from '../utils/constants';
 
 const pieDatasetOptions = {
   backgroundColor: ['#19A974', '#96CCFF', '#FF725C'],
@@ -42,11 +41,7 @@ class Card extends PureComponent {
                 {position['Jugador/a']}
               </h3>
               <div className="b--black-20 bl br">
-                <img
-                  className="db w-100"
-                  src={getPlayerImage(position.Foto)}
-                  alt={position['Jugador/a']}
-                />
+                <img className="db w-100" src={position.Foto} alt={position['Jugador/a']} />
               </div>
               <div className="b--black-20 ba bg-white-60 pa3">
                 <p className="mb1 mt0">Posición:</p>

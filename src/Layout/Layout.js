@@ -1,12 +1,12 @@
-import AsyncComponent from '../HOC/AsyncComponent';
+import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import NotFound from '../404/404';
 import DataProvider from '../DataProvider/DataProvider';
 import Footer from '../Footer/Footer';
+import AsyncComponent from '../HOC/AsyncComponent';
 import Header from '../Header/Header';
-import NotFound from '../404/404';
-import React, { Component } from 'react';
-import * as styles from './Layout.module.css';
 import themeManager from '../utils/themeManager';
+import * as styles from './Layout.module.css';
 
 const AsyncApp = AsyncComponent({
   loader: () => import('../App/App')

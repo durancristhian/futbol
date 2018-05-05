@@ -1,7 +1,7 @@
-import ball from './ball.svg';
-import { Link } from 'react-router-dom';
 import React, { PureComponent } from 'react';
+import { Link } from 'react-router-dom';
 import * as styles from './Header.module.css';
+import ball from './ball.svg';
 
 class Header extends PureComponent {
   render() {

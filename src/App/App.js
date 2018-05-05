@@ -1,6 +1,6 @@
-import Main from '../Main/Main';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
+import Main from '../Main/Main';
 
 class App extends PureComponent {
   static propTypes = {

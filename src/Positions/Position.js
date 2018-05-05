@@ -1,7 +1,6 @@
-import { getPlayerImage } from '../utils/getPlayerImage';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
+import { Link } from 'react-router-dom';
 import * as styles from './Positions.module.css';
 
 const positionProps = PropTypes.shape({
@@ -43,7 +42,7 @@ class Position extends PureComponent {
             <div className="mr1 mr3-ns">
               <div
                 className="bg-center cover h2 w2"
-                style={{ backgroundImage: `url(${getPlayerImage(position.Foto)})` }}
+                style={{ backgroundImage: `url('${position.Foto}')` }}
               />
             </div>
             <span className={'truncate ' + (isTop && 'b')}>{position['Jugador/a']}</span>

@@ -1,8 +1,8 @@
+import React, { PureComponent } from 'react';
 import Covers from '../Covers/Covers';
 import Curiosities from '../Curiosities/Curiosities';
 import LeaderBoard from '../LeaderBoard/LeaderBoard';
 import Positions from '../Positions/Positions';
-import React, { PureComponent } from 'react';
 import Shirts from '../Shirts/Shirts';
 
 class Main extends PureComponent {

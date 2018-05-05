@@ -1,6 +1,6 @@
-import timer from './timer.svg';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
+import timer from './timer.svg';
 
 class Spinner extends PureComponent {
   static propTypes = {

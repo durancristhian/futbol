@@ -1,4 +1,3 @@
-import { getPlayerImage } from '../utils/getPlayerImage';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 
@@ -24,7 +23,7 @@ class Curiosity extends PureComponent {
             <div className="mr3">
               <div
                 className="bg-center cover h2 w2"
-                style={{ backgroundImage: `url('${getPlayerImage(curiosity.Foto)}'` }}
+                style={{ backgroundImage: `url('${curiosity.Foto}')` }}
               />
             </div>
             <div className="f6 flex-auto">

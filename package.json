@@ -1,15 +1,18 @@
 {
   "name": "futbol",
   "version": "3.7.2",
-  "description": "🏆 Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.",
+  "description":
+    "🏆 Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.",
   "scripts": {
     "build-prod": "REACT_APP_VERSION=${npm_package_version} react-scripts build",
     "clean-deploys": "now rm $REACT_APP_INSTANCE_NAME --safe --token $NOW_TOKEN --yes",
     "contributors-add": "all-contributors add",
     "contributors-generate": "all-contributors generate",
-    "deploy": "now alias $(now --name $REACT_APP_INSTANCE_NAME --npm --token $NOW_TOKEN) $REACT_APP_INSTANCE_NAME --token=$NOW_TOKEN",
+    "deploy":
+      "now alias $(now --name $REACT_APP_INSTANCE_NAME --npm --token $NOW_TOKEN) $REACT_APP_INSTANCE_NAME --token=$NOW_TOKEN",
     "dev": "REACT_APP_VERSION=${npm_package_version} react-scripts start",
     "eject": "react-scripts eject",
+    "fetch-spreadsheet": "env-cmd .env node scripts/fetch-spreadsheet",
     "precommit": "lint-staged",
     "scale": "now scale $REACT_APP_INSTANCE_NAME'.now.sh' 1 --token $NOW_TOKEN",
     "start": "serve build --single"
@@ -24,9 +27,7 @@
     "env": {
       "NODE_ENV": "production"
     },
-    "files": [
-      "build"
-    ],
+    "files": ["build"],
     "public": true,
     "type": "npm"
   },
@@ -35,9 +36,9 @@
   "devDependencies": {
     "all-contributors-cli": "^4.11.0",
     "chart.js": "^2.7.2",
+    "env-cmd": "^8.0.1",
     "eslint-plugin-prettier": "^2.6.0",
     "gsheets": "^2.0.0",
-    "husky": "^0.14.3",
     "lint-staged": "^7.0.4",
     "prettier": "^1.12.0",
     "react": "^16.3.1",

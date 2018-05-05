@@ -1,6 +1,6 @@
-import injury from './injury.svg';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
+import injury from './injury.svg';
 
 class Error extends PureComponent {
   static propTypes = {

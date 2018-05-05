@@ -1,8 +1,8 @@
-import Cover from './Cover';
-import { FONT_FAMILY } from '../utils/constants';
-import Lightbox from 'react-images';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import Lightbox from 'react-images';
+import { FONT_FAMILY } from '../utils/constants';
+import Cover from './Cover';
 
 const styles = {
   color: 'white',

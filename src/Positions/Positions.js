@@ -1,6 +1,6 @@
-import Position from './Position';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
+import Position from './Position';
 import * as styles from './Positions.module.css';
 
 class Positions extends PureComponent {

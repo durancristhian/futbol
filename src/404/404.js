@@ -1,5 +1,5 @@
-import injury from './injury.svg';
 import React, { PureComponent } from 'react';
+import injury from './injury.svg';
 
 class NotFound extends PureComponent {
   render() {

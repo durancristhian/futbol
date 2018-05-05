@@ -1,6 +1,6 @@
-import Curiosity from './Curiosity';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
+import Curiosity from './Curiosity';
 
 class Curiosities extends PureComponent {
   static propTypes = {
