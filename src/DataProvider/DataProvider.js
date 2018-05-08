@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import dataset from '../data/data.json';
+import dataset from '../dataset.json';
 
 class DataProvider extends Component {
   static propTypes = {

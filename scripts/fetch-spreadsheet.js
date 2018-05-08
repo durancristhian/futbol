@@ -102,7 +102,7 @@ async function generateData() {
     .then(([positions, covers, curiosities, shirts]) => {
       // guardo la información en disco para ser usado desde la app
       fs.writeFileSync(
-        path.resolve('./', 'src', 'data', 'data.json'),
+        path.resolve('./', 'src', 'dataset.json'),
         JSON.stringify(
           {
             positions: addInfoToPositions(positions),
