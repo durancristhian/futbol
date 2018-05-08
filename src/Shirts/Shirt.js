@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
+import LazyLoad from 'react-lazyload';
 import Tilt from 'react-tilt';
 
 class Shirt extends PureComponent {
@@ -26,11 +27,13 @@ class Shirt extends PureComponent {
               scale: '1.05'
             }}
           >
-            <img
-              src={require(`./${shirt.Nombre.toLowerCase()}.svg`)}
-              alt={`Camiseta de ${shirt.Nombre}`}
-              className="center db mw5"
-            />
+            <LazyLoad>
+              <img
+                src={require(`./${shirt.Nombre.toLowerCase()}.svg`)}
+                alt={`Camiseta de ${shirt.Nombre}`}
+                className="center db mw5"
+              />
+            </LazyLoad>
           </Tilt>
           <div className="flex justify-center tc">
             <div className="mh3">

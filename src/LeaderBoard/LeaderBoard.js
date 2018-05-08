@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
+import LazyLoad from 'react-lazyload';
 import * as styles from './LeaderBoard.module.css';
 
 function getStylesFromIndex(index) {
@@ -57,13 +58,15 @@ class LeaderBoard extends PureComponent {
               return (
                 <li key={leader['Jugador/a']} className={`${order} ${width}`}>
                   <div className="tc">
-                    <img
-                      src={leader.Foto}
-                      alt={`${leader['Jugador/a']}`}
-                      className={`br-100 center db ${styles.imageShadow} ${
-                        !index ? 'w3 w4-ns' : 'w2 w3-ns'
-                      }`}
-                    />
+                    <LazyLoad>
+                      <img
+                        src={leader.Foto}
+                        alt={`${leader['Jugador/a']}`}
+                        className={`br-100 center db ${styles.imageShadow} ${
+                          !index ? 'w3 w4-ns' : 'w2 w3-ns'
+                        }`}
+                      />
+                    </LazyLoad>
                     <h3 className="mv2 normal truncate">{leader['Jugador/a']}</h3>
                   </div>
                   <div

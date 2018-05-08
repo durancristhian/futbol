@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
+import LazyLoad from 'react-lazyload';
 import { Link } from 'react-router-dom';
 import * as styles from './Positions.module.css';
 
@@ -40,10 +41,12 @@ class Position extends PureComponent {
           </div>
           <div className={`b--black-20 br ${styles.cellName} flex items-center pa1 pa2-ns`}>
             <div className="mr1 mr3-ns">
-              <div
-                className="bg-center cover h2 w2"
-                style={{ backgroundImage: `url('${position.Foto}')` }}
-              />
+              <LazyLoad>
+                <div
+                  className="bg-center cover h2 w2"
+                  style={{ backgroundImage: `url('${position.Foto}')` }}
+                />
+              </LazyLoad>
             </div>
             <span className={'truncate ' + (isTop && 'b')}>{position['Jugador/a']}</span>
           </div>

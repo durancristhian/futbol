@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Pie } from 'react-chartjs-2';
+import LazyLoad from 'react-lazyload';
 import Position from '../Positions/Position';
 import { FONT_FAMILY } from '../utils/constants';
 
@@ -41,7 +42,9 @@ class Card extends PureComponent {
                 {position['Jugador/a']}
               </h3>
               <div className="b--black-20 bl br">
-                <img className="db w-100" src={position.Foto} alt={position['Jugador/a']} />
+                <LazyLoad>
+                  <img className="db w-100" src={position.Foto} alt={position['Jugador/a']} />
+                </LazyLoad>
               </div>
               <div className="b--black-20 ba bg-white-60 pa3">
                 <p className="mb1 mt0">Posición:</p>
