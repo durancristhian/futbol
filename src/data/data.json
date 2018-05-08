@@ -327,19 +327,19 @@
     {
       "Fecha": 10,
       "Estadista": "Teban",
-      "Foto": "twitter/Teban3010",
+      "Foto": "https://avatars.io/twitter/Teban3010/large",
       "Descripcion": "Es la primer fecha que Carlos pierde un partido."
     },
     {
       "Fecha": 10,
       "Estadista": "Cris",
-      "Foto": "twitter/durancristhian",
+      "Foto": "https://avatars.io/twitter/durancristhian/large",
       "Descripcion": "Es el primer partido que ganan Cris y Tom jugando en el mismo equipo."
     },
     {
       "Fecha": 10,
       "Estadista": "Teban",
-      "Foto": "twitter/Teban3010",
+      "Foto": "https://avatars.io/twitter/Teban3010/large",
       "Descripcion": "Teban es el único que jugo las 10 Fechas."
     }
   ],

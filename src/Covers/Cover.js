@@ -20,7 +20,7 @@ class Cover extends PureComponent {
       <div className="pv3 pa3-l w-100 w-50-m w-33-l">
         <div className={index % 2 ? 'ml2-m ml0-l' : 'mr2-m mr0-l'}>
           <p className="mb2 mt0 tc">{cover.Fecha}</p>
-          <LazyLoad>
+          <LazyLoad height="100%" once={true}>
             <img
               src={cover.Portada}
               alt={`Tapa de Olé - ${cover.Fecha}`}

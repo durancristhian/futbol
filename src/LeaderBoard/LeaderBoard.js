@@ -58,7 +58,7 @@ class LeaderBoard extends PureComponent {
               return (
                 <li key={leader['Jugador/a']} className={`${order} ${width}`}>
                   <div className="tc">
-                    <LazyLoad>
+                    <LazyLoad height="100%" once={true}>
                       <img
                         src={leader.Foto}
                         alt={`${leader['Jugador/a']}`}

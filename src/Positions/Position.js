@@ -41,7 +41,7 @@ class Position extends PureComponent {
           </div>
           <div className={`b--black-20 br ${styles.cellName} flex items-center pa1 pa2-ns`}>
             <div className="mr1 mr3-ns">
-              <LazyLoad>
+              <LazyLoad height="100%" once={true}>
                 <div
                   className="bg-center cover h2 w2"
                   style={{ backgroundImage: `url('${position.Foto}')` }}

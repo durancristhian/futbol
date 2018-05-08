@@ -27,7 +27,7 @@ class Shirt extends PureComponent {
               scale: '1.05'
             }}
           >
-            <LazyLoad>
+            <LazyLoad height="100%" once={true}>
               <img
                 src={require(`./${shirt.Nombre.toLowerCase()}.svg`)}
                 alt={`Camiseta de ${shirt.Nombre}`}

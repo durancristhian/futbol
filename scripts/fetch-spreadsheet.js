@@ -3,13 +3,22 @@ const fs = require('fs');
 const gsheets = require('gsheets');
 const path = require('path');
 
+const addInfoToCuriosities = function(curiosities) {
+  // agregarmos la foto de perfil a las curiosidad
+  return curiosities.map((curiosity) =>
+    Object.assign({}, curiosity, {
+      Foto: getPlayerImage(curiosity.Foto)
+    })
+  );
+};
+
 const addInfoToPositions = function(positions) {
   // devolvemos un nuevo array compuesto de:
   //    - la información de los jugadores que ya tenemos
   //    - la posición calculada
   //    - la foto de perfil
   return positions.map((position) =>
-    Object.assign(position, {
+    Object.assign({}, position, {
       Foto: getPlayerImage(position.Foto),
       Posicion: getPositionNumberFromName(positions, position['Jugador/a'])
     })
@@ -95,8 +104,12 @@ async function generateData() {
       fs.writeFileSync(
         path.resolve('./', 'src', 'data', 'data.json'),
         JSON.stringify(
-          // agregamos la posición a cada uno de los jugadores
-          { positions: addInfoToPositions(positions), covers, curiosities, shirts },
+          {
+            positions: addInfoToPositions(positions),
+            covers,
+            curiosities: addInfoToCuriosities(curiosities),
+            shirts
+          },
           null,
           2
         )

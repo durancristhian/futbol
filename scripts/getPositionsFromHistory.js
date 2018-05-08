@@ -25,7 +25,7 @@ async function generateData() {
 
   const estadisticasFinalesPorJugador = estadisticasPorJugador
     .map((estadisticas) => {
-      return Object.assign(estadisticas, {
+      return Object.assign({}, estadisticas, {
         puntos: estadisticas.victorias * 3 + estadisticas.empates,
         jugados: estadisticas.victorias + estadisticas.empates + estadisticas.derrotas
       });

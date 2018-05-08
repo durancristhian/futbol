@@ -22,7 +22,7 @@ class Curiosity extends PureComponent {
           <p className="b--black-20 bl br bt bg-white-60 mv0 pa3">"{curiosity.Descripcion}"</p>
           <div className="b--black-20 ba bg-black-10 flex items-center ph3 pv2">
             <div className="mr3">
-              <LazyLoad>
+              <LazyLoad height="100%" once={true}>
                 <div
                   className="bg-center cover h2 w2"
                   style={{ backgroundImage: `url('${curiosity.Foto}')` }}
