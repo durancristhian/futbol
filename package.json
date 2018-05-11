@@ -11,6 +11,7 @@
     "dev": "REACT_APP_VERSION=${npm_package_version} react-scripts start",
     "eject": "react-scripts eject",
     "fetch-spreadsheet": "env-cmd .env node scripts/fetch-spreadsheet",
+    "lh": "lighthouse-ci",
     "precommit": "lint-staged",
     "scale": "now scale $REACT_APP_INSTANCE_NAME'.now.sh' 1 --token $NOW_TOKEN",
     "start": "serve build --single"
@@ -39,6 +40,7 @@
     "env-cmd": "^8.0.1",
     "eslint-plugin-prettier": "^2.6.0",
     "gsheets": "^2.0.0",
+    "lighthouse-ci": "git+https://github.com/ebidel/lighthouse-ci.git",
     "lint-staged": "^7.0.4",
     "prettier": "^1.12.0",
     "react": "^16.3.1",
