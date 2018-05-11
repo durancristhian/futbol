@@ -52,6 +52,7 @@ class Footer extends PureComponent {
                 target="_blank"
                 className="color-inherit no-underline"
                 rel="noopener noreferrer"
+                title="Ver en GitHub"
               >
                 Código fuente
               </a>

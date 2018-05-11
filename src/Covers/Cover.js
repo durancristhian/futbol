@@ -25,6 +25,7 @@ class Cover extends PureComponent {
               src={cover.Portada}
               alt={`Tapa de Olé - ${cover.Fecha}`}
               className={`db center ${styles.mh100} ${styles.zoomIn}`}
+              title={`Tapa de Olé - ${cover.Fecha}`}
               onClick={(event) => onClick(event, index)}
             />
           </LazyLoad>

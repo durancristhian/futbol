@@ -31,6 +31,7 @@ class Shirt extends PureComponent {
               <img
                 src={require(`./${shirt.Nombre.toLowerCase()}.svg`)}
                 alt={`Camiseta de ${shirt.Nombre}`}
+                title={`Camiseta de ${shirt.Nombre}`}
                 className="center db mw5"
               />
             </LazyLoad>

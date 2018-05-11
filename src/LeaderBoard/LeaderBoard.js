@@ -61,7 +61,8 @@ class LeaderBoard extends PureComponent {
                     <LazyLoad height="100%" once={true}>
                       <img
                         src={leader.Foto}
-                        alt={`${leader['Jugador/a']}`}
+                        alt={leader['Jugador/a']}
+                        title={leader['Jugador/a']}
                         className={`br-100 center db ${styles.imageShadow} ${
                           !index ? 'w3 w4-ns' : 'w2 w3-ns'
                         }`}

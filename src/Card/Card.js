@@ -43,7 +43,12 @@ class Card extends PureComponent {
               </h3>
               <div className="b--black-20 bl br">
                 <LazyLoad height="100%" once={true}>
-                  <img className="db w-100" src={position.Foto} alt={position['Jugador/a']} />
+                  <img
+                    className="db w-100"
+                    src={position.Foto}
+                    alt={position['Jugador/a']}
+                    title={position['Jugador/a']}
+                  />
                 </LazyLoad>
               </div>
               <div className="b--black-20 ba bg-white-60 pa3">
