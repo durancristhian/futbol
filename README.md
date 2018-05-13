@@ -24,7 +24,7 @@
   SPREADSHEET_ID=<your-id> node scripts/list-worksheets.js
   ```
 
-* Duplicate `template.env`, rename it as `.env` and complete it with the right information.
+* Duplicate `.env.template`, rename it as `.env` and complete it with the right information.
 * Start the server:
 
   ```bash
