@@ -7,7 +7,7 @@ notifications:
   email: false
 script:
   - npm run fetch-spreadsheet
-  - npm run generate-manifest
+  - npm run build-manifest
   - npm run build-prod
 after_success:
   - test $REACT_APP_URL = 'https://futboljs.now.sh/' && npm run lh $REACT_APP_URL
