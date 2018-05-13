@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const manifestSrcPath = path.resolve('src', 'manifest.json');
 const manifestDistPath = path.resolve('build', 'manifest.json');
+const manifestSrcPath = path.resolve('src', 'manifest.json');
 const manifest = require(manifestSrcPath);
 
 const newManifest = Object.assign({}, manifest, {
