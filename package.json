@@ -1,15 +1,18 @@
 {
   "name": "futbol",
   "version": "3.10.1",
-  "description": "🏆 Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.",
+  "description":
+    "🏆 Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.",
   "scripts": {
-    "build-manifest": "env-cmd .env node scripts/generate-manifest",
+    "build-manifest": "env-cmd .env node scripts/build-manifest",
     "build-prod": "REACT_APP_VERSION=${npm_package_version} react-scripts build",
     "clean-deploys": "now rm $REACT_APP_INSTANCE_NAME --safe --token $NOW_TOKEN --yes",
     "contributors-add": "all-contributors add",
     "contributors-generate": "all-contributors generate",
-    "deploy": "now alias $(now --name $REACT_APP_INSTANCE_NAME --npm --token $NOW_TOKEN) $REACT_APP_INSTANCE_NAME --token=$NOW_TOKEN",
-    "dev": "REACT_APP_VERSION=${npm_package_version} npm run fetch-spreadsheet && npm run build-manifest && react-scripts start",
+    "deploy":
+      "now alias $(now --name $REACT_APP_INSTANCE_NAME --npm --token $NOW_TOKEN) $REACT_APP_INSTANCE_NAME --token=$NOW_TOKEN",
+    "dev":
+      "REACT_APP_VERSION=${npm_package_version} npm run fetch-spreadsheet && npm run build-manifest && react-scripts start",
     "eject": "react-scripts eject",
     "fetch-spreadsheet": "env-cmd .env node scripts/fetch-spreadsheet",
     "precommit": "lint-staged",
@@ -26,9 +29,7 @@
     "env": {
       "NODE_ENV": "production"
     },
-    "files": [
-      "build"
-    ],
+    "files": ["build"],
     "public": true,
     "type": "npm"
   },
