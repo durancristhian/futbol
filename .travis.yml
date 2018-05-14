@@ -7,7 +7,7 @@ notifications:
   email: false
 jobs:
   include:
-    - stage: futboljs
+    stage: futboljs
     script:
       - npm run fetch-spreadsheet
       - npm run build-prod
