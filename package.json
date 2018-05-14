@@ -1,6 +1,6 @@
 {
   "name": "futbol",
-  "version": "3.10.2",
+  "version": "3.10.3",
   "description": "🏆 Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.",
   "scripts": {
     "build-manifest": "env-cmd .env node scripts/build-manifest",
