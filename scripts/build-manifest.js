@@ -11,3 +11,5 @@ const newManifest = Object.assign({}, manifest, {
 });
 
 fs.writeFileSync(manifestPublicPath, JSON.stringify(newManifest, null, 2));
+console.log('manifest generated successfully 😎');
+console.log(JSON.stringify(newManifest, null, 2));

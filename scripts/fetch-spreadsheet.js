@@ -114,6 +114,8 @@ async function generateData() {
           2
         )
       );
+
+      console.log('spreadsheet generated successfully 😎');
     })
     .catch(console.error);
 }
