@@ -14,8 +14,8 @@ class Footer extends PureComponent {
       <div className="b--black-20 bt bg-white-80 pa3">
         <div className="center mw8">
           <div className="flex flex-column flex-row-m flex-row-l justify-between-m justify-between-l">
-            <div className="f7 flex items-center justify-center">
-              <span className="b">Apariencia:</span>
+            <div className="flex flex-wrap items-center justify-center">
+              <span className="b tc tl-ns w-100 w-auto-ns">Apariencia:</span>
               <a
                 href="#!"
                 className={`color-inherit ml2 pa0 ${currentTheme !== 'theme-yellow' &&
@@ -43,7 +43,7 @@ class Footer extends PureComponent {
                 Verdecito
               </a>
             </div>
-            <p className="f7 flex items-center justify-center mb0 mt3 mv0-m mt0-l">
+            <p className="flex items-center justify-center mb0 mt3 mv0-m mt0-l">
               <span className="b mr2">Version:</span>
               <span>{process.env.REACT_APP_VERSION}</span>
               <span className="mh2">|</span>

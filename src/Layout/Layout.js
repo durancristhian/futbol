@@ -38,7 +38,7 @@ class Layout extends Component {
     return (
       <BrowserRouter>
         <div
-          className={`${bgMain} f6 f5-ns flex flex-column lh-copy mid-gray min-vh-100 sans-serif ${theme} ${transition}`}
+          className={`${bgMain} flex flex-column lh-copy mid-gray min-vh-100 sans-serif ${theme} ${transition}`}
         >
           <Header />
           <div className="flex-auto">

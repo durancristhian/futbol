@@ -29,7 +29,7 @@ class Curiosity extends PureComponent {
                 />
               </LazyLoad>
             </div>
-            <div className="f6 flex-auto">
+            <div className="flex-auto">
               <span className="b">{curiosity.Estadista}</span>, Fecha {curiosity.Fecha}.
             </div>
           </div>

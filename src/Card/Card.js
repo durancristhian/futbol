@@ -86,7 +86,7 @@ class Card extends PureComponent {
                 </p>
               </div>
             </div>
-            <a href="/" className="color-inherit f7 f6-ns mt3" rel="noopener noreferrer">
+            <a href="/" className="color-inherit mt3" rel="noopener noreferrer">
               Volver
             </a>
           </div>
