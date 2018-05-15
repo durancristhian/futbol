@@ -10,7 +10,6 @@ const newManifest = Object.assign({}, manifest, {
   short_name: process.env.REACT_APP_TITLE
 });
 
-fs.unlinkSync(manifestPublicPath);
 fs.writeFileSync(manifestPublicPath, JSON.stringify(newManifest, null, 2));
 console.log('manifest generated successfully 😎');
 console.log(JSON.stringify(newManifest, null, 2));

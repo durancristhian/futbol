@@ -10,8 +10,8 @@ jobs:
     - stage: futbolmixto
       script:
         - npm run fetch-spreadsheet
+        - npm run generate-manifest
         - npm run build-prod
-        - npm run build-manifest
       env: REACT_APP_COVERS_WORKSHEET_ID='obpp9hl' REACT_APP_CURIOSITIES_WORKSHEET_ID='ooxq4mi' REACT_APP_INSTANCE_NAME='futbolmixto' REACT_APP_POSITIONS_WORKSHEET_ID='oce51o4' REACT_APP_SPREADSHEET_ID='1W5ihCnbzRV3UHa9lMCcJNOtFKWHVUI_0P5SKcdF4wig' REACT_APP_DESCRIPTION='Estadísticas del fútbol mixto.' REACT_APP_SOCIAL_IMAGE='https://futbolmixto.now.sh/assets/images/social-mixto.jpg' REACT_APP_TITLE='Fútbol Mixto' REACT_APP_URL='https://futbolmixto.now.sh/'
       before_deploy:
         - npm i now --no-save
@@ -27,8 +27,8 @@ jobs:
     - stage: futboljs
       script:
         - npm run fetch-spreadsheet
+        - npm run generate-manifest
         - npm run build-prod
-        - npm run build-manifest
       env: REACT_APP_COVERS_WORKSHEET_ID='oxkmli1' REACT_APP_CURIOSITIES_WORKSHEET_ID='oeu2u4b' REACT_APP_INSTANCE_NAME='futboljs' REACT_APP_POSITIONS_WORKSHEET_ID='oce51o4' REACT_APP_SHIRTS_WORKSHEET_ID='o4fh6yk' REACT_APP_SPREADSHEET_ID='10IreaMeMXPPrvx4bFuqU7eOjcAp7VCVP96c4jxs1Hk8' REACT_APP_DESCRIPTION='Estadísticas del fútbol.js.' REACT_APP_SOCIAL_IMAGE='https://futboljs.now.sh/assets/images/social-martes.jpg' REACT_APP_TITLE='Fútbol.js' REACT_APP_URL='https://futboljs.now.sh/'
       before_deploy:
         - npm i now --no-save
