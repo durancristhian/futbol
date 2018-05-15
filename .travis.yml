@@ -7,7 +7,7 @@ notifications:
   email: false
 script:
   - npm run fetch-spreadsheet
-  - npm run build-manifest
+  - npm run generate-manifest
   - npm run build-prod
 before_deploy:
   - npm i now --no-save
