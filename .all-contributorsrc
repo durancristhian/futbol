@@ -37,6 +37,17 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "teban3010",
+      "name": "Esteban",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/28022150?v=4",
+      "profile": "https://github.com/teban3010",
+      "contributions": [
+        "code",
+        "ideas"
+      ]
     }
-  ]
+  ],
+  "repoType": "github"
 }
