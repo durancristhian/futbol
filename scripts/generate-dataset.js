@@ -1,5 +1,3 @@
-// TODO: cuando comparo por nombre hacer un .toUppercase()
-
 require('isomorphic-fetch');
 const gsheets = require('gsheets');
 
@@ -61,6 +59,18 @@ async function generateDataset() {
     )
   );
 
+  // Funciones para ordenar las estadisticas de los jugadores
+  const tieneMasJugados = (j1, j2) => j1.Jugados < j2.Jugados;
+  const tieneIgualJugados = (j1, j2) => j1.Jugados === j2.Jugados;
+  const tieneMasGanados = (j1, j2) => j1.Ganados < j2.Ganados;
+  const tieneIgualGanados = (j1, j2) => j1.Ganados === j2.Ganados;
+  const ordenarNombre = (j1, j2) => j1.nombre < j2.nombre ? -1 : 1;
+  const tieneMasPuntos = (j1, j2) => j1.Puntos < j2.Puntos;
+  const tieneMismosPuntos = (j1, j2) => j1.Puntos === j2.Puntos;
+  const ordenarJugadosNombre = (j1, j2) => tieneMasJugados(j1, j2) ? 1 : tieneIgualJugados(j1, j2) ? ordenarNombre(j1, j2) : -1;
+  const ordenarGanadosJugadosNombre = (j1, j2) => tieneMasGanados(j1, j2) ? 1 : tieneIgualGanados(j1, j2) ? ordenarJugadosNombre(j1, j2) : -1;
+  const ordenarPuntosGanadosJugadosNombre = (j1, j2) => tieneMasPuntos(j1, j2) ? 1 : tieneMismosPuntos(j1, j2) ? ordenarGanadosJugadosNombre(j1, j2) : -1;
+
   const estadisticasFinalesPorJugador = estadisticasPorJugador
     // por cada jugador calculamos sus puntos y lo partidos jugados
     .map((estadisticas) => {
@@ -74,38 +84,7 @@ async function generateDataset() {
     //    - Ganados DESC
     //    - Jugados DESC
     //    - Jugador/a ASC
-    .sort((j1, j2) => {
-      // TODO: refactor
-      const tieneMasPuntos = j1.Puntos < j2.Puntos;
-      const tieneMismosPuntos = j1.Puntos === j2.Puntos;
-
-      if (tieneMasPuntos) {
-        return 1;
-      } else if (tieneMismosPuntos) {
-        const tieneMasGanados = j1.Ganados < j2.Ganados;
-        const tieneIgualGanados = j1.Ganados === j2.Ganados;
-
-        if (tieneMasGanados) {
-          return 1;
-        } else if (tieneIgualGanados) {
-          const tieneMasJugados = j1.Jugados < j2.Jugados;
-          const tieneIgualJugados = j1.Jugados === j2.Jugados;
-
-          if (tieneMasJugados) {
-            return 1;
-          } else if (tieneIgualJugados) {
-            // orden alfabético
-            return j1.nombre < j2.nombre ? -1 : 1;
-          } else {
-            return -1;
-          }
-        } else {
-          return -1;
-        }
-      } else {
-        return -1;
-      }
-    });
+    .sort(ordenarPuntosGanadosJugadosNombre);
 
   console.log(JSON.stringify(estadisticasFinalesPorJugador, null, 2));
 }
