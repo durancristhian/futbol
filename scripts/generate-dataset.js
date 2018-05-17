@@ -17,7 +17,8 @@ const worksheetsIDs = [
   'oxnfbuu', // Fecha 12
   'o4rm9fv', // Fecha 13
   'o85xyi5', // Fecha 14
-  'oiflb6v' // Fecha 15
+  'oiflb6v', // Fecha 15
+  'oh68d57' // Fecha 16
 ];
 
 async function generateDataset() {
@@ -36,16 +37,11 @@ async function generateDataset() {
     .concat(...dataArrays)
     // y filtramos posibles filas vacías
     .filter(
-      (jugador) =>
-        jugador['Jugador/a'] !== undefined &&
-        jugador['Jugador/a'] !== null &&
-        jugador['Jugador/a'] !== ''
+      (jugador) => jugador.Nombre !== undefined && jugador.Nombre !== null && jugador.Nombre !== ''
     );
 
   // Lista SIN REPETICIONES de nombre de jugadores (en mayúscula para comparar alfabéticamente)
-  const nombresJugadores = Array.from(
-    new Set(data.map((jugador) => jugador['Jugador/a'].toUpperCase()))
-  );
+  const nombresJugadores = Array.from(new Set(data.map((jugador) => jugador.Nombre.toUpperCase())));
 
   // console.log(nombresJugadores);
 
@@ -55,7 +51,7 @@ async function generateDataset() {
     data.reduce(
       (prev, curr) => {
         // si el jugador actual que estamos iterando es el mismo de la fila de resultados
-        if (curr['Jugador/a'].toUpperCase().trim() === nombre.toUpperCase().trim()) {
+        if (curr.Nombre === nombre) {
           // agregamos los resultados a su objeto
           prev.Ganados += parseInt(curr.Ganados, 10);
           prev.Empatados += parseInt(curr.Empatados, 10);
@@ -103,7 +99,7 @@ async function generateDataset() {
     //    - Puntos DESC
     //    - Ganados DESC
     //    - Jugados DESC
-    //    - Jugador/a ASC
+    //    - Nombre ASC
     .sort(ordenarPuntosGanadosJugadosNombre);
 
   console.log(JSON.stringify(estadisticasFinalesPorJugador, null, 2));
