@@ -1,6 +1,7 @@
 {
-  "short_name": "%REACT_APP_TITLE%",
+  "version": "%REACT_APP_VERSION%",
   "name": "%REACT_APP_TITLE%",
+  "short_name": "%REACT_APP_TITLE%",
   "icons": [
     {
       "src": "icon-192.jpg",

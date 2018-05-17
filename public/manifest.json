@@ -1,6 +1,7 @@
 {
-  "short_name": "Fútbol.js",
+  "version": "3.14.0",
   "name": "Fútbol.js",
+  "short_name": "Fútbol.js",
   "icons": [
     {
       "src": "icon-192.jpg",
