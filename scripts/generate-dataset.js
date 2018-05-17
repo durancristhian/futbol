@@ -1,10 +1,24 @@
+// TODO: cuando comparo por nombre hacer un .toUppercase()
+
 require('isomorphic-fetch');
 const gsheets = require('gsheets');
 
 // Lista de IDs de las worksheets de la planilla que tienen los datos por fecha
 const worksheetsIDs = [
-  'ojqokn' // Fecha 2
-  // 'od6xkhl' // Fecha 3
+  'of1a6hw', // Fecha 2
+  'off4s01', // Fecha 3
+  'o8drnce', // Fecha 4
+  'o82vgxg', // Fecha 5
+  'oua9csk', // Fecha 6
+  'owf8s4d', // Fecha 7
+  'oj78hmg', // Fecha 8
+  'ogvoa1i', // Fecha 9
+  'o1izkvp', // Fecha 10
+  'ojj8b8k', // Fecha 11
+  'oxnfbuu', // Fecha 12
+  'o4rm9fv', // Fecha 13
+  'o85xyi5', // Fecha 14
+  'oiflb6v' // Fecha 15
 ];
 
 async function generateDataset() {
@@ -23,6 +37,8 @@ async function generateDataset() {
 
   // Lista SIN REPETICIONES de jugadores
   const nombresJugadores = Array.from(new Set(data.map((jugador) => jugador['Jugador/a'])));
+
+  console.log(nombresJugadores);
 
   // por cada jugador
   const estadisticasPorJugador = nombresJugadores.map((nombre) =>
@@ -58,50 +74,35 @@ async function generateDataset() {
     //    - Jugados DESC
     //    - Jugador/a ASC
     .sort((j1, j2) => {
-      console.log(j1.nombre, j2.nombre);
-
+      // TODO: refactor
       const tieneMasPuntos = j1.Puntos < j2.Puntos;
       const tieneMismosPuntos = j1.Puntos === j2.Puntos;
 
-      console.log('');
-      console.log('');
-      console.log('');
-      console.log('tieneMasPuntos', tieneMasPuntos);
-      console.log('tieneMismosPuntos', tieneMismosPuntos);
-
       if (tieneMasPuntos) {
-        return true;
+        return 1;
       } else if (tieneMismosPuntos) {
         const tieneMasGanados = j1.Ganados < j2.Ganados;
         const tieneIgualGanados = j1.Ganados === j2.Ganados;
 
-        console.log('tieneMasGanados', tieneMasGanados);
-        console.log('tieneIgualGanados', tieneIgualGanados);
-
         if (tieneMasGanados) {
-          return true;
+          return 1;
         } else if (tieneIgualGanados) {
           const tieneMasJugados = j1.Jugados < j2.Jugados;
           const tieneIgualJugados = j1.Jugados === j2.Jugados;
 
-          console.log('tieneMasJugados', tieneMasJugados);
-          console.log('tieneIgualJugados', tieneIgualJugados);
-
           if (tieneMasJugados) {
-            return true;
+            return 1;
           } else if (tieneIgualJugados) {
-            console.log('Está antes', j1.nombre < j2.nombre);
-
             // orden alfabético
-            return j1.nombre < j2.nombre;
+            return j1.nombre < j2.nombre ? -1 : 1;
           } else {
-            return false;
+            return -1;
           }
         } else {
-          return false;
+          return -1;
         }
       } else {
-        return false;
+        return -1;
       }
     });
 
