@@ -32,12 +32,22 @@ async function generateDataset() {
   const dataArrays = await Promise.all(dataPromises);
   // hacemos un `flatten` del array para obtener todos las filas de todas las worksheets (fechas)
   // en una sola colección
-  const data = [].concat(...dataArrays).filter((jugador) => jugador['Jugador/a'] != null && jugador['Jugador/a'] != '');
+  const data = []
+    .concat(...dataArrays)
+    // y filtramos posibles filas vacías
+    .filter(
+      (jugador) =>
+        jugador['Jugador/a'] !== undefined &&
+        jugador['Jugador/a'] !== null &&
+        jugador['Jugador/a'] !== ''
+    );
 
-  // Lista SIN REPETICIONES de jugadores
-  const nombresJugadores = Array.from(new Set(data.map((jugador) => jugador['Jugador/a'])));
+  // Lista SIN REPETICIONES de nombre de jugadores (en mayúscula para comparar alfabéticamente)
+  const nombresJugadores = Array.from(
+    new Set(data.map((jugador) => jugador['Jugador/a'].toUpperCase()))
+  );
 
-  console.log(nombresJugadores);
+  // console.log(nombresJugadores);
 
   // por cada jugador
   const estadisticasPorJugador = nombresJugadores.map((nombre) =>
@@ -64,12 +74,22 @@ async function generateDataset() {
   const tieneIgualJugados = (j1, j2) => j1.Jugados === j2.Jugados;
   const tieneMasGanados = (j1, j2) => j1.Ganados < j2.Ganados;
   const tieneIgualGanados = (j1, j2) => j1.Ganados === j2.Ganados;
-  const ordenarNombre = (j1, j2) => j1.nombre < j2.nombre ? -1 : 1;
+  const ordenarNombre = (j1, j2) => (j1.nombre < j2.nombre ? -1 : 1);
   const tieneMasPuntos = (j1, j2) => j1.Puntos < j2.Puntos;
   const tieneMismosPuntos = (j1, j2) => j1.Puntos === j2.Puntos;
-  const ordenarJugadosNombre = (j1, j2) => tieneMasJugados(j1, j2) ? 1 : tieneIgualJugados(j1, j2) ? ordenarNombre(j1, j2) : -1;
-  const ordenarGanadosJugadosNombre = (j1, j2) => tieneMasGanados(j1, j2) ? 1 : tieneIgualGanados(j1, j2) ? ordenarJugadosNombre(j1, j2) : -1;
-  const ordenarPuntosGanadosJugadosNombre = (j1, j2) => tieneMasPuntos(j1, j2) ? 1 : tieneMismosPuntos(j1, j2) ? ordenarGanadosJugadosNombre(j1, j2) : -1;
+
+  const ordenarJugadosNombre = (j1, j2) =>
+    tieneMasJugados(j1, j2) ? 1 : tieneIgualJugados(j1, j2) ? ordenarNombre(j1, j2) : -1;
+
+  const ordenarGanadosJugadosNombre = (j1, j2) =>
+    tieneMasGanados(j1, j2) ? 1 : tieneIgualGanados(j1, j2) ? ordenarJugadosNombre(j1, j2) : -1;
+
+  const ordenarPuntosGanadosJugadosNombre = (j1, j2) =>
+    tieneMasPuntos(j1, j2)
+      ? 1
+      : tieneMismosPuntos(j1, j2)
+        ? ordenarGanadosJugadosNombre(j1, j2)
+        : -1;
 
   const estadisticasFinalesPorJugador = estadisticasPorJugador
     // por cada jugador calculamos sus puntos y lo partidos jugados
