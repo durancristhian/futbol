@@ -5,6 +5,7 @@ const gsheets = require('gsheets');
 
 // Lista de IDs de las worksheets de la planilla que tienen los datos por fecha
 const worksheetsIDs = [
+  'o2hhf1q', // Fecha 1
   'of1a6hw', // Fecha 2
   'off4s01', // Fecha 3
   'o8drnce', // Fecha 4
@@ -33,7 +34,7 @@ async function generateDataset() {
   const dataArrays = await Promise.all(dataPromises);
   // hacemos un `flatten` del array para obtener todos las filas de todas las worksheets (fechas)
   // en una sola colección
-  const data = [].concat(...dataArrays);
+  const data = [].concat(...dataArrays).filter((jugador) => jugador['Jugador/a'] != null && jugador['Jugador/a'] != '');
 
   // Lista SIN REPETICIONES de jugadores
   const nombresJugadores = Array.from(new Set(data.map((jugador) => jugador['Jugador/a'])));
@@ -46,7 +47,7 @@ async function generateDataset() {
     data.reduce(
       (prev, curr) => {
         // si el jugador actual que estamos iterando es el mismo de la fila de resultados
-        if (curr['Jugador/a'] === nombre) {
+        if (curr['Jugador/a'].toUpperCase().trim() === nombre.toUpperCase().trim()) {
           // agregamos los resultados a su objeto
           prev.Ganados += parseInt(curr.Ganados, 10);
           prev.Empatados += parseInt(curr.Empatados, 10);
