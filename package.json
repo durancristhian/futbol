@@ -35,7 +35,7 @@
   "author": "@durancristhian",
   "license": "MIT",
   "devDependencies": {
-    "all-contributors-cli": "^4.11.0",
+    "all-contributors-cli": "^5.0.0",
     "chart.js": "^2.7.2",
     "env-cmd": "^8.0.1",
     "eslint-plugin-prettier": "^2.6.0",
@@ -57,7 +57,7 @@
     "tachyons": "^4.9.1"
   },
   "dependencies": {
-    "serve": "^6.5.0"
+    "serve": "^9.0.0"
   },
   "repository": {
     "type": "git",
