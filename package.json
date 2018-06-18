@@ -6,15 +6,13 @@
     "generate-manifest": "REACT_APP_VERSION=${npm_package_version} env-cmd .env node scripts/generate-manifest",
     "build-prod": "REACT_APP_VERSION=${npm_package_version} react-scripts build",
     "clean-deploys": "now rm $REACT_APP_INSTANCE_NAME --safe --token $NOW_TOKEN --yes",
-    "contributors-add": "all-contributors add",
-    "contributors-generate": "all-contributors generate",
     "deploy": "now alias $(now --name $REACT_APP_INSTANCE_NAME --npm --token $NOW_TOKEN) $REACT_APP_INSTANCE_NAME --token=$NOW_TOKEN",
     "dev": "npm run fetch-spreadsheet && npm run generate-manifest && react-scripts start",
     "eject": "react-scripts eject",
     "fetch-spreadsheet": "REACT_APP_VERSION=${npm_package_version} env-cmd .env node scripts/fetch-spreadsheet",
     "precommit": "lint-staged",
     "scale": "now scale $REACT_APP_INSTANCE_NAME'.now.sh' 1 --token $NOW_TOKEN",
-    "start": "serve build --cache 0 --single"
+    "start": "serve build --single"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
@@ -35,29 +33,28 @@
   "author": "@durancristhian",
   "license": "MIT",
   "devDependencies": {
-    "all-contributors-cli": "^4.11.0",
     "chart.js": "^2.7.2",
-    "env-cmd": "^8.0.1",
+    "env-cmd": "^8.0.2",
     "eslint-plugin-prettier": "^2.6.0",
     "gsheets": "^2.0.0",
-    "lint-staged": "^7.0.4",
-    "prettier": "^1.12.0",
-    "react": "^16.3.1",
-    "react-chartjs-2": "^2.7.0",
-    "react-dom": "^16.3.1",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.13.5",
+    "react": "^16.4.1",
+    "react-chartjs-2": "^2.7.2",
+    "react-dom": "^16.4.1",
     "react-images": "^0.5.17",
     "react-lazyload": "^2.3.0",
-    "react-loadable": "^5.3.1",
-    "react-router-dom": "^4.2.2",
+    "react-loadable": "^5.4.0",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "react-tilt": "^0.1.4",
-    "stylelint": "^9.2.0",
+    "stylelint": "^9.3.0",
     "stylelint-config-css-modules": "^1.2.0",
     "stylelint-config-standard": "^18.2.0",
-    "tachyons": "^4.9.1"
+    "tachyons": "^4.10.0"
   },
   "dependencies": {
-    "serve": "^6.5.0"
+    "serve": "^9.0.0"
   },
   "repository": {
     "type": "git",
@@ -86,8 +83,7 @@
       "url": "https://github.com/hrajchert",
       "contributions": 1,
       "additions": 43,
-      "deletions": 8,
-      "hireable": true
+      "deletions": 8
     },
     {
       "name": "Mateo Silguero",
