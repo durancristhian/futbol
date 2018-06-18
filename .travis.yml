@@ -6,6 +6,7 @@ cache:
 notifications:
   email: false
 script:
+  - npm run semantic-release
   - npm run fetch-spreadsheet
   - npm run generate-manifest
   - npm run build-prod
