@@ -4,14 +4,14 @@
   "description": "🏆 Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.",
   "scripts": {
     "generate-manifest": "REACT_APP_VERSION=${npm_package_version} env-cmd .env node scripts/generate-manifest",
-    "build-prod": "REACT_APP_VERSION=${npm_package_version} react-scripts build",
+    "build-prod": "NODE_ENV=production REACT_APP_VERSION=${npm_package_version} react-scripts build",
     "clean-deploys": "now rm $REACT_APP_INSTANCE_NAME --safe --token $NOW_TOKEN --yes",
-    "deploy": "now alias $(now --name $REACT_APP_INSTANCE_NAME --npm --token $NOW_TOKEN) $REACT_APP_INSTANCE_NAME --token=$NOW_TOKEN",
+    "deploy": "now alias $(now --name $REACT_APP_INSTANCE_NAME -e NODE_ENV=production --npm --token $NOW_TOKEN) $REACT_APP_INSTANCE_NAME --token=$NOW_TOKEN",
     "dev": "npm run fetch-spreadsheet && npm run generate-manifest && react-scripts start",
     "eject": "react-scripts eject",
     "fetch-spreadsheet": "REACT_APP_VERSION=${npm_package_version} env-cmd .env node scripts/fetch-spreadsheet",
     "precommit": "lint-staged",
-    "scale": "now scale $REACT_APP_INSTANCE_NAME'.now.sh' 1 --token $NOW_TOKEN",
+    "scale": "now scale $REACT_APP_INSTANCE_NAME'.now.sh' sfo --token $NOW_TOKEN",
     "start": "serve build --single"
   },
   "lint-staged": {
