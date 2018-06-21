@@ -25,7 +25,7 @@ class Curiosity extends PureComponent {
               <LazyLoad height="100%" once={true}>
                 <div
                   className="bg-center cover h2 w2"
-                  style={{ backgroundImage: `url('${curiosity.Foto}')` }}
+                  style={{ backgroundImage: `url('${curiosity.Foto}') ` }}
                 />
               </LazyLoad>
             </div>
