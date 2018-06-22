@@ -3,8 +3,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import NotFound from '../404/404';
 import DataProvider from '../DataProvider/DataProvider';
 import Footer from '../Footer/Footer';
-import AsyncComponent from '../HOC/AsyncComponent';
 import Header from '../Header/Header';
+import AsyncComponent from '../HOC/AsyncComponent';
+import ReloadModal from '../ReloadModal/ReloadModal';
 import themeManager from '../utils/themeManager';
 import * as styles from './Layout.module.css';
 
@@ -59,6 +60,7 @@ class Layout extends Component {
             </Switch>
           </div>
           <Footer currentTheme={theme} changeTheme={this.changeTheme} />
+          <ReloadModal />
         </div>
       </BrowserRouter>
     );

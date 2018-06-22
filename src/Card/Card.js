@@ -82,7 +82,7 @@ class Card extends PureComponent {
                 />
                 <p className="mb1 mt4">Efectividad:</p>
                 <p className="b f4 mv0">
-                  {Number(position.Puntos * 100 / (position.Jugados * 3)).toFixed(2)} %
+                  {Number((position.Puntos * 100) / (position.Jugados * 3)).toFixed(2)} %
                 </p>
               </div>
             </div>
