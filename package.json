@@ -56,7 +56,6 @@
   "author": "@durancristhian",
   "license": "MIT",
   "devDependencies": {
-    "all-contributors-cli": "^5.0.0",
     "chart.js": "^2.7.2",
     "env-cmd": "^8.0.2",
     "eslint-plugin-prettier": "^2.6.0",
