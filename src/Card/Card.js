@@ -3,6 +3,7 @@ import { Pie } from 'react-chartjs-2';
 import LazyLoad from 'react-lazyload';
 import Position from '../Positions/Position';
 import { FONT_FAMILY } from '../utils/constants';
+import { NavLink } from 'react-router-dom';
 
 const pieDatasetOptions = {
   backgroundColor: ['#19A974', '#96CCFF', '#FF725C'],
@@ -86,9 +87,9 @@ class Card extends PureComponent {
                 </p>
               </div>
             </div>
-            <a href="/" className="color-inherit mt3" rel="noopener noreferrer">
+            <NavLink to="/" className="color-inherit mt3" rel="noopener noreferrer">
               Volver
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>

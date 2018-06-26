@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import LazyLoad from 'react-lazyload';
 import injury from './injury.svg';
+import { NavLink } from 'react-router-dom';
 
 class NotFound extends PureComponent {
   render() {
@@ -10,9 +11,9 @@ class NotFound extends PureComponent {
         <LazyLoad height="100%" once={true}>
           <img src={injury} alt="Lesión" className={'h3 h4-ns w3 w4-ns'} title="Lesión" />
         </LazyLoad>
-        <a href="/" className="color-inherit mt3" rel="noopener noreferrer">
+        <NavLink to="/" className="color-inherit mt3" rel="noopener noreferrer">
           Volver a la página principal
-        </a>
+        </NavLink>
       </div>
     );
   }

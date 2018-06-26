@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import LazyLoad from 'react-lazyload';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import * as styles from './Positions.module.css';
 
 const positionProps = PropTypes.shape({
@@ -25,7 +25,7 @@ class Position extends PureComponent {
     const isTop = this.props.position.Puntos === topScore;
 
     return (
-      <Link
+      <NavLink
         to={{
           pathname: `/ficha/${position['Jugador/a'].toLowerCase()}`
         }}
@@ -86,7 +86,7 @@ class Position extends PureComponent {
             <span>{position.Puntos}</span>
           </div>
         </div>
-      </Link>
+      </NavLink>
     );
   }
 }
