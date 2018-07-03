@@ -21,9 +21,9 @@ class Main extends PureComponent {
         <div className="center mw8">
           <LeaderBoard leaders={positions.slice(0, 3)} />
           <Positions positions={positions} />
-          <Covers covers={covers} />
-          {shirts && shirts.length && <Shirts shirts={shirts} />}
-          <Curiosities curiosities={curiosities} />
+          {covers && covers.length > 0 && <Covers covers={covers} />}
+          {shirts && shirts.length > 0 && <Shirts shirts={shirts} />}
+          {curiosities && curiosities.length > 0 && <Curiosities curiosities={curiosities} />}
         </div>
       </div>
     );
