@@ -40,15 +40,15 @@ class Card extends PureComponent {
           <div className="flex flex-column items-center justify-center pv4 pv5-ns">
             <div className="w-100 w-40-l">
               <h3 className="b--black-20 ba bg-black-10 mv0 normal ph3 pv2 tc">
-                {position['Jugador/a']}
+                {position.Nombre}
               </h3>
               <div className="b--black-20 bl br">
                 <LazyLoad height="100%" once={true}>
                   <img
                     className="db w-100"
                     src={position.Foto}
-                    alt={position['Jugador/a']}
-                    title={position['Jugador/a']}
+                    alt={position.Nombre}
+                    title={position.Nombre}
                   />
                 </LazyLoad>
               </div>

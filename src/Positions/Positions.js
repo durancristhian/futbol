@@ -45,7 +45,7 @@ class Positions extends PureComponent {
         <div className="b--black-20 bl">
           {positions.map((position, index) => (
             <Position
-              key={position['Jugador/a']}
+              key={position.Nombre}
               position={position}
               index={index}
               topScore={topScore}

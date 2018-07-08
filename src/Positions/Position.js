@@ -8,7 +8,7 @@ const positionProps = PropTypes.shape({
   Posicion: PropTypes.number.isRequired,
   Empatados: PropTypes.number.isRequired,
   Ganados: PropTypes.number.isRequired,
-  'Jugador/a': PropTypes.string.isRequired,
+  Nombre: PropTypes.string.isRequired,
   Jugados: PropTypes.number.isRequired,
   Perdidos: PropTypes.number.isRequired,
   Puntos: PropTypes.number.isRequired
@@ -27,7 +27,7 @@ class Position extends PureComponent {
     return (
       <NavLink
         to={{
-          pathname: `/ficha/${position['Jugador/a'].toLowerCase()}`
+          pathname: `/ficha/${position.Nombre.toLowerCase()}`
         }}
         className="color-inherit link"
       >
@@ -48,7 +48,7 @@ class Position extends PureComponent {
                 />
               </LazyLoad>
             </div>
-            <span className={'truncate ' + (isTop && 'b')}>{position['Jugador/a']}</span>
+            <span className={'truncate ' + (isTop && 'b')}>{position.Nombre}</span>
           </div>
           <div
             className={`b--black-20 br ${

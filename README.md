@@ -25,12 +25,24 @@
   ```
 
 - Duplicate `.env.template`, rename it as `.env` and complete it with the right information.
+- Generate the dataset:
+
+  ```bash
+  npm run generate-dataset
+  ```
+
 - Start the server:
 
   ```bash
   # dev mode
   npm run dev
   ```
+
+## Submitting changes
+
+- Update npm version by running `npm version {major|minor|patch}`
+- Update manifest by running `npm run generate-manifest` and commit the changes
+- `git push` and submit a PR :)
 
 ## Contributors
 

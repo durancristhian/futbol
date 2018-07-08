@@ -30,7 +30,7 @@ class LeaderBoard extends PureComponent {
     leaders: PropTypes.arrayOf(
       PropTypes.shape({
         Foto: PropTypes.string.isRequired,
-        'Jugador/a': PropTypes.string.isRequired,
+        Nombre: PropTypes.string.isRequired,
         Puntos: PropTypes.number.isRequired
       })
     ).isRequired
@@ -56,19 +56,19 @@ class LeaderBoard extends PureComponent {
               } = getStylesFromIndex(index);
 
               return (
-                <li key={leader['Jugador/a']} className={`${order} ${width}`}>
+                <li key={leader.Nombre} className={`${order} ${width}`}>
                   <div className="tc">
                     <LazyLoad height="100%" once={true}>
                       <img
                         src={leader.Foto}
-                        alt={leader['Jugador/a']}
-                        title={leader['Jugador/a']}
+                        alt={leader.Nombre}
+                        title={leader.Nombre}
                         className={`br-100 center db ${styles.imageShadow} ${
                           !index ? 'w3 w4-ns' : 'w2 w3-ns'
                         }`}
                       />
                     </LazyLoad>
-                    <h3 className="mv2 normal truncate">{leader['Jugador/a']}</h3>
+                    <h3 className="mv2 normal truncate">{leader.Nombre}</h3>
                   </div>
                   <div
                     className={`b--black-20 ${index !== 2 ? 'bl' : ''} ${
