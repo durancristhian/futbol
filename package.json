@@ -1,6 +1,6 @@
 {
   "name": "futbol",
-  "version": "4.4.0",
+  "version": "4.5.0",
   "description": "🏆 Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.",
   "scripts": {
     "build-prod": "NODE_ENV=production REACT_APP_VERSION=${npm_package_version} react-scripts build",
@@ -40,7 +40,7 @@
           "headers": [
             {
               "key": "Cache-Control",
-              "value": "no-cache"
+              "value": "max-age=0"
             }
           ]
         },
@@ -49,7 +49,7 @@
           "headers": [
             {
               "key": "Cache-Control",
-              "value": "604800"
+              "value": "max-age=2592000"
             }
           ]
         }
