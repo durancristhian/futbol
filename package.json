@@ -34,26 +34,6 @@
       }
     },
     "static": {
-      "headers": [
-        {
-          "source": "**/*.*",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "max-age=2592000"
-            }
-          ]
-        },
-        {
-          "source": "**/service-worker.js",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "max-age=0,no-cache,no-store,must-revalidate"
-            }
-          ]
-        }
-      ],
       "trailingSlash": true
     },
     "type": "npm"
