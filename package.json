@@ -1,6 +1,6 @@
 {
   "name": "futbol",
-  "version": "4.14.0",
+  "version": "4.15.0",
   "description": "🏆 Generador de los sitios estáticos para mostrar las estadísticas del fútbol de la comunidad desde una Google Spreadsheet.",
   "scripts": {
     "alias": "now alias $REACT_APP_INSTANCE_NAME --token=$NOW_TOKEN",
