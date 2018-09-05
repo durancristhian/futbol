@@ -6,3 +6,5 @@ import './index.css';
 
 ReactDOM.render(<Layout />, document.getElementById('root'));
 unregister();
+
+console.log(process.env.REACT_APP_VERSION);
