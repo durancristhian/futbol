@@ -5,14 +5,13 @@
   "scripts": {
     "build-prod": "NODE_ENV=production REACT_APP_VERSION=${npm_package_version} react-scripts build",
     "clean-deploys": "now rm $REACT_APP_INSTANCE_NAME --safe --yes --token $NOW_TOKEN",
-    "deploy": "now alias $(now --name $REACT_APP_INSTANCE_NAME --public --token $NOW_TOKEN) $REACT_APP_INSTANCE_NAME --token=$NOW_TOKEN",
+    "deploy": "cd build && now alias $(now --name $REACT_APP_INSTANCE_NAME --public --static --token $NOW_TOKEN) $REACT_APP_INSTANCE_NAME --token=$NOW_TOKEN",
     "dev": "REACT_APP_VERSION=${npm_package_version} react-scripts start",
     "eject": "react-scripts eject",
     "generate-dataset": "env-cmd .env node scripts/generate-dataset",
     "generate-manifest": "REACT_APP_VERSION=${npm_package_version} env-cmd .env node scripts/generate-manifest",
     "precommit": "lint-staged",
-    "scale": "now scale $REACT_APP_URL sfo 1 --token $NOW_TOKEN",
-    "start": "serve build"
+    "scale": "now scale $REACT_APP_URL sfo 1 --token $NOW_TOKEN"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
@@ -42,9 +41,6 @@
     "stylelint-config-css-modules": "^1.3.0",
     "stylelint-config-standard": "^18.2.0",
     "tachyons": "^4.11.1"
-  },
-  "dependencies": {
-    "serve": "^10.0.0"
   },
   "repository": {
     "type": "git",
