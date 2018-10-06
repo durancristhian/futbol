@@ -5,6 +5,7 @@ import * as styles from './Positions.module.css';
 
 class Positions extends PureComponent {
   static propTypes = {
+    // eslint-disable-next-line
     positions: PropTypes.arrayOf(Position.propTypes.position)
   };
 
@@ -44,12 +45,7 @@ class Positions extends PureComponent {
         </div>
         <div className="b--black-20 bl">
           {positions.map((position, index) => (
-            <Position
-              key={position.Nombre}
-              position={position}
-              index={index}
-              topScore={topScore}
-            />
+            <Position key={position.Nombre} position={position} index={index} topScore={topScore} />
           ))}
         </div>
       </div>

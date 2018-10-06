@@ -4,6 +4,7 @@ import Main from '../Main/Main';
 
 class App extends PureComponent {
   static propTypes = {
+    // eslint-disable-next-line
     dataset: PropTypes.shape(Main.propTypes.main).isRequired
   };
 

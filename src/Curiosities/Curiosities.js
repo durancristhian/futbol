@@ -4,6 +4,7 @@ import Curiosity from './Curiosity';
 
 class Curiosities extends PureComponent {
   static propTypes = {
+    // eslint-disable-next-line
     curiosities: PropTypes.arrayOf(Curiosity.propTypes.curiosity).isRequired
   };
 

@@ -7,9 +7,13 @@ import Shirts from '../Shirts/Shirts';
 
 class Main extends PureComponent {
   static propTypes = {
+    // eslint-disable-next-line
     covers: Covers.propTypes.covers,
+    // eslint-disable-next-line
     curiosities: Curiosities.propTypes.curiosities,
+    // eslint-disable-next-line
     positions: Positions.propTypes.positions,
+    // eslint-disable-next-line
     shirts: Shirts.propTypes.shirts
   };
 

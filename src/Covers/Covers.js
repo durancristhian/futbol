@@ -17,6 +17,7 @@ const LightboxTheme = {
 
 class Covers extends Component {
   static propTypes = {
+    // eslint-disable-next-line
     covers: PropTypes.arrayOf(Cover.propTypes.cover).isRequired
   };
 

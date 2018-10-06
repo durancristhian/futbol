@@ -28,6 +28,7 @@ const pieOptions = {
 
 class Card extends PureComponent {
   static propTypes = {
+    // eslint-disable-next-line
     position: Position.propTypes.position.isRequired
   };
 

@@ -4,6 +4,7 @@ import Shirt from './Shirt';
 
 class Shirts extends PureComponent {
   static propTypes = {
+    // eslint-disable-next-line
     shirts: PropTypes.arrayOf(Shirt.propTypes.shirt)
   };
 
