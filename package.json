@@ -30,7 +30,7 @@
     "prettier": "^1.13.7",
     "react": "^16.6.2",
     "react-chartjs-2": "^2.7.4",
-    "react-dom": "^16.4.1",
+    "react-dom": "^16.6.2",
     "react-images": "^0.5.19",
     "react-lazyload": "^2.3.0",
     "react-loadable": "^5.4.0",
