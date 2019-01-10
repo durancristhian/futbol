@@ -10,7 +10,7 @@ script:
   - npm run generate-manifest
   - npm run build-prod
 before_deploy:
-  - npm i now --no-save
+  - npm i now@12.1.8 --no-save
 deploy:
   provider: script
   script: npm run deploy
