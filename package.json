@@ -25,7 +25,7 @@
     "env-cmd": "^8.0.2",
     "eslint-plugin-prettier": "^3.0.0",
     "gsheets": "^2.0.0",
-    "lint-staged": "^8.0.0",
+    "lint-staged": "8.1.0",
     "prettier": "^1.13.7",
     "react": "^16.4.1",
     "react-chartjs-2": "^2.7.4",
