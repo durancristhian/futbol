@@ -41,7 +41,7 @@ class LeaderBoard extends PureComponent {
 
     return (
       <div className="mv4 mv5-ns">
-        <h2 className="f4 f3-ns mb4 mb5-ns mt0 normal tc">Los mejores</h2>
+        <h2 className="f4 f3-ns mb4 mb5-ns mt0 normal tc">Les mejores</h2>
         <div className="flex justify-center">
           <ul className="b--black-20 bb flex items-end justify-center list ph3 ph4-ns mv0">
             {leaders.map((leader, index) => {
