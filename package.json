@@ -22,7 +22,7 @@
   "license": "MIT",
   "devDependencies": {
     "chart.js": "^2.7.2",
-    "env-cmd": "^8.0.2",
+    "env-cmd": "^9.0.1",
     "eslint-plugin-prettier": "^3.0.0",
     "gsheets": "^2.0.0",
     "lint-staged": "^8.0.0",
