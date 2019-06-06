@@ -30,7 +30,7 @@
     "react": "^16.4.1",
     "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.4.1",
-    "react-images": "^0.5.19",
+    "react-images": "^1.0.0",
     "react-lazyload": "^2.3.0",
     "react-loadable": "^5.4.0",
     "react-router-dom": "^4.3.1",
